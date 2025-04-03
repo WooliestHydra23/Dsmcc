@@ -1,61 +1,74 @@
+# Hello, I'm Dron Sharma
 
-# Hello, I'm CHANGEME
-<a href="https://linkedin.com/in/dsmcc"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/dsmcc/">
+  <img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
 
-[Brief Introduction - Remove this afterwards]
+## 🧭 About Me
 
-I am a recent graduate with a profound interest in technology and a dedication to solving complex problems.
+I'm a PGDM student at IILM Lodhi Road with a background in BBA and a strong passion for product strategy, marketing, and AI-driven business solutions. I enjoy analyzing brands, building creative campaigns, and solving real-world problems through research and storytelling.
 
-## Objective
-[Provide Objective - Remove this afterwards]]
+---
 
-My journey in computer science has led me to develop a passion for cybersecurity, and I am now eager to transition into this field, specifically aiming to join a Security Operations Center (SOC) as a Tier 1 Analyst.
+## 🎯 Objective
 
-## Skills
-[Provide skills and associated project. Make sure to hyperlink the project - Remove this afterwards]]
+To build a portfolio that reflects my interdisciplinary strengths across marketing, strategy, and technology—while showcasing hands-on experience in branding, AI, and market research.
 
-| Skill                                         | Associated Project         |
-|-----------------------------------------------|----------------------------|
-| SIEM Implementation and Log Analysis          | <a href="https://google.com">Detection Lab</a>|
-| Network Traffic Monitoring and Attack Detection | <a href="https://google.com">Detection Lab</a>|
-| Security Automation with Shuffle SOAR         | SOC Automation Lab|
-| Incident Response Planning and Execution      | SOC Automation Lab|
-| Case Management with TheHive                  | SOC Automation Lab|
-| Scripting and Automation for Threat Mitigation | SOC Automation Lab|
+---
 
-## Tools
-[Provide tools and break them down into categories. Use ChatGPT to help create the link - Remove this afterwards]]
+## 🛠️ Skills & Projects
 
-### Network
+| Skill                                        | Associated Project                                                  |
+|---------------------------------------------|----------------------------------------------------------------------|
+| Strategic Brand Positioning                 | [Clean AF - Toothpaste Brand Strategy](#)                            |
+| Market Research & Consumer Insights         | [MM1 Project – Toothpaste Category Analysis](#)                      |
+| Case Study Analysis                         | [Apple Inc. – Design & Product Philosophy](#)                        |
+| Business Simulation & Decision-Making       | [Online Business Simulation Project](#)                              |
+| Product Development & Innovation            | [LiDAR-based Tyre Monitoring System](#)                              |
+| Content Strategy & Event Coverage           | [Social Media @ IILM | Independence Day, SIP Event, Book Launch](#)  |
+
+---
+
+## 🔧 Tools
+
+### Design & Editing
 <div>
-    <img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Suricata-EF3B2D?&style=for-the-badge&logo=Suricata&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Zeek-777BB4?&style=for-the-badge&logo=Zeek&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Canva-00C4CC?&style=for-the-badge&logo=canva&logoColor=white" />
+  <img src="https://img.shields.io/badge/-DaVinci_Resolve-1C1C1C?&style=for-the-badge&logo=DaVinci-Resolve&logoColor=white" />
 </div>
 
-### Endpoint
+### Data & Research
 <div>
-    <img src="https://img.shields.io/badge/-Microsoft_Defender_for_Endpoint-00A4EF?&style=for-the-badge&logo=Microsoft&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Velociraptor-4B275F?&style=for-the-badge&logo=Velociraptor&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Obsidian-483699?&style=for-the-badge&logo=Obsidian&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Google_Sheets-34A853?&style=for-the-badge&logo=Google-Sheets&logoColor=white" />
 </div>
 
-### SIEM
+### Productivity
 <div>
-    <img src="https://img.shields.io/badge/-Microsoft_Sentinel-0078D4?&style=for-the-badge&logo=Microsoft&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Splunk-000000?&style=for-the-badge&logo=Splunk&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Elastic-005571?&style=for-the-badge&logo=Elastic&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Notion-000000?&style=for-the-badge&logo=Notion&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Trello-0079BF?&style=for-the-badge&logo=Trello&logoColor=white" />
 </div>
 
-## Certifications
-[Provide certifications that you have obtained. Use ChatGPT to help create the link - Remove this afterwards]]
+---
+
+## 📜 Certifications
+
 <div>
-<img src="https://img.shields.io/badge/-Security%2B-FF0000?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-Network%2B-007ACC?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-A%2B-4D4D4D?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-CDSA-006400?&style=for-the-badge&logoColor=white" />
-<img src="https://img.shields.io/badge/-CCD-000080?&style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Google_Generative_AI_Specialization-4285F4?&style=for-the-badge&logo=Google&logoColor=white" />
+  <img src="https://img.shields.io/badge/-IBM_Customer_Care_AI-1F70C1?&style=for-the-badge&logo=IBM&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Marketing_Mix_Implementation_IE-FF6600?&style=for-the-badge&logo=Coursera&logoColor=white" />
 </div>
 
-## Projects
-- Detection Lab
-- SOC Automation Project
+---
+
+## 🧪 Featured Projects
+
+- [Clean AF – Toothpaste Brand Strategy](#)
+- [Apple Inc. Case Study – Design, Simplicity, Innovation](#)
+- [Dis the Brand – Marketing Event Ideation & Execution](#)
+- [LiDAR-based Tyre Monitoring System](#)
+- [Online Business Simulation](#)
+- [SIP Event & Social Media Coverage](#)
+
+---
+
