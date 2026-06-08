@@ -45,6 +45,12 @@ class ParticleSystem {
     this.particleCount = particleCount;
     this.animationId = null;
 
+    // Optimize for mobile
+    this.isMobile = window.innerWidth < 768;
+    if (this.isMobile) {
+      this.particleCount = Math.floor(particleCount * 0.5);
+    }
+
     // Set canvas size
     this.resizeCanvas();
     window.addEventListener('resize', () => this.resizeCanvas());
@@ -96,8 +102,10 @@ class ParticleSystem {
       particle.draw(this.ctx);
     }
 
-    // Draw connections between nearby particles
-    this.drawConnections();
+    // Draw connections between nearby particles (skip on mobile for performance)
+    if (!this.isMobile) {
+      this.drawConnections();
+    }
 
     this.animationId = requestAnimationFrame(() => this.animate());
   }

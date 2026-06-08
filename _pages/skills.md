@@ -11,6 +11,21 @@ I work at the intersection of **product strategy**, **business research**, and *
 
 ---
 
+## Technology Stack
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
+<div style="font-size: 3rem;">🐍</div>
+<div style="font-size: 3rem;">🤖</div>
+<div style="font-size: 3rem;">💬</div>
+<div style="font-size: 3rem;">📊</div>
+<div style="font-size: 3rem;">🔄</div>
+<div style="font-size: 3rem;">⚙️</div>
+<div style="font-size: 3rem;">🎯</div>
+<div style="font-size: 3rem;">🚀</div>
+</div>
+
+---
+
 ## Strategy & Business Analysis
 
 **Brand & Positioning**

@@ -11,6 +11,32 @@ I'm actively interested in **product strategy**, **AI-driven automation**, **bus
 
 ---
 
+## Send a Message
+
+<form action="https://formspree.io/f/xyzabcde" method="POST" style="background: rgba(0,0,0,0.05); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+
+<div style="margin-bottom: 1rem;">
+  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+</div>
+
+<div style="margin-bottom: 1rem;">
+  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+</div>
+
+<div style="margin-bottom: 1rem;">
+  <textarea name="message" placeholder="Your Message" required rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; font-family: inherit;"></textarea>
+</div>
+
+<button type="submit" style="width: 100%; padding: 0.75rem; background: #555; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Send Message</button>
+
+<p style="font-size: 0.85rem; color: #666; margin-top: 1rem; text-align: center;">
+  💡 Sign up for <a href="https://formspree.io">Formspree</a> (free) to activate this form. Update the form ID above.
+</p>
+
+</form>
+
+---
+
 ## Reach Out
 
 ### 💼 LinkedIn (Best for Professional Inquiries)
