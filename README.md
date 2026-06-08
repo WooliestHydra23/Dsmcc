@@ -8,8 +8,18 @@ header:
   caption: "Product Strategy | AI Automation | GTM Support"
 ---
 
+<script src="/assets/js/particles.js" defer></script>
+<script src="/assets/js/typewriter.js" defer></script>
+<link rel="stylesheet" href="/assets/css/animations.css">
+
+<canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: all;"></canvas>
+
 # Dron Sharma
 **Product Strategy, AI Workflow Automation, GTM Support & Enterprise Technical Documentation**
+
+<div style="text-align: center; padding: 2rem 0; font-size: 1.8rem; color: #c770f0; font-weight: bold; min-height: 60px;">
+  <span id="typewriter-text"></span>
+</div>
 
 > Curated professional portfolio showcasing product strategy, market research, AI-driven workflows, and enterprise technical work.
 
