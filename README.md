@@ -113,28 +113,53 @@ Built Python automation tools, AI-driven systems, and workflow pipelines. Contri
 ## 🔄 Currently Exploring
 
 - Applied AI workflows in product strategy and market research
-- Building scalable automation systems for business processes
+- Building scalable automation systems for business processes  
 - Studying enterprise software integration and pipeline architecture
 
-*Last updated: June 2026*
+[See what I'm working on →](/now/)
 
 ---
 
-## 📧 Let's Connect
+## 💻 Code & Technical Work
 
-**I'm interested in discussing:**
-- Product strategy and go-to-market planning
-- AI-driven business workflows and automation
-- Market research and competitive analysis
-- Technical documentation and sales enablement
+Beyond strategy—I build automation tools, AI systems, and production pipelines.
 
-**Contact me:**
-- 💼 [LinkedIn](https://www.linkedin.com/in/dsmcc/) (preferred for professional inquiries)
-- 📧 [Email](mailto:dron.sharma.pgdm26@iilm.edu)
-- 🐙 [GitHub](https://github.com/WooliestHydra23)
+- **WebLedger**: Web audit and change detection tool
+- **RAG_VAULT**: AI-powered knowledge management system
+- **LinkedinPipeline**: Workflow automation and data pipelines
+- **Enterprise Rendering Pipelines**: Multi-software 3D system integration
 
-**Resume**: Available on request—I can provide a version tailored to your role and company.
+[View code samples & architecture →](/code-samples/)
 
 ---
 
-*Building at the intersection of product strategy, business research, and technology.*
+## 🎯 Let's Work Together
+
+I'm actively looking for opportunities in:
+
+**Roles**: Product Strategy, AI/Automation Engineering, Technical Product Management  
+**Projects**: AI-driven automation, product strategy, business research, systems design  
+**Consulting**: GTM strategy, automation architecture, technical documentation
+
+### Quick Links
+- **For opportunities**: [Connect on LinkedIn](https://www.linkedin.com/in/dsmcc/) or [Email me](mailto:dron.sharma.pgdm26@iilm.edu)
+- **To see code**: [View technical samples →](/code-samples/)
+- **To learn more**: [What I'm working on →](/now/)
+- **Full contact options**: [Get in touch →](/contact/)
+
+---
+
+## 📋 Also Find Me
+
+- 📊 [Microsoft Learn achievements](https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements)
+- 🏅 [Skillsoft digital badges](https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet)
+- 💼 [LinkedIn profile](https://www.linkedin.com/in/dsmcc/)
+
+---
+
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f0f8ff; border-left: 4px solid #1976d2; border-radius: 4px;">
+  <strong>Building at the intersection of product strategy, business research, and technology.</strong>
+  <p style="margin-top: 1rem; font-size: 0.9em;">Interested in discussing AI, automation, product thinking, or collaboration? Let's talk.</p>
+</div>
+
+*Last updated: June 8, 2026*

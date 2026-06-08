@@ -96,8 +96,12 @@ tag_archive:
 navigation:
   - title: "Work"
     url: /work/
+  - title: "Code & Samples"
+    url: /code-samples/
   - title: "Skills"
     url: /skills/
+  - title: "Now"
+    url: /now/
   - title: "Certifications"
     url: /certifications/
   - title: "Contact"
