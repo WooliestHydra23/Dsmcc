@@ -4,13 +4,13 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/header-bg.jpg
+  overlay_image: /Dsmcc/assets/images/header-bg.jpg
   caption: "Product Strategy | AI Automation | GTM Support"
 ---
 
-<script src="/assets/js/particles.js" defer></script>
-<script src="/assets/js/typewriter.js" defer></script>
-<link rel="stylesheet" href="/assets/css/animations.css">
+<script src="{{ '/assets/js/particles.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/typewriter.js' | relative_url }}" defer></script>
+<link rel="stylesheet" href="{{ '/assets/css/animations.css' | relative_url }}">
 
 <canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: all;"></canvas>
 
