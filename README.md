@@ -90,6 +90,32 @@ a:hover {
   margin: 2rem 0;
 }
 
+.project-card {
+  padding: 2rem;
+  border: 1px solid #e5e5e7;
+  border-radius: 16px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #0071e3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #1d1d1f;
+}
+
+.impact {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -109,51 +135,57 @@ a:hover {
 ## Featured Work
 
 <div class="grid-2">
+<div class="project-card">
 
-### Enterprise Cloud Rendering: Product Documentation & GTM Support
-**Impact**: 30+ FAQ items | 8 tutorial scripts | 3 cross-functional handoffs
+### Enterprise Cloud Rendering
+<p class="impact">30+ FAQ items | 8 scripts | 3 handoffs</p>
 
-Supported product documentation, FAQ structuring, tutorial scripting, and sales enablement for an enterprise cloud rendering platform.
+Product documentation, FAQ structuring, and sales enablement for enterprise cloud rendering platform.
 
-**Skills**: Technical communication, GTM support, stakeholder coordination, content architecture
-
-**Confidentiality Note**: High-level overview protecting internal company information. Focus on role, contribution type, and demonstrated skills.
+**Skills**: Technical communication, GTM support, stakeholder coordination
 
 [Read Full Project →](projects/01-enterprise-cloud-rendering.md)
 
----
+</div>
 
-### Clean AF: Toothpaste Brand Strategy
-**Impact**: Analyzed 5+ competitors | Identified market opportunity | Built positioning matrix
+<div class="project-card">
 
-Developed comprehensive brand strategy for natural toothpaste brand, including positioning statement, target segmentation, and marketing mix recommendations.
+### Clean AF Brand Strategy
+<p class="impact">5+ competitors analyzed | Market identified</p>
 
-**Skills**: Market research, competitive analysis, brand positioning, consumer segmentation, strategic communication
+Comprehensive brand strategy for natural toothpaste, including positioning, segmentation, and marketing mix.
+
+**Skills**: Market research, competitive analysis, brand positioning, consumer segmentation
 
 [Read Full Project →](projects/02-clean-af-brand-strategy.md)
 
----
+</div>
 
-###  LiDAR-Based Tyre Monitoring System
-**Impact**: Market opportunity sizing | 5-phase product roadmap | 25-slide pitch deck
+<div class="project-card">
 
-Researched and documented IoT product concept for vehicle safety. Analyzed technical feasibility, identified target market, and created go-to-market strategy.
+### LiDAR Tyre Monitoring
+<p class="impact">Market sizing | Product roadmap | Pitch deck</p>
 
-**Skills**: Product innovation, market analysis, technical research, customer mapping, presentation design
+IoT product concept for vehicle safety. Technical feasibility analysis, market identification, and go-to-market strategy.
+
+**Skills**: Product innovation, market analysis, technical research, customer mapping
 
 [Read Full Project →](projects/03-lidar-tyre-monitoring.md)
 
----
+</div>
 
-###  AI Workflow Automation & Technical Projects
-**Impact**: 3 production tools built | 4 enterprise DCC pipelines | Python + AI integration
+<div class="project-card">
 
-Built Python automation tools, AI-driven systems, and workflow pipelines. Contributions span WebLedger, RAG_VAULT, LinkedinPipeline, and Urja Renderfarm enterprise work.
+### AI Workflow Automation
+<p class="impact">3 tools built | 4 pipelines | Python + AI</p>
 
-**Skills**: Python scripting, AI/LLM integration, data pipelines, enterprise software workflow exposure, systems thinking
+Python automation tools, AI-driven systems, and workflow pipelines. WebLedger, RAG_VAULT, LinkedinPipeline, and enterprise work.
+
+**Skills**: Python scripting, AI/LLM integration, data pipelines, systems thinking
 
 [Read Full Project →](projects/04-ai-workflow-automation.md)
 
+</div>
 </div>
 
 ---
