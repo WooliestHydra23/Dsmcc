@@ -1,0 +1,105 @@
+---
+# Custom Stylesheet
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+// Custom styles for portfolio
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Project card styling
+.project-card {
+  border-left: 4px solid #1976d2;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .impact {
+    font-weight: bold;
+    color: #388e3c;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Hero section enhancement
+.page__hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  .page__title {
+    color: white;
+  }
+}
+
+// Navigation enhancement
+.greedy-nav {
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+// SVG diagram styling
+svg {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  display: block;
+}
+
+// Skills section
+.skills-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Read time and related posts
+.page__meta,
+.page__related {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+// Link styling
+a {
+  color: #1976d2;
+
+  &:hover {
+    color: #1565c0;
+  }
+}
+
+// Footer customization
+.page__footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+}
