@@ -1,0 +1,56 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box { fill: #f9f9f9; stroke: #333; stroke-width: 1; }
+      .title { font-size: 20px; font-weight: bold; fill: #000; }
+      .label { font-size: 11px; fill: #333; }
+      .brand { font-size: 12px; font-weight: bold; }
+      .grid-line { stroke: #ccc; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="title">Clean AF: Competitive Positioning Matrix</text>
+  <text x="400" y="55" text-anchor="middle" style="font-size: 12px; fill: #666;">Natural Toothpaste Category | Professional Grade × Eco-Conscious</text>
+
+  <!-- Grid Background -->
+  <rect x="100" y="100" width="600" height="200" fill="white" stroke="#333" stroke-width="2"/>
+
+  <!-- Grid Lines (divide into quadrants) -->
+  <line x1="400" y1="100" x2="400" y2="300" class="grid-line" stroke-width="2"/>
+  <line x1="100" y1="200" x2="700" y2="200" class="grid-line" stroke-width="2"/>
+
+  <!-- Axes Labels -->
+  <!-- Y-axis (vertical) -->
+  <text x="80" y="105" text-anchor="end" class="label" style="font-weight: bold;">Professional Grade</text>
+  <text x="80" y="295" text-anchor="end" class="label" style="font-weight: bold;">Mainstream</text>
+
+  <!-- X-axis (horizontal) -->
+  <text x="110" y="330" class="label" style="font-weight: bold;">Natural/Eco</text>
+  <text x="650" y="330" text-anchor="end" class="label" style="font-weight: bold;">Chemical/Performance</text>
+
+  <!-- Competitor Positions -->
+  <!-- Quadrant 1: Professional + Chemical (top-right) -->
+  <circle cx="580" cy="140" r="20" fill="#e8e8e8" stroke="#333" stroke-width="2"/>
+  <text x="580" y="145" text-anchor="middle" class="brand">Crest Pro</text>
+
+  <!-- Quadrant 2: Professional + Natural (top-left) - CLEAN AF HERE -->
+  <circle cx="240" cy="140" r="25" fill="#4CAF50" stroke="#333" stroke-width="3"/>
+  <text x="240" y="145" text-anchor="middle" class="brand" style="fill: white; font-weight: bold;">Clean AF</text>
+
+  <!-- Quadrant 3: Mainstream + Natural (bottom-left) -->
+  <circle cx="210" cy="260" r="18" fill="#FFB6C1" stroke="#333" stroke-width="2"/>
+  <text x="210" y="264" text-anchor="middle" class="brand">Tom's</text>
+
+  <!-- Quadrant 4: Mainstream + Chemical (bottom-right) -->
+  <circle cx="610" cy="260" r="18" fill="#87CEEB" stroke="#333" stroke-width="2"/>
+  <text x="610" y="264" text-anchor="middle" class="brand">Colgate</text>
+
+  <!-- Positioning Statement -->
+  <rect x="50" y="340" width="700" height="50" fill="#f0f8f0" stroke="#4CAF50" stroke-width="2" rx="3"/>
+  <text x="400" y="360" text-anchor="middle" style="font-size: 13px; font-weight: bold; fill: #000;">Clean AF Positioning: Professional-grade oral care with natural, eco-conscious ingredients</text>
+  <text x="400" y="378" text-anchor="middle" style="font-size: 11px; fill: #333;">Target: Professionals 28-42, health-conscious, willing to pay premium for natural + effective</text>
+
+  <!-- Legend -->
+  <text x="50" y="385" style="font-size: 10px; fill: #666;">● Green = Target position (unique opportunity)  ● Other colors = Competitor positions</text>
+</svg>

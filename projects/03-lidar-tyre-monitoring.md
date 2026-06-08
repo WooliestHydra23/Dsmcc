@@ -3,6 +3,8 @@
 ## Overview
 Researched and documented a product concept for an IoT-enabled vehicle safety system using LiDAR to monitor tyre condition in real-time.
 
+![LiDAR Tyre Monitoring: System Architecture](../assets/images/projects/lidar-system-architecture.svg)
+
 ## Problem Statement
 Tyre failure is a significant cause of accidents and fleet downtime. How could emerging technology (LiDAR) solve this problem with a product approach?
 

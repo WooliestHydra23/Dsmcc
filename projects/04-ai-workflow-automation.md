@@ -3,6 +3,8 @@
 ## Overview
 I build Python automation tools, AI-driven systems, and workflow pipelines to solve business and research problems. This includes generative AI applications, data pipelines, and enterprise automation.
 
+![AI Automation Ecosystem: Tools & Projects](../assets/images/projects/ai-automation-ecosystem.svg)
+
 ## Projects & Skills
 
 ### WebLedger

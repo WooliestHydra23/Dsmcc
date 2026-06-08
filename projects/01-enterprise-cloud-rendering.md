@@ -3,6 +3,8 @@
 ## Overview
 Supported product documentation, FAQ development, tutorial scripting, sales enablement materials, and website communication for an enterprise cloud rendering platform.
 
+![Enterprise Cloud Rendering: GTM Support Flow](../assets/images/projects/enterprise-rendering-flow.svg)
+
 ## Problem Statement
 The platform needed structured documentation, sales training content, and customer-facing tutorials to support product readiness and go-to-market launch.
 

@@ -3,6 +3,8 @@
 ## Overview
 Developed a brand strategy for a fictional natural toothpaste brand positioned as professional-grade, eco-conscious, and effective.
 
+![Clean AF Competitive Positioning Matrix](../assets/images/projects/clean-af-positioning.svg)
+
 ## Problem Statement
 The natural toothpaste category has competitors, but few brands successfully bridge "natural ingredients" with "clinical effectiveness." How should a new entrant position itself?
 

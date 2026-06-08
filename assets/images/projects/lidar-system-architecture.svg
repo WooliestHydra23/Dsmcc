@@ -1,0 +1,70 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box { fill: #f0f0f0; stroke: #333; stroke-width: 2; }
+      .title { font-size: 20px; font-weight: bold; fill: #000; }
+      .label { font-size: 12px; fill: #333; }
+      .arrow { stroke: #333; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .impact { font-size: 11px; fill: #666; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="title">LiDAR Tyre Monitoring: Product System</text>
+  <text x="400" y="55" text-anchor="middle" style="font-size: 12px; fill: #666;">IoT Safety Innovation for Fleet Management</text>
+
+  <!-- Stage 1: Sensor Hardware -->
+  <rect x="40" y="90" width="130" height="90" class="box" rx="5"/>
+  <text x="105" y="120" text-anchor="middle" style="font-size: 13px; font-weight: bold;">LiDAR Sensor</text>
+  <text x="105" y="145" text-anchor="middle" class="label">Real-time tyre</text>
+  <text x="105" y="160" text-anchor="middle" class="label">condition scanning</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 170 135 L 220 135" class="arrow"/>
+
+  <!-- Stage 2: Data Processing -->
+  <rect x="220" y="90" width="130" height="90" class="box" rx="5"/>
+  <text x="285" y="120" text-anchor="middle" style="font-size: 13px; font-weight: bold;">Data Pipeline</text>
+  <text x="285" y="145" text-anchor="middle" class="label">Edge computing +</text>
+  <text x="285" y="160" text-anchor="middle" class="label">Cloud processing</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 350 135 L 400 135" class="arrow"/>
+
+  <!-- Stage 3: Analysis & Decision -->
+  <rect x="400" y="90" width="130" height="90" class="box" rx="5"/>
+  <text x="465" y="120" text-anchor="middle" style="font-size: 13px; font-weight: bold;">AI Analysis</text>
+  <text x="465" y="145" text-anchor="middle" class="label">Wear patterns,</text>
+  <text x="465" y="160" text-anchor="middle" class="label">failure prediction</text>
+
+  <!-- Arrow 3 -->
+  <path d="M 530 135 L 580 135" class="arrow"/>
+
+  <!-- Stage 4: Action -->
+  <rect x="580" y="90" width="160" height="90" class="box" rx="5"/>
+  <text x="660" y="115" text-anchor="middle" style="font-size: 13px; font-weight: bold;">Fleet Safety</text>
+  <text x="660" y="140" text-anchor="middle" class="label">Predictive alerts</text>
+  <text x="660" y="155" text-anchor="middle" class="label">Maintenance scheduling</text>
+  <text x="660" y="170" text-anchor="middle" class="label">Risk prevention</text>
+
+  <!-- Problem Statement -->
+  <rect x="40" y="220" width="350" height="130" fill="#fff9e6" stroke="#FF9800" stroke-width="2" rx="5"/>
+  <text x="215" y="245" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #000;">Problem</text>
+  <text x="215" y="265" text-anchor="middle" class="impact">Tyre failure causes 30%+ fleet downtime</text>
+  <text x="215" y="280" text-anchor="middle" class="impact">No real-time visibility into tyre health</text>
+  <text x="215" y="295" text-anchor="middle" class="impact">Reactive maintenance vs. preventive</text>
+  <text x="215" y="310" text-anchor="middle" class="impact">Safety risk for drivers and cargo</text>
+  <text x="215" y="330" text-anchor="middle" style="font-size: 11px; fill: #666;">Market: Commercial fleet management | TAM: $2B+ in preventive maintenance</text>
+
+  <!-- Solution/Impact -->
+  <rect x="410" y="220" width="330" height="130" fill="#e8f5e9" stroke="#4CAF50" stroke-width="2" rx="5"/>
+  <text x="575" y="245" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #000;">Solution & Impact</text>
+  <text x="575" y="265" text-anchor="middle" class="impact">✓ Real-time tyre condition monitoring</text>
+  <text x="575" y="280" text-anchor="middle" class="impact">✓ Predictive maintenance alerts</text>
+  <text x="575" y="295" text-anchor="middle" class="impact">✓ 40%+ reduction in unexpected downtime</text>
+  <text x="575" y="310" text-anchor="middle" class="impact">✓ Improved driver safety and cargo security</text>
+  <text x="575" y="330" text-anchor="middle" style="font-size: 11px; fill: #666;">ROI: Reduced maintenance costs + eliminated emergency repairs</text>
+</svg>
