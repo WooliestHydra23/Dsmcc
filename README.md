@@ -2,35 +2,116 @@
 layout: splash
 permalink: /
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/header-bg.jpg
-  caption: "Product Strategy | AI Automation | GTM Support"
+  overlay_color: "#ffffff"
+  overlay_filter: "0"
+  overlay_image: 
+  caption: 
 ---
 
-<script src="{{ '/assets/js/particles.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/js/typewriter.js' | relative_url }}" defer></script>
-<link rel="stylesheet" href="{{ '/assets/css/animations.css' | relative_url }}">
+<style>
+body {
+  background-color: #ffffff;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
-<canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: all;"></canvas>
+.page__hero {
+  background: #ffffff;
+  padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0071e3;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background: #0077ed;
+  text-decoration: none;
+}
+
+.contact-box {
+  background: #f5f5f7;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+</style>
 
 # Dron Sharma
-**Product Strategy, AI Workflow Automation, GTM Support & Enterprise Technical Documentation**
 
-<div style="text-align: center; padding: 2rem 0; font-size: 1.8rem; color: #c770f0; font-weight: bold; min-height: 60px;">
-  <span id="typewriter-text"></span>
-</div>
-
-> Curated professional portfolio showcasing product strategy, market research, AI-driven workflows, and enterprise technical work.
+<p class="subtitle">Product Strategy • AI Automation • GTM Support</p>
 
 ---
 
-## 📌 Featured Work
+## Featured Work
 
 <div class="grid-2">
 
-### 📱 Enterprise Cloud Rendering: Product Documentation & GTM Support
-**Impact**: Delivered 30+ FAQ items | 8 tutorial scripts | 3 cross-functional handoffs
+### Enterprise Cloud Rendering: Product Documentation & GTM Support
+**Impact**: 30+ FAQ items | 8 tutorial scripts | 3 cross-functional handoffs
 
 Supported product documentation, FAQ structuring, tutorial scripting, and sales enablement for an enterprise cloud rendering platform.
 
@@ -42,7 +123,7 @@ Supported product documentation, FAQ structuring, tutorial scripting, and sales 
 
 ---
 
-### 🪥 Clean AF: Toothpaste Brand Strategy
+### Clean AF: Toothpaste Brand Strategy
 **Impact**: Analyzed 5+ competitors | Identified market opportunity | Built positioning matrix
 
 Developed comprehensive brand strategy for natural toothpaste brand, including positioning statement, target segmentation, and marketing mix recommendations.
@@ -53,7 +134,7 @@ Developed comprehensive brand strategy for natural toothpaste brand, including p
 
 ---
 
-### 🚗 LiDAR-Based Tyre Monitoring System
+###  LiDAR-Based Tyre Monitoring System
 **Impact**: Market opportunity sizing | 5-phase product roadmap | 25-slide pitch deck
 
 Researched and documented IoT product concept for vehicle safety. Analyzed technical feasibility, identified target market, and created go-to-market strategy.
@@ -64,7 +145,7 @@ Researched and documented IoT product concept for vehicle safety. Analyzed techn
 
 ---
 
-### 🤖 AI Workflow Automation & Technical Projects
+###  AI Workflow Automation & Technical Projects
 **Impact**: 3 production tools built | 4 enterprise DCC pipelines | Python + AI integration
 
 Built Python automation tools, AI-driven systems, and workflow pipelines. Contributions span WebLedger, RAG_VAULT, LinkedinPipeline, and Urja Renderfarm enterprise work.
@@ -77,7 +158,7 @@ Built Python automation tools, AI-driven systems, and workflow pipelines. Contri
 
 ---
 
-## 🎯 What I Do
+##  What I Do
 
 ### **Strategy & Analysis**
 - Brand positioning and competitive analysis
@@ -99,17 +180,17 @@ Built Python automation tools, AI-driven systems, and workflow pipelines. Contri
 
 ---
 
-## 🏆 Certifications & Learning
+##  Certifications & Learning
 
 <div class="certification-grid">
 
 **AI & Generative AI**
-- 🔵 Google Generative AI Specialization
-- 🤖 IBM Customer Care AI
+-  Google Generative AI Specialization
+-  IBM Customer Care AI
 - Continuous learning in prompt engineering and LLM applications
 
 **Business & Strategy**
-- 💼 IE/Coursera: Marketing Mix Implementation
+-  IE/Coursera: Marketing Mix Implementation
 - Active learner in product strategy and go-to-market frameworks
 
 **Active Learning Platforms**
@@ -120,7 +201,7 @@ Built Python automation tools, AI-driven systems, and workflow pipelines. Contri
 
 ---
 
-## 🔄 Currently Exploring
+##  Currently Exploring
 
 - Applied AI workflows in product strategy and market research
 - Building scalable automation systems for business processes  
@@ -130,7 +211,7 @@ Built Python automation tools, AI-driven systems, and workflow pipelines. Contri
 
 ---
 
-## 💻 Code & Technical Work
+##  Code & Technical Work
 
 Beyond strategy—I build automation tools, AI systems, and production pipelines.
 
@@ -143,7 +224,7 @@ Beyond strategy—I build automation tools, AI systems, and production pipelines
 
 ---
 
-## 🎯 Let's Work Together
+##  Let's Work Together
 
 I'm actively looking for opportunities in:
 
@@ -159,17 +240,18 @@ I'm actively looking for opportunities in:
 
 ---
 
-## 📋 Also Find Me
+##  Also Find Me
 
-- 📊 [Microsoft Learn achievements](https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements)
-- 🏅 [Skillsoft digital badges](https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet)
-- 💼 [LinkedIn profile](https://www.linkedin.com/in/dsmcc/)
+-  [Microsoft Learn achievements](https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements)
+-  [Skillsoft digital badges](https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet)
+-  [LinkedIn profile](https://www.linkedin.com/in/dsmcc/)
 
 ---
 
-<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f0f8ff; border-left: 4px solid #1976d2; border-radius: 4px;">
-  <strong>Building at the intersection of product strategy, business research, and technology.</strong>
-  <p style="margin-top: 1rem; font-size: 0.9em;">Interested in discussing AI, automation, product thinking, or collaboration? Let's talk.</p>
+<div class="contact-box">
+  <h3 style="margin-top: 0;">Let's talk.</h3>
+  <p>Interested in discussing product strategy, AI automation, or collaboration?</p>
+  <a href="/contact/" class="cta-button">Get in touch</a>
 </div>
 
 *Last updated: June 8, 2026*
