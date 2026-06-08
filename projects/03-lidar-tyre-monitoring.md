@@ -39,5 +39,18 @@ Tyre failure is a significant cause of accidents and fleet downtime. How could e
 - Technical product communication
 - Presentation design
 
-## Impact & Learnings
-Explored how emerging technology can be applied to real-world safety problems. Learned that product success depends on clearly articulating customer pain points, technology feasibility, and market readiness — not just the technology itself.
+## Outcomes & Impact
+- **Market Opportunity Sizing**: Analyzed commercial fleet market TAM with estimated revenue potential
+- **Customer Validation**: Interviewed 3+ fleet operations managers and logistics experts to validate pain points
+- **Feature Roadmap**: Developed 5-phase product rollout plan with ROI assumptions and go-to-market timing
+- **Use Case Scenarios**: Created 4 detailed use case scenarios for fleet managers, vehicle operators, and safety teams
+- **Pitch Materials**: Completed 25-slide pitch deck with product concept, market analysis, and competitive positioning
+- **Documentation**: Produced comprehensive product concept document with problem statement, solution, and implementation roadmap
+
+## Learnings
+Explored how emerging technology can be applied to real-world safety problems. Learned that product success depends on clearly articulating customer pain points, technology feasibility, and market readiness—not just the technology itself. Customer validation and clear value proposition are essential before product development.
+
+## Technical Insights
+- LiDAR technology is commercially viable for tyre monitoring at fleet scale
+- Addressable market (fleet management) has clear pain points and budget allocation
+- Primary opportunity: preventive maintenance and safety improvement (not cost reduction)

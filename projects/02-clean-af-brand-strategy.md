@@ -39,5 +39,13 @@ The natural toothpaste category has competitors, but few brands successfully bri
 - Marketing mix planning
 - Strategic communication
 
-## Impact & Learnings
-This project demonstrated how brand strategy synthesizes market research, consumer insights, and competitive positioning into a coherent narrative. Learned that successful positioning requires depth in category understanding, not generic messaging.
+## Outcomes & Impact
+- **Competitor Analysis**: Analyzed 5+ brands across positioning, pricing, messaging, and target audience
+- **Market Research**: Researched category trends, consumer preferences, and emerging opportunities
+- **Segment Profiles**: Created detailed primary and secondary consumer personas with behavior insights
+- **Positioning Matrix**: Developed competitive positioning map revealing blue ocean opportunity vs. mass-market brands
+- **Campaign Concept**: Built campaign concept with messaging framework and visual positioning guidelines
+- **Deliverables**: Completed positioning statement, brand pillars, marketing mix strategy, and campaign brief
+
+## Learnings
+This project demonstrated how brand strategy synthesizes market research, consumer insights, and competitive positioning into a coherent narrative. Learned that successful positioning requires depth in category understanding, not generic messaging—specificity and consumer empathy drive distinctiveness.

@@ -38,8 +38,33 @@ Contributed to production pipelines for 3D rendering software (Maya, Blender, Ho
 - Systems and workflow thinking
 - Technical problem-solving
 
-## Learning & Impact
-These projects show how automation, AI, and technical systems can solve repetitive problems and improve business workflows. They bridge the gap between business requirements and technical implementation.
+## Outcomes & Impact
 
-## Code & Details
+### Personal Projects
+- **WebLedger**: Python tool for capturing and verifying webpage state | Web scraping + audit automation | Demonstrates product thinking and automation design
+- **RAG_VAULT**: AI-powered knowledge management system | RAG architecture + Claude/ChatGPT integration | Showcases AI workflow design
+- **LinkedinPipeline**: Python data pipeline for workflow automation | Production-ready code | Demonstrates systems thinking and data pipeline design
+
+### Enterprise Work (Urja Renderfarm)
+- **4 DCC Pipelines**: Contributed to production pipelines for Maya, Blender, Houdini, C4D
+- **Asset Management**: Implemented asset repathing and dependency correction workflows
+- **Streaming Systems**: Worked on render job streaming and management infrastructure
+- **Documentation**: Created system documentation and integration guides
+
+### Technical Outcomes
+- **Code Quality**: Production-ready scripts with documentation, testing, and error handling
+- **Tool Breadth**: Python + PowerShell + VBA + AI integration (Claude/ChatGPT)
+- **Scale**: Enterprise systems handling multiple software ecosystems and distributed workflows
+- **Impact**: Reduced manual work, improved consistency, enabled cross-team collaboration
+
+## Learning & Impact
+These projects demonstrate how automation, AI, and technical systems solve repetitive problems and improve business workflows. They bridge the gap between business requirements and technical implementation—showing that technical skills strengthen product thinking.
+
+## Code & Architecture
 Full code samples, architecture diagrams, and detailed documentation available in the code-samples folder (with confidentiality restrictions on enterprise work).
+
+Key architectural patterns:
+- **Modular design**: Reusable components for scalability
+- **Error handling**: Production-grade exception management
+- **Documentation**: Clear code comments and system documentation
+- **Testing**: Validation workflows for data quality
