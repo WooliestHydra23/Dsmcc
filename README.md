@@ -1,74 +1,73 @@
-# Hello, I'm Dron Sharma
+# Dron Sharma
+**Product Strategy | AI Workflow Automation | GTM Support | Enterprise Technical Documentation**
 
-<a href="https://www.linkedin.com/in/dsmcc/">
-  <img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-
-## 🧭 About Me
-
-I'm a PGDM student at IILM Lodhi Road with a background in BBA and a strong passion for product strategy, marketing, and AI-driven business solutions. I enjoy analyzing brands, building creative campaigns, and solving real-world problems through research and storytelling.
+> This portfolio is designed as a curated professional evidence folder for recruiters, hiring managers, and project collaborators.
 
 ---
 
-## 🎯 Objective
+## About Me
 
-To build a portfolio that reflects my interdisciplinary strengths across marketing, strategy, and technology—while showcasing hands-on experience in branding, AI, and market research.
+PGDM student at IILM Lodhi Road with a BBA background. I work at the intersection of product strategy, business research, and technology — specifically in brand positioning, market analysis, AI-driven workflows, GTM support, and enterprise product documentation.
 
----
-
-## 🛠️ Skills & Projects
-
-| Skill                                        | Associated Project                                                  |
-|---------------------------------------------|----------------------------------------------------------------------|
-| Strategic Brand Positioning                 | [Clean AF - Toothpaste Brand Strategy](#)                            |
-| Market Research & Consumer Insights         | [MM1 Project – Toothpaste Category Analysis](#)                      |
-| Case Study Analysis                         | [Apple Inc. – Design & Product Philosophy](#)                        |
-| Business Simulation & Decision-Making       | [Online Business Simulation Project](#)                              |
-| Product Development & Innovation            | [LiDAR-based Tyre Monitoring System](#)                              |
-| Content Strategy & Event Coverage           | [Social Media @ IILM | Independence Day, SIP Event, Book Launch](#)  |
+I enjoy converting complex ideas into structured narratives, user-facing content, and practical solutions.
 
 ---
 
-## 🔧 Tools
+## What I Do
 
-### Design & Editing
-<div>
-  <img src="https://img.shields.io/badge/-Canva-00C4CC?&style=for-the-badge&logo=canva&logoColor=white" />
-  <img src="https://img.shields.io/badge/-DaVinci_Resolve-1C1C1C?&style=for-the-badge&logo=DaVinci-Resolve&logoColor=white" />
-</div>
+**Strategy & Analysis**
+- Brand positioning and segmentation
+- Market research and competitive analysis
+- Product thinking and GTM planning
+- Business case analysis
 
-### Data & Research
-<div>
-  <img src="https://img.shields.io/badge/-Obsidian-483699?&style=for-the-badge&logo=Obsidian&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Google_Sheets-34A853?&style=for-the-badge&logo=Google-Sheets&logoColor=white" />
-</div>
+**Technical & Automation**
+- AI/LLM workflow design and automation
+- Python scripting and data pipelines
+- Product documentation and technical communication
+- Enterprise product workflow documentation
 
-### Productivity
-<div>
-  <img src="https://img.shields.io/badge/-Notion-000000?&style=for-the-badge&logo=Notion&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Trello-0079BF?&style=for-the-badge&logo=Trello&logoColor=white" />
-</div>
-
----
-
-## 📜 Certifications
-
-<div>
-  <img src="https://img.shields.io/badge/-Google_Generative_AI_Specialization-4285F4?&style=for-the-badge&logo=Google&logoColor=white" />
-  <img src="https://img.shields.io/badge/-IBM_Customer_Care_AI-1F70C1?&style=for-the-badge&logo=IBM&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Marketing_Mix_Implementation_IE-FF6600?&style=for-the-badge&logo=Coursera&logoColor=white" />
-</div>
+**Tools**
+- Python, PowerPoint, Excel, Google Sheets, Notion
+- Canva, Obsidian, DaVinci Resolve
+- ChatGPT, Claude, AI-assisted research
 
 ---
 
-## 🧪 Featured Projects
+## Featured Work
 
-- [Clean AF – Toothpaste Brand Strategy](#)
-- [Apple Inc. Case Study – Design, Simplicity, Innovation](#)
-- [Dis the Brand – Marketing Event Ideation & Execution](#)
-- [LiDAR-based Tyre Monitoring System](#)
-- [Online Business Simulation](#)
-- [SIP Event & Social Media Coverage](#)
+### 1. 📱 Enterprise Cloud Rendering: Product Documentation & GTM Support
+Supported documentation, FAQ structuring, tutorial scripting, sales enablement, and product communication for an enterprise cloud rendering platform. [→ Read full project](projects/01-enterprise-cloud-rendering.md)
+
+### 2. 🪥 Clean AF Brand Strategy
+Developed positioning strategy, target segmentation, and campaign concept for a natural toothpaste brand. [→ Read full project](projects/02-clean-af-brand-strategy.md)
+
+### 3. 🚗 LiDAR-Based Tyre Monitoring System
+Researched and documented an IoT product concept for vehicle safety using LiDAR technology. [→ Read full project](projects/03-lidar-tyre-monitoring.md)
+
+### 4. 🤖 AI Workflow Automation & Technical Projects
+Python automation tools, AI-driven research systems, and workflow pipelines. [→ Read full project](projects/04-ai-workflow-automation.md)
 
 ---
 
+## Certifications
+
+- **Google Generative AI Specialization**
+- **IBM Customer Care AI**
+- **Marketing Mix Implementation (IE/Coursera)**
+
+[Full certifications & badges →](certifications/certifications-index.md)
+
+---
+
+## Get in Touch
+
+- **LinkedIn**: https://www.linkedin.com/in/dsmcc/
+- **Email**: dron.sharma.pgdm26@iilm.edu
+- **GitHub**: https://github.com/WooliestHydra23
+
+[More contact details →](contact.md)
+
+---
+
+*Product strategist, AI enthusiast, and technical documentation builder.*
