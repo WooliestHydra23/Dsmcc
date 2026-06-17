@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Cloud Rendering — Dron Sharma</title>
+    <title>Urja Renderfarm — Enterprise Cloud Rendering GTM System</title>
     <style>
         * {
             margin: 0;
@@ -31,11 +31,19 @@
             margin-bottom: 1rem;
         }
 
+        .subtitle {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
         h2 {
             font-size: 32px;
             line-height: 1.2;
             letter-spacing: 0.06em;
-            margin-top: 2rem;
+            margin-top: 3rem;
             margin-bottom: 1.5rem;
         }
 
@@ -44,12 +52,14 @@
             line-height: 1.3;
             letter-spacing: 0.04em;
             margin-bottom: 1rem;
+            margin-top: 2rem;
         }
 
         h4 {
             font-size: 16px;
             letter-spacing: 0.04em;
             margin-bottom: 1rem;
+            color: #ffffff;
         }
 
         p {
@@ -145,35 +155,11 @@
             padding: 120px 0 60px 0;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #999999;
-            margin-bottom: 1rem;
-        }
-
-        .case-study {
-            padding: 60px 0;
-        }
-
-        .section-number {
-            font-size: 11px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #999999;
-            margin-bottom: 0.5rem;
-        }
-
-        .divider {
-            height: 1px;
-            background: #262626;
-            margin: 3rem 0;
-        }
-
         .meta-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            margin: 2rem 0;
+            margin: 3rem 0;
             padding: 2rem 0;
             border-top: 1px solid #262626;
             border-bottom: 1px solid #262626;
@@ -186,12 +172,103 @@
         }
 
         .meta-item h4 {
+            margin-top: 0;
             margin-bottom: 0.5rem;
         }
 
         .meta-item p {
             font-size: 14px;
             margin: 0;
+            color: #999999;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .pillar {
+            margin-bottom: 2.5rem;
+        }
+
+        .pillar-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .artifact {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
+        }
+
+        .artifact-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .before-after h4 {
+            margin-top: 0;
+        }
+
+        .before-after ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .before-after li {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .before-after li:last-child {
+            border-bottom: none;
         }
 
         .tools-list {
@@ -204,6 +281,17 @@
         .tool-item {
             font-size: 14px;
             color: #cccccc;
+        }
+
+        .role-note {
+            background: transparent;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            font-size: 14px;
+            color: #999999;
+            font-style: italic;
         }
 
         .cta-section {
@@ -278,7 +366,7 @@
                 padding-bottom: 40px;
             }
 
-            .case-study {
+            .section {
                 padding: 40px 0;
             }
 
@@ -304,87 +392,163 @@
 
     <main>
         <section class="hero">
-            <h1>Enterprise Cloud Rendering</h1>
-            <p>Product & GTM Support • Technical Communication • Stakeholder Coordination</p>
-        </section>
+            <h1>Urja Renderfarm</h1>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Enterprise Cloud Rendering GTM System</h2>
+            <p class="subtitle">Turning a technically complex renderfarm platform into clearer sales, documentation, onboarding, and GTM communication systems.</p>
 
-        <section class="case-study">
-            <div class="section-number">01 / Context</div>
-            <h2>The Project</h2>
-            <p>Urja Renderfarm is an enterprise-grade cloud rendering platform designed for studios, VFX houses, and animation teams. The platform manages complex 3D rendering workloads across distributed infrastructure—a technically sophisticated product serving a specialized market.</p>
-            <p>My involvement centered on making this complexity accessible to customers, sales teams, and internal stakeholders. The focus: clear documentation, sales enablement, and GTM strategy to support product launch and market positioning.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">02 / Problem</div>
-            <h2>What Was Broken</h2>
-            <p><strong>Documentation Gap:</strong> Enterprise customers needed clear guides on platform capabilities, workflow integration, troubleshooting, and best practices. Without this, onboarding friction slowed adoption and support tickets multiplied.</p>
-            <p><strong>Sales Enablement Mismatch:</strong> The sales team lacked clear, concise materials to explain technical differentiation to non-technical decision-makers (studio heads, VFX supervisors, IT leads).</p>
-            <p><strong>Stakeholder Alignment:</strong> Product, sales, and support teams operated with different understandings of platform capabilities, messaging, and customer value propositions—creating handoff friction.</p>
-            <p><strong>Knowledge Siloing:</strong> Critical product knowledge lived in code, internal conversations, and tribal memory. No single source of truth for customers or internal teams.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">03 / My Role</div>
-            <h2>What I Did</h2>
-            <p><strong>Documentation Architecture:</strong> Designed a structured FAQ and knowledge base framework organized by customer journey stage: pre-integration (capabilities, pricing), integration (API, workflows), production (performance tuning, troubleshooting), and support (edge cases, best practices).</p>
-            <p><strong>Content Development:</strong> Wrote 30+ FAQ items, integration guides, and troubleshooting docs. Conducted product interviews to extract knowledge. Iterated with support team feedback to ensure accuracy and customer relevance.</p>
-            <p><strong>Video & Tutorial Scripting:</strong> Outlined and scripted 8+ tutorial videos covering core workflows (job submission, monitoring, result retrieval, pipeline integration). Coordinated with product/demo team on technical accuracy and visual clarity.</p>
-            <p><strong>Sales Enablement:</strong> Created one-pagers explaining technical value to different buyer personas (studio leads, VFX supervisors, IT). Developed comparison docs against competitive offerings. Built internal training deck for sales team onboarding.</p>
-            <p><strong>Stakeholder Coordination:</strong> Facilitated product/sales/support alignment meetings. Synthesized feedback from all teams into documentation priorities and updates. Ensured consistency across all customer-facing materials.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">04 / Process</div>
-            <h2>How I Approached It</h2>
-            <p><strong>Discovery:</strong> Interviews with product team (capabilities, roadmap), sales team (objections, common questions), and support (recurring issues). Reviewed competitive products to understand positioning gaps.</p>
-            <p><strong>Information Architecture:</strong> Mapped customer journey and decision points. Organized content by persona and use case rather than just feature lists. Created hierarchical structure (category → subtopic → FAQ/guide) for discoverability.</p>
-            <p><strong>Content Development:</strong> Wrote in customer voice, not product voice. Tested explanations with non-expert readers to ensure clarity. Built iteratively—published core docs first, then expanded based on feedback.</p>
-            <p><strong>Coordination:</strong> Weekly sync with product to validate accuracy. Monthly reviews with sales to measure material effectiveness. Quarterly updates with support to incorporate new issue patterns.</p>
-            <p><strong>Quality Gates:</strong> Technical accuracy reviewed by engineering. Clarity reviewed by customer-facing teams. Consistency checked across all materials.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">05 / Output</div>
-            <h2>What Was Delivered</h2>
-            <p><strong>Documentation Suite:</strong> 30+ FAQ items (organized by topic), integration guides, API documentation, troubleshooting playbooks, best practices guides, video scripts, and training materials.</p>
-            <p><strong>Sales Materials:</strong> Persona-specific one-pagers (Studio Lead, VFX Supervisor, IT Infrastructure), competitive comparison docs, internal sales training deck, objection handling guide.</p>
-            <p><strong>Internal Knowledge:</strong> Process documentation for documentation updates, feedback loops between support/product/sales, and a system for incorporating new learnings into customer-facing materials.</p>
-            <p><strong>Video Content:</strong> Scripts and outlines for 8+ tutorial videos covering core workflows, ready for demo/video production team implementation.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">06 / Impact</div>
-            <h2>What Changed</h2>
-            <p><strong>Reduced Onboarding Friction:</strong> New customers could self-serve answers to common questions, reducing support load and accelerating time-to-value.</p>
-            <p><strong>Improved Sales Effectiveness:</strong> Sales team had clear materials to explain technical value to non-technical buyers. Support for objections and competitive positioning improved deal closure rates.</p>
-            <p><strong>Aligned Stakeholders:</strong> Product, sales, and support operated from shared documentation. Handoff friction decreased. Cross-team communication improved.</p>
-            <p><strong>Foundation for Scale:</strong> Documentation framework supports rapid onboarding of new team members and customers. Creates a scalable knowledge system as product grows.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">07 / Tools Used</div>
-            <h2>Technical Stack</h2>
-            <div class="tools-list">
-                <div class="tool-item">Google Docs (collaborative writing)</div>
-                <div class="tool-item">Markdown (doc formatting)</div>
-                <div class="tool-item">Figma (diagrams & visuals)</div>
-                <div class="tool-item">Loom (video recording)</div>
-                <div class="tool-item">Notion (knowledge base)</div>
-                <div class="tool-item">Slack (team coordination)</div>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>My Role</h4>
+                    <p>Product Communication, Sales Enablement, Documentation, GTM Support</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Focus Areas</h4>
+                    <p>FAQs, demo scripts, sales material, onboarding communication, internal alignment</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Industry</h4>
+                    <p>Media, Entertainment, VFX, Animation, Architecture, Creative Production</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Product Type</h4>
+                    <p>Enterprise Cloud Infrastructure, Rendering-as-a-Service (RaaS)</p>
+                </div>
             </div>
         </section>
 
-        <section class="case-study">
-            <div class="section-number">08 / Reflection</div>
-            <h2>What I Learned</h2>
-            <p><strong>Documentation is GTM:</strong> Clear documentation isn't a post-launch task—it's a critical part of go-to-market strategy. Good docs reduce friction, accelerate adoption, and improve customer satisfaction.</p>
-            <p><strong>Systems Beat Content:</strong> A single great doc loses value if nobody maintains it. Building systems for feedback, updates, and knowledge capture beats writing one-off docs.</p>
-            <p><strong>Bridge Internal Silos:</strong> The most valuable work happened at intersections—coordinating between product, sales, and support. Documentation became a shared language for alignment.</p>
-            <p><strong>Know Your Personas:</strong> Writing FAQ for "enterprise customers" fails. Writing for "Studio Lead concerned about ROI" or "VFX Supervisor evaluating integration effort" succeeds. Understanding buyer motivation matters more than feature lists.</p>
+        <section class="section">
+            <div class="section-number">01 / Why This Mattered</div>
+            <h2>The Stakes</h2>
+            <p>For studios, VFX teams, and animation houses, rendering is not just a technical workload. It directly affects production timelines, project delivery, artist productivity, cost predictability, and data security.</p>
+            <p>Renderfarm products can have strong infrastructure and technical capability. But if customers cannot understand the workflow, pricing model, security posture, software integration, or onboarding process, adoption becomes slower and riskier.</p>
+            <p>My work focused on reducing that communication gap—building the clarity layer that turns technical capability into customer confidence.</p>
         </section>
 
-        <section class="case-study cta-section">
+        <section class="section">
+            <div class="section-number">02 / The Challenge</div>
+            <h2>What Needed Solving</h2>
+            <p>Urja had strong technical capability, but the communication layer around the product needed to become more structured. The challenge was not only "how do we explain cloud rendering?" It was:</p>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we help sales teams explain Urja confidently to different buyer personas?</strong></li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we help customers evaluate it faster?</strong></li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we help support teams answer repeated questions?</strong></li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we turn scattered internal product knowledge into reusable assets?</strong></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-number">03 / My Role</div>
+            <h2>The Communication System I Built</h2>
+            <p>I helped build the communication infrastructure around Urja Renderfarm. This was not one project—it was a system with four pillars:</p>
+
+            <div class="pillar">
+                <div class="pillar-title">01 / Customer Clarity</div>
+                <div class="pillar-desc">Structured FAQs covering account setup, upload workflows, rendering process, pricing, security, data localization, software support, and troubleshooting. Made it easier for customers to answer their own questions before reaching support.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">02 / Sales Enablement</div>
+                <div class="pillar-desc">Persona-specific talking points for studio heads (business impact, ROI), VFX supervisors (technical integration, workflow), IT stakeholders (security, compliance), and procurement teams (pricing, licensing). Sales teams had clearer language to position Urja's value.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">03 / Technical Translation</div>
+                <div class="pillar-desc">Demo scripts and step-by-step product walkthrough guides. Explanations of rendering workflows, security architecture, data localization, pipeline integration, and software compatibility—translated from technical language into customer-facing explanations.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">04 / Internal Alignment</div>
+                <div class="pillar-desc">Structured documentation that helped product, sales, support, and marketing teams refer to a common language when explaining Urja's value, capabilities, use cases, and pricing model.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">04 / Selected Outputs</div>
+            <h2>What Was Delivered</h2>
+
+            <div class="artifact">
+                <div class="artifact-title">Customer FAQ Architecture</div>
+                <div class="artifact-desc">Structured FAQ system (30+ items) organized by customer journey: pre-purchase (what is cloud rendering, is it secure?), onboarding (how do I upload assets?), operational (pricing, rendering process), and support (troubleshooting, performance tuning). Reduced repeated support questions.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Sales Enablement Material</div>
+                <div class="artifact-desc">Persona-based talking points, objection handling guides, competitive positioning notes, and product comparison materials. Helped sales teams have clearer conversations with different buyer types.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Demo Script Framework</div>
+                <div class="artifact-desc">Step-by-step product walkthrough scripts for explaining Urja's render workflow, security model, and integration points. Enabled consistent, clear product demonstrations across sales and customer success teams.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Website & Marketing Inputs</div>
+                <div class="artifact-desc">Solution-page outlines, customer problem → Urja benefit mapping, and messaging frameworks for website copy, EDMs, and marketing collateral. Helped ensure marketing language aligned with sales positioning.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">05 / Before & After</div>
+            <h2>The Difference</h2>
+
+            <div class="before-after">
+                <div>
+                    <h4>Before</h4>
+                    <ul>
+                        <li>Product information was spread across calls, internal conversations, technical documentation, and scattered product notes.</li>
+                        <li>Sales teams needed clearer language to explain Urja to different customer personas—studio leads, VFX supervisors, IT teams, procurement.</li>
+                        <li>Customer questions around pricing, onboarding, security model, rendering workflow, and software integration required repeated verbal explanation.</li>
+                        <li>Support team was answering similar questions repeatedly, without structured knowledge to refer customers to.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>After</h4>
+                    <ul>
+                        <li>Created structured FAQs, demo scripts, sales notes, and product communication blocks organized by use case and audience.</li>
+                        <li>Converted technical features into customer-facing benefits with clear language for each buyer persona.</li>
+                        <li>Built reusable content that could support outreach, demos, onboarding, training, and support conversations.</li>
+                        <li>Established a common language across sales, product, support, and marketing teams for explaining Urja's capabilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">06 / Impact</div>
+            <h2>What This Enabled</h2>
+            <p><strong>Stronger Sales Readiness.</strong> Sales and ISR teams had clearer talking points, product explanations, and customer-facing material to support outreach, demos, and follow-up conversations.</p>
+            <p><strong>Clearer Customer Communication.</strong> FAQs, onboarding explanations, and demo scripts made it easier to answer customer questions around workflow, pricing, security, software support, and rendering process—reducing dependency on repeated verbal explanations.</p>
+            <p><strong>Better Internal Alignment.</strong> Product, sales, support, and marketing teams could refer to consistent language when explaining Urja's value, capabilities, use cases, and differentiation.</p>
+            <p><strong>Reusable GTM Assets.</strong> Instead of one-time explanations, created reusable content blocks that could support website pages, email campaigns, sales decks, training sessions, and customer discussions. This foundation made GTM communication more scalable and consistent.</p>
+
+            <div class="role-note">
+                My role was not infrastructure engineering or product development. My role was to support the product's go-to-market layer—translating technical capability into clearer documentation, sales enablement, and customer-facing explanation. This is honestly what made the work valuable.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">07 / Tools & Methods</div>
+            <h2>How I Worked</h2>
+            <div class="tools-list">
+                <div class="tool-item">Google Docs (collaborative writing)</div>
+                <div class="tool-item">Google Sheets (competitive analysis, Q&A tracking)</div>
+                <div class="tool-item">Figma (diagrams, workflow visuals)</div>
+                <div class="tool-item">PowerPoint (sales decks, training presentations)</div>
+                <div class="tool-item">Product interviews (knowledge extraction)</div>
+                <div class="tool-item">Customer feedback (validation, iteration)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">08 / Reflection</div>
+            <h2>What I Learned</h2>
+            <p><strong>Documentation is Infrastructure.</strong> Clear documentation isn't a nice-to-have. It's GTM infrastructure. Good docs reduce friction, accelerate adoption, and improve customer confidence. Bad or missing docs stall deals and create support overhead.</p>
+            <p><strong>Systems Beat Content.</strong> A single great FAQ loses value if nobody maintains it. Building systems for feedback, updates, and knowledge capture beats writing one-off documents. The framework matters more than individual pieces.</p>
+            <p><strong>Bridge the Silos.</strong> The most valuable work happened at intersections—coordinating between product, sales, support, and marketing. Documentation became the shared language for alignment across teams.</p>
+            <p><strong>Know Your Personas.</strong> Writing FAQ for "enterprise customers" fails. Writing for "Studio Lead concerned about ROI" or "VFX Supervisor evaluating integration effort" succeeds. Understanding buyer motivation matters more than listing features.</p>
+        </section>
+
+        <section class="section cta-section">
             <h3>Explore More Work</h3>
             <p><a href="/work/">Back to all projects →</a></p>
         </section>
