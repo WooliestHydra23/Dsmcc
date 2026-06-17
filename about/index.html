@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: #cccccc;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .content-block {
+            margin-bottom: 4rem;
+        }
+
+        .content-block p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .list-items {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .list-items li {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 14px 32px;
+            min-height: 44px;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            transition: all 0.2s;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+
+        .btn-primary:hover {
+            border-color: #c3d9f3;
+            color: #c3d9f3;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            section:first-of-type {
+                padding-top: 80px;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/certifications/">Certifications</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h1>About</h1>
+
+            <div class="content-block">
+                <h3>Who I Am</h3>
+                <p>PGDM student at IILM Lodhi Road with a BBA background. I work at the intersection of product strategy, AI automation, and business communication.</p>
+                <p>My focus: turning complex workflows into clear systems—whether that means documenting enterprise software, building automation pipelines, or shaping go-to-market assets.</p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="content-block">
+                <h3>What I Work On</h3>
+                <p>Product strategy, brand positioning, market research, and go-to-market planning for product-led teams.</p>
+                <p>AI-driven automation, Python scripting, and workflow pipelines that reduce friction and scale business processes.</p>
+                <p>Technical communication, product documentation, and enterprise software knowledge systems that make complex tools accessible.</p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="content-block">
+                <h3>Education</h3>
+                <ul class="list-items">
+                    <li><strong>PGDM</strong> — IILM Lodhi Road (2024–2026)</li>
+                    <li><strong>BBA</strong> — Business Administration & Management</li>
+                </ul>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="content-block">
+                <h3>Operating Style</h3>
+                <p>I prefer clarity over complexity. In strategy: clear positioning beats vague messaging. In code: readable automation beats clever hacks. In communication: one strong idea beats three mediocre ones.</p>
+                <p>I move fast. I ask questions before building. I finish what I start.</p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="content-block">
+                <h3>Tools I Use</h3>
+                <ul class="list-items">
+                    <li><strong>Languages:</strong> Python, PowerShell, VBA, HTML/CSS</li>
+                    <li><strong>AI/ML:</strong> ChatGPT, Claude, RAG systems, prompt engineering</li>
+                    <li><strong>Business:</strong> PowerPoint, Excel, Google Sheets, Notion</li>
+                    <li><strong>Creative:</strong> Canva, Obsidian, DaVinci Resolve</li>
+                    <li><strong>Enterprise:</strong> Maya, Blender, Houdini, C4D</li>
+                </ul>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="content-block">
+                <h3>Let's Work Together</h3>
+                <p>I'm actively looking for opportunities in:</p>
+                <ul class="list-items">
+                    <li><strong>Roles:</strong> Product Strategy, AI/Automation Engineering, Technical Product Management</li>
+                    <li><strong>Projects:</strong> AI-driven automation, product strategy, business research, systems design</li>
+                    <li><strong>Consulting:</strong> GTM strategy, automation architecture, technical documentation</li>
+                </ul>
+                <button class="btn-primary" onclick="window.location.href='/contact/'">Get in Touch</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
