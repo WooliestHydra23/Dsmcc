@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoolini Photography & Social Media — Professional Content Strategy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+        }
+
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meta-item h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 14px;
+            margin: 0;
+            color: #999999;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .pillar {
+            margin-bottom: 2.5rem;
+        }
+
+        .pillar-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .artifact {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
+        }
+
+        .artifact-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .before-after h4 {
+            margin-top: 0;
+        }
+
+        .before-after ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .before-after li {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .before-after li:last-child {
+            border-bottom: none;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .role-note {
+            background: transparent;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            font-size: 14px;
+            color: #999999;
+            font-style: italic;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../certifications/">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Shoolini Photography & Social Media</h1>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Professional Content Strategy & Visual Storytelling</h2>
+            <p class="subtitle">Professional Photography • Social Media Strategy • Content Marketing • Brand Management • Team Collaboration</p>
+
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Role & Timeline</h4>
+                    <p>Photography Specialist & Social Media Manager (Paid Internship, Aug 2022–Dec 2022, 5 months)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Output & Scale</h4>
+                    <p>50+ professional photo shoots, 25-30 events covered, multi-platform content strategy (Instagram, Facebook, LinkedIn, WhatsApp)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Team & Context</h4>
+                    <p>Worked with team under manager. Professional-grade deliverables for institutional events (graduations, conferences, campus activities)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Impact</h4>
+                    <p>Content assets still in active use. Increased brand awareness, engagement, and social media reach across multiple platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">01 / Market Context</div>
+            <h2>Professional Photography & Social Strategy at Institutional Scale</h2>
+            <p>Educational institutions need professional visual content at scale—graduations, conferences, campus events, academic celebrations—but rarely have in-house capability to deliver consistently. Most rely on external contractors (expensive, quality variable) or unsourced photography (inconsistent, amateur).</p>
+            <p>The opportunity: build internal capability for professional-grade photography that serves institutional brand building, social media strategy, and content marketing. This requires three things: (1) Technical photography excellence, (2) Strategic social media approach (not just posting), (3) Brand consistency across platforms.</p>
+            <p>Shoolini invested in this capability by hiring a professional internship position—recognizing that content strategy compounds over time and builds institutional brand.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">02 / The Challenge</div>
+            <h2>Scaling Content Production</h2>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Volume at Quality:</strong> 50+ shoots and 25-30 events in 5 months (roughly 10+ shoots/month, 5+ events/month). Maintaining consistent quality across high volume requires systems, not just skill.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Multi-Platform Strategy:</strong> Photos aren't just stored. They need strategy across Instagram (visual storytelling), Facebook (community engagement), LinkedIn (institutional credibility), WhatsApp (internal communication). Different formats, different messaging, different cadence.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Brand Consistency:</strong> 50+ shoots from different events need coherent visual language. Color grading, composition style, tone. Consistency builds brand recognition; inconsistency dilutes it.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Team Dynamics:</strong> Working under manager with team structure (not solo work). Need to coordinate with events team, understand requirements, deliver on brief, receive feedback, iterate.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Strategic Thinking:</strong> Photography isn't just capturing moments—it's capturing moments that tell institutional story. Institutional priorities (diversity, innovation, community), not just technically excellent photos.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-number">03 / My Role</div>
+            <h2>Professional Internship Leadership</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">01 / Professional Photography</div>
+                <div class="pillar-desc">Execute 50+ professional photo shoots across institutional events: graduations, conferences, campus activities, award ceremonies. Utilize advanced photography techniques and equipment to produce high-quality images that effectively represent college's values and mission. Collaborate with cross-functional teams (event organizers, communications, faculty) to understand requirements and deliver on brief.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">02 / Social Media Strategy & Content Marketing</div>
+                <div class="pillar-desc">Develop and implement comprehensive social media strategy across Instagram, Facebook, Twitter, LinkedIn. Beyond posting—analyze target audience, create engaging content, monitor trends, measure engagement metrics, optimize based on data. Increased brand awareness, follower growth, and engagement through strategic content placement and community engagement tactics.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">03 / Brand Management & Reputation</div>
+                <div class="pillar-desc">Ensure consistent branding and messaging across digital platforms. Monitor and respond to social media comments and inquiries in timely, professional manner. Conduct reputation audits to identify potential issues, develop crisis communication strategies if needed. Build positive online presence that reflects institutional values.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">04 / Community Engagement & Visual Storytelling</div>
+                <div class="pillar-desc">Foster sense of community and belonging through visual storytelling. Highlight student achievements, faculty initiatives, campus events through compelling imagery and narratives. Encourage user-generated content and facilitate student takeovers. Amplify student voice through platform, strengthening college's online community.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">04 / The Systems</div>
+            <h2>Content Production & Distribution Framework</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">System 1: Photography Workflow</div>
+                <div class="pillar-desc"><strong>Pre-shoot:</strong> Brief with event organizers, understand key moments/people, plan shot list. <strong>During shoot:</strong> Capture diverse angles, technical excellence, candid moments alongside posed shots. <strong>Post-shoot:</strong> Culling, color grading, editing for consistency. <strong>Archive:</strong> Organized filing for future reuse and reference.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 2: Multi-Platform Distribution</div>
+                <div class="pillar-desc"><strong>Instagram:</strong> Visual storytelling, behind-the-scenes, event highlights. <strong>Facebook:</strong> Community engagement, longer-form storytelling, event announcements. <strong>LinkedIn:</strong> Institutional credibility, professional achievement highlighting. <strong>WhatsApp:</strong> Internal updates, alumni communication. Different platforms have different audiences and communication styles.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 3: Brand Standards</div>
+                <div class="pillar-desc">Established visual guidelines: color grading aesthetic, composition principles, caption tone, hashtag strategy. Ensured consistency across 50+ shoots while accommodating event-specific variations. Standards maintained through systematic review and iteration, not rigid rules.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 4: Analytics & Optimization</div>
+                <div class="pillar-desc">Monitored social media metrics: engagement rate, reach, follower growth, platform performance. Identified which content types and posting times performed best. Iterated strategy based on data: adjusted posting schedule, content mix, captions based on what actually resonated with audience.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">05 / Outputs & Deliverables</div>
+            <h2>What Was Produced</h2>
+
+            <div class="artifact">
+                <div class="artifact-title">50+ Professional Photo Shoots</div>
+                <div class="artifact-desc">High-quality photographs across diverse institutional events: graduations, conferences, campus activities, award ceremonies, competitions. Each shoot produced 100+ images; selectively curated and edited for publication. Total asset library of thousands of production-ready images.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">25-30 Event Documentations</div>
+                <div class="artifact-desc">Comprehensive visual documentation of major institutional events. Captured key moments, attendees, outcomes. Delivered as curated photo galleries ready for publication and reuse.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Multi-Platform Content Strategy</div>
+                <div class="artifact-desc">Instagram, Facebook, LinkedIn, WhatsApp campaigns with strategic content placement. Increased brand awareness, engagement, and follower growth. Content optimized for each platform's audience and communication style.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Content Assets (Still in Active Use)</div>
+                <div class="artifact-desc">Photography and content produced during internship continues to be used for institutional marketing, alumni communication, and social media campaigns. Demonstrates lasting value and impact beyond internship period.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Brand Consistency & Visual Language</div>
+                <div class="artifact-desc">Established coherent visual identity across 50+ shoots. Color grading, composition style, and tone maintained consistency while accommodating event-specific variations. Built institutional visual brand that's recognizable and cohesive.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">06 / Key Decisions & Execution</div>
+            <h2>Professional Approach to Content Production</h2>
+
+            <div class="before-after">
+                <div>
+                    <h4>The Challenge</h4>
+                    <ul>
+                        <li>High volume (50+ shoots in 5 months)</li>
+                        <li>Multiple event types with different requirements</li>
+                        <li>Team-based structure (coordination, feedback, iteration)</li>
+                        <li>Multi-platform distribution (not just taking photos, but strategy)</li>
+                        <li>Brand consistency across diverse events</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Professional Approach</h4>
+                    <ul>
+                        <li>Pre-shoot briefs to understand requirements and key moments</li>
+                        <li>Systematic post-production workflow for consistency</li>
+                        <li>Collaborative feedback with manager and team</li>
+                        <li>Data-driven platform strategy (analytics, optimization)</li>
+                        <li>Visual standards maintained through documentation and review</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">07 / Impact & Outcomes</div>
+            <h2>Professional Content Impact</h2>
+            <p><strong>Institutional Brand Building.</strong> 50+ professional shoots created content asset library that continues to be used for institutional marketing. Photographs represent college's values, community, and achievements consistently across platforms.</p>
+            <p><strong>Social Media Growth.</strong> Strategic content distribution increased follower growth, engagement, and brand awareness across Instagram, Facebook, LinkedIn. Platform presence strengthened through consistent, high-quality visual content.</p>
+            <p><strong>Professional Deliverables.</strong> Worked under manager in team setting—receiving briefs, delivering on requirements, iterating based on feedback. Demonstrated ability to work within organizational structure and professional standards.</p>
+            <p><strong>Lasting Asset Value.</strong> Content produced during 5-month internship continues to be used—months and years later. Demonstrates that good content has compounding value; initial investment keeps paying dividends.</p>
+            <p><strong>Cross-Functional Impact.</strong> Photography and social content served communications, events, admissions, and alumni teams. Showed value of centralized professional content production.</p>
+            <p><strong>Strategic Thinking.</strong> Beyond just photography—understood platform strategy, audience behavior, content optimization. Demonstrated that content strategy requires analysis and iteration, not just execution.</p>
+
+            <div class="role-note">
+                <strong>Context & Timeline:</strong> This was paid professional internship (Aug–Dec 2022), concurrent with Bodh institutional leadership (Dec 2021–Sep 2023). Demonstrates ability to manage professional paid role while leading institutional volunteer role. Professional-grade output and team collaboration distinguish this from volunteer club work.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">08 / Learnings</div>
+            <h2>What Professional Photography & Social Strategy Taught</h2>
+            <p><strong>Volume Requires Systems.</strong> Can't scale to 50 shoots/month on skill alone. Need workflow, pre-shoot briefs, post-production process, archival system. Systems enable quality at scale.</p>
+            <p><strong>Photography is Communication.</strong> Every image tells story—intentionally or not. Professional photography means understanding institutional narrative and capturing moments that serve that narrative. It's not just technical excellence; it's strategic communication.</p>
+            <p><strong>Multi-Platform Requires Different Thinking.</strong> Instagram image isn't same as Facebook post isn't same as LinkedIn content. Different audiences, different formats, different purposes. Same asset, different strategy.</p>
+            <p><strong>Data Informs Strategy.</strong> Which posts perform best? When do followers engage? What content gets shared? Analytics reveal patterns that intuition misses. Strategic iteration beats "I think this will work."</p>
+            <p><strong>Professional Work is Different.</strong> Working under manager, in team structure, on institutional brief is different from volunteer club leadership. Hierarchy, feedback cycles, professional standards. Both valuable, different skills.</p>
+            <p><strong>Content Compounds.</strong> Invest in quality assets early. They continue to provide value months/years later. Short-term cost, long-term benefit.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">09 / Tools & Methods</div>
+            <h2>Professional Photography & Social Tools</h2>
+            <div class="tools-list">
+                <div class="tool-item">Professional photography — Advanced camera techniques, lighting, composition</div>
+                <div class="tool-item">Post-production — Photo editing, color grading, image optimization</div>
+                <div class="tool-item">Social media platforms — Instagram, Facebook, LinkedIn, WhatsApp</div>
+                <div class="tool-item">Content strategy — Audience analysis, platform optimization, engagement tactics</div>
+                <div class="tool-item">Analytics — Performance tracking, engagement metrics, trend analysis</div>
+                <div class="tool-item">Brand management — Visual consistency, messaging, reputation monitoring</div>
+                <div class="tool-item">Team collaboration — Manager feedback, cross-functional coordination, brief understanding</div>
+                <div class="tool-item">Asset management — Photography archive, organized filing, reuse strategy</div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <h3>Explore More Work</h3>
+            <p><a href="../">Back to all projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
