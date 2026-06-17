@@ -1,322 +1,660 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dron Sharma — Product Strategy, AI Automation, GTM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Dron Sharma - Portfolio</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-on-surface": "#f0f0f2",
-                        "secondary-fixed": "#e4e2e4",
-                        "primary-fixed-dim": "#abc7ff",
-                        "secondary-fixed-dim": "#c8c6c8",
-                        "inverse-surface": "#2f3132",
-                        "on-primary-container": "#fcfbff",
-                        "on-primary": "#ffffff",
-                        "primary-container": "#0071e3",
-                        "surface": "#f9f9fb",
-                        "on-secondary-fixed-variant": "#474649",
-                        "secondary-container": "#e2dfe1",
-                        "on-surface-variant": "#414753",
-                        "on-surface": "#1a1c1d",
-                        "background": "#f9f9fb",
-                        "surface-container-high": "#e8e8ea",
-                        "surface-tint": "#005cbb",
-                        "on-secondary-container": "#636264",
-                        "tertiary-container": "#737378",
-                        "surface-dim": "#d9dadc",
-                        "outline-variant": "#c1c6d6",
-                        "on-tertiary": "#ffffff",
-                        "secondary": "#5f5e60",
-                        "on-error-container": "#93000a",
-                        "outline": "#717785",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed": "#e3e2e7",
-                        "on-tertiary-fixed-variant": "#46464b",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-container": "#fcfaff",
-                        "surface-container-low": "#f3f3f5",
-                        "error": "#ba1a1a",
-                        "surface-container-highest": "#e2e2e4",
-                        "on-secondary": "#ffffff",
-                        "surface-variant": "#e2e2e4",
-                        "on-secondary-fixed": "#1b1b1d",
-                        "on-error": "#ffffff",
-                        "on-tertiary-fixed": "#1a1b1f",
-                        "tertiary": "#5a5b5f",
-                        "tertiary-fixed-dim": "#c7c6cb",
-                        "on-primary-fixed": "#001b3f",
-                        "primary": "#0059b5",
-                        "primary-fixed": "#d7e2ff",
-                        "surface-container": "#eeeef0",
-                        "surface-bright": "#f9f9fb",
-                        "on-primary-fixed-variant": "#00458f",
-                        "inverse-primary": "#abc7ff",
-                        "on-background": "#1a1c1d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-mobile": "24px",
-                        "section-gap": "128px",
-                        "unit": "8px",
-                        "gutter": "24px",
-                        "margin-desktop": "64px",
-                        "container-max": "1200px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Inter"],
-                        "body-md": ["Inter"],
-                        "display-lg": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "headline-md": ["Inter"],
-                        "headline-lg": ["Inter"],
-                        "label-md": ["Inter"],
-                        "label-sm": ["Inter"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
-                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-lg": ["19px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
-                        "headline-md": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
-                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }]
-                    }
-                }
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Typography System */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 3rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            font-weight: 400;
+        }
+
+        .caption {
+            font-size: 11px;
+            line-height: 1.4;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
             }
         }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; color: #1a1c1d; }
-        .glass-nav { background: rgba(249, 249, 251, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-        .card-hover:hover { border-color: #0059b5; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); transform: translateY(-2px); transition: all 0.3s ease; }
+
+        /* Main Content */
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #cccccc;
+            max-width: 60%;
+            margin-bottom: 3rem;
+        }
+
+        .hero-divider {
+            height: 1px;
+            background: #262626;
+            width: 100%;
+            margin: 60px 0 0 0;
+        }
+
+        /* Featured Work Grid */
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 1024px) {
+            .work-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        .work-card {
+            background: transparent;
+            border: 1px solid #262626;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .work-card h3 {
+            margin-bottom: 1.5rem;
+            font-size: 20px;
+        }
+
+        .work-card p {
+            color: #cccccc;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .work-card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .meta-badge {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+            padding: 4px 0;
+        }
+
+        .work-card a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: auto;
+            color: #c3d9f3;
+        }
+
+        /* What I Do Section */
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .three-column {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .column h3 {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+            padding-bottom: 1rem;
+        }
+
+        .column ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .column li {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cccccc;
+            border-bottom: 1px solid #262626;
+            padding-bottom: 1rem;
+        }
+
+        .column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+        }
+
+        @media (min-width: 1024px) {
+            .certifications-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 60px;
+            }
+        }
+
+        .cert-category h3 {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+            padding-bottom: 1rem;
+        }
+
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cert-list li {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        .cert-list a {
+            display: inline;
+            color: #c3d9f3;
+        }
+
+        /* Code Section */
+        .code-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin: 2rem 0 3rem 0;
+        }
+
+        @media (min-width: 640px) {
+            .code-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .code-item {
+            border: 1px solid #262626;
+            padding: 24px;
+            background: transparent;
+        }
+
+        .code-item h4 {
+            font-size: 14px;
+            letter-spacing: 0.04em;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 120px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            color: #cccccc;
+            margin-bottom: 3rem;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 14px 32px;
+            min-height: 44px;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            border-color: #c3d9f3;
+            color: #c3d9f3;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #262626;
+            padding: 120px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 0;
+        }
+
+        @media (min-width: 768px) {
+            .menu-btn {
+                display: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+
+            .hero p {
+                max-width: 100%;
+            }
+
+            .work-card {
+                padding: 24px;
+            }
+
+            .three-column {
+                gap: 60px;
+            }
+
+            .cta-section {
+                padding: 80px 24px;
+            }
+
+            footer {
+                padding: 80px 24px;
+            }
+        }
     </style>
 </head>
-<body class="bg-background text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed pt-24">
-<!-- Top Navigation (from JSON) -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit min-h-[64px]">
-<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface tracking-tight" href="/">Dron Sharma</a>
-<div class="hidden md:flex items-center gap-6">
-<a class="font-body-md text-label-md text-primary dark:text-primary-fixed-dim font-semibold border-b border-primary pb-1" href="#work">Work</a>
-<a class="font-body-md text-label-md text-on-surface-variant/80 dark:text-on-surface-variant/80 hover:text-on-surface dark:hover:text-on-surface-variant transition-opacity duration-200 opacity-80 hover:opacity-100" href="#code">Code Samples</a>
-<a class="font-body-md text-label-md text-on-surface-variant/80 dark:text-on-surface-variant/80 hover:text-on-surface dark:hover:text-on-surface-variant transition-opacity duration-200 opacity-80 hover:opacity-100" href="#skills">Skills</a>
-<a class="font-body-md text-label-md text-on-surface-variant/80 dark:text-on-surface-variant/80 hover:text-on-surface dark:hover:text-on-surface-variant transition-opacity duration-200 opacity-80 hover:opacity-100" href="#now">Now</a>
-<a class="font-body-md text-label-md text-on-surface-variant/80 dark:text-on-surface-variant/80 hover:text-on-surface dark:hover:text-on-surface-variant transition-opacity duration-200 opacity-80 hover:opacity-100" href="#certifications">Certifications</a>
-<a class="font-body-md text-label-md text-on-surface-variant/80 dark:text-on-surface-variant/80 hover:text-on-surface dark:hover:text-on-surface-variant transition-opacity duration-200 opacity-80 hover:opacity-100" href="#contact">Contact</a>
-</div>
-<button aria-label="Menu" class="md:hidden text-on-surface">
-<span class="material-symbols-outlined" data-weight="regular">menu</span>
-</button>
-</div>
-</nav>
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<!-- Hero Section -->
-<section class="pt-24 pb-16 md:pt-32 md:pb-24">
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-4 tracking-tight">Dron Sharma</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Product Strategy • AI Automation • GTM Support</p>
-<hr class="mt-12 border-t border-outline-variant/30"/>
-</section>
-<!-- Featured Work Section -->
-<section class="py-16" id="work">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Featured Work</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Project 1 -->
-<article class="bg-[#f5f5f7] rounded-[16px] border border-outline-variant/30 p-8 card-hover flex flex-col h-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Enterprise Cloud Rendering</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Technical communication, GTM support, stakeholder coordination.</p>
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">30+ FAQ items</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">8 scripts</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">3 handoffs</span>
-</div>
-<a class="font-label-md text-label-md text-primary hover:text-primary-fixed-variant transition-colors inline-flex items-center gap-1 group mt-auto" href="#">
-                        Read Full Project
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</article>
-<!-- Project 2 -->
-<article class="bg-[#f5f5f7] rounded-[16px] border border-outline-variant/30 p-8 card-hover flex flex-col h-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Clean AF Brand Strategy</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Market research, competitive analysis, brand positioning.</p>
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">5+ competitors analyzed</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">Market identified</span>
-</div>
-<a class="font-label-md text-label-md text-primary hover:text-primary-fixed-variant transition-colors inline-flex items-center gap-1 group mt-auto" href="#">
-                        Read Full Project
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</article>
-<!-- Project 3 -->
-<article class="bg-[#f5f5f7] rounded-[16px] border border-outline-variant/30 p-8 card-hover flex flex-col h-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">LiDAR Tyre Monitoring</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Product innovation, market analysis, technical research.</p>
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">Market sizing</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">Product roadmap</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">Pitch deck</span>
-</div>
-<a class="font-label-md text-label-md text-primary hover:text-primary-fixed-variant transition-colors inline-flex items-center gap-1 group mt-auto" href="#">
-                        Read Full Project
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</article>
-<!-- Project 4 -->
-<article class="bg-[#f5f5f7] rounded-[16px] border border-outline-variant/30 p-8 card-hover flex flex-col h-full">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">AI Workflow Automation</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Python scripting, AI/LLM integration, data pipelines.</p>
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">3 tools built</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">4 pipelines</span>
-<span class="bg-surface-container-high px-3 py-1 rounded-full font-label-sm text-label-sm text-tertiary">Python + AI</span>
-</div>
-<a class="font-label-md text-label-md text-primary hover:text-primary-fixed-variant transition-colors inline-flex items-center gap-1 group mt-auto" href="#">
-                        Read Full Project
-                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</article>
-</div>
-</section>
-<!-- What I Do Section -->
-<section class="py-section-gap" id="skills">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 border-b border-outline-variant/30 pb-4">What I Do</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Strategy &amp; Analysis</h3>
-<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-<li class="border-b border-outline-variant/20 pb-2">Brand positioning</li>
-<li class="border-b border-outline-variant/20 pb-2">Market research</li>
-<li class="border-b border-outline-variant/20 pb-2">Product thinking</li>
-<li class="border-b border-outline-variant/20 pb-2">Business strategy</li>
-</ul>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Technical &amp; Automation</h3>
-<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-<li class="border-b border-outline-variant/20 pb-2">AI/LLM workflows</li>
-<li class="border-b border-outline-variant/20 pb-2">Python scripting</li>
-<li class="border-b border-outline-variant/20 pb-2">Product documentation</li>
-<li class="border-b border-outline-variant/20 pb-2">Enterprise software docs</li>
-</ul>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Tools &amp; Platforms</h3>
-<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-<li class="border-b border-outline-variant/20 pb-2">Languages: Python, PowerShell, VBA</li>
-<li class="border-b border-outline-variant/20 pb-2">AI/ML: ChatGPT, Claude, RAG</li>
-<li class="border-b border-outline-variant/20 pb-2">Business tools</li>
-<li class="border-b border-outline-variant/20 pb-2">Creative tools</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Certifications & Learning Section -->
-<section class="py-16 bg-[#f5f5f7] rounded-xl p-8 md:p-12 mb-section-gap" id="certifications">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Certifications &amp; Learning</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-6">AI &amp; Generative AI</h3>
-<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant list-none">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">verified</span>
-                            Google Generative AI Specialization
-                        </li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">verified</span>
-                            IBM Customer Care AI
-                        </li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">school</span>
-                            Prompt engineering learning
-                        </li>
-</ul>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Business &amp; Strategy</h3>
-<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant list-none mb-8">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">verified</span>
-                            IE/Coursera Marketing Mix
-                        </li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">school</span>
-                            Active learner in product strategy
-                        </li>
-</ul>
-<div class="pt-6 border-t border-outline-variant/30 flex flex-col gap-3">
-<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-2" href="#">
-                            Microsoft Learn achievements <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-</a>
-<a class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-2" href="#">
-                            Skillsoft digital badges <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Code & Technical Work Section -->
-<section class="py-section-gap" id="code">
-<div class="max-w-3xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Code &amp; Technical Work</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Beyond strategy—I build automation tools, AI systems, and production pipelines.</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-<div class="p-6 border border-outline-variant/30 rounded-lg hover:border-primary transition-colors">
-<h4 class="font-label-md text-label-md font-bold text-on-surface">WebLedger</h4>
-</div>
-<div class="p-6 border border-outline-variant/30 rounded-lg hover:border-primary transition-colors">
-<h4 class="font-label-md text-label-md font-bold text-on-surface">RAG_VAULT</h4>
-</div>
-<div class="p-6 border border-outline-variant/30 rounded-lg hover:border-primary transition-colors">
-<h4 class="font-label-md text-label-md font-bold text-on-surface">LinkedinPipeline</h4>
-</div>
-<div class="p-6 border border-outline-variant/30 rounded-lg hover:border-primary transition-colors">
-<h4 class="font-label-md text-label-md font-bold text-on-surface">Enterprise Rendering Pipelines</h4>
-</div>
-</div>
-<a class="font-label-md text-label-md text-primary hover:text-primary-fixed-variant transition-colors inline-flex items-center gap-1 group" href="#">
-                    View code samples &amp; architecture
-                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</section>
-<!-- Let's Work Together Section -->
-<section class="py-16" id="contact">
-<div class="bg-[#f5f5f7] rounded-[16px] p-10 md:p-16 text-center max-w-4xl mx-auto border border-outline-variant/20">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Let's talk.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">Interested in discussing product strategy, AI automation, or collaboration?</p>
-<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md rounded-[16px] px-8 py-4 hover:bg-on-primary-fixed-variant transition-colors" href="/contact/">
-                    Get in touch
-                </a>
-</div>
-</section>
-</main>
-<!-- Footer (from JSON) -->
-<footer class="w-full py-section-gap bg-background dark:bg-background border-t border-outline-variant/30 flex flex-col items-center justify-center space-y-unit mt-16">
-<div class="flex gap-6 mb-4">
-<a class="font-body-md text-label-sm text-secondary dark:text-secondary-fixed hover:text-primary transition-colors" href="#work">Work</a>
-<a class="font-body-md text-label-sm text-secondary dark:text-secondary-fixed hover:text-primary transition-colors" href="#code">Code Samples</a>
-<a class="font-body-md text-label-sm text-secondary dark:text-secondary-fixed hover:text-primary transition-colors" href="#contact">Contact</a>
-</div>
-<div class="flex gap-4 mb-6">
-<a class="text-secondary hover:text-primary text-sm" href="#">LinkedIn</a>
-<a class="text-secondary hover:text-primary text-sm" href="#">Microsoft Learn</a>
-<a class="text-secondary hover:text-primary text-sm" href="#">Skillsoft</a>
-</div>
-<p class="font-body-md text-label-sm text-secondary dark:text-secondary-fixed">Last updated: June 8, 2026</p>
-</footer>
-</body></html>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="wordmark">Dron Sharma</div>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#code">Code</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="menu-btn" aria-label="Menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Dron Sharma</h1>
+            <p>Product Strategy • AI Automation • GTM Support</p>
+            <div class="hero-divider"></div>
+        </section>
+
+        <!-- Featured Work -->
+        <section id="work">
+            <h2>Featured Work</h2>
+            <div class="work-grid">
+                <article class="work-card">
+                    <h3>Enterprise Cloud Rendering</h3>
+                    <p>Technical communication, GTM support, stakeholder coordination for enterprise cloud rendering platform.</p>
+                    <div class="work-card-meta">
+                        <span class="meta-badge">30+ FAQ items</span>
+                        <span class="meta-badge">8 scripts</span>
+                        <span class="meta-badge">3 handoffs</span>
+                    </div>
+                    <a href="#">Read Full Project →</a>
+                </article>
+                <article class="work-card">
+                    <h3>Clean AF Brand Strategy</h3>
+                    <p>Market research, competitive analysis, and brand positioning for natural toothpaste category.</p>
+                    <div class="work-card-meta">
+                        <span class="meta-badge">5+ competitors</span>
+                        <span class="meta-badge">Market mapped</span>
+                    </div>
+                    <a href="#">Read Full Project →</a>
+                </article>
+                <article class="work-card">
+                    <h3>LiDAR Tyre Monitoring</h3>
+                    <p>Product innovation research, market analysis, and go-to-market strategy for IoT vehicle safety.</p>
+                    <div class="work-card-meta">
+                        <span class="meta-badge">Market sizing</span>
+                        <span class="meta-badge">Product roadmap</span>
+                        <span class="meta-badge">Pitch deck</span>
+                    </div>
+                    <a href="#">Read Full Project →</a>
+                </article>
+                <article class="work-card">
+                    <h3>AI Workflow Automation</h3>
+                    <p>Python automation tools, AI-driven systems, and workflow pipelines for enterprise and research.</p>
+                    <div class="work-card-meta">
+                        <span class="meta-badge">3 tools built</span>
+                        <span class="meta-badge">4 pipelines</span>
+                        <span class="meta-badge">Python + AI</span>
+                    </div>
+                    <a href="#">Read Full Project →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- What I Do -->
+        <section id="skills">
+            <h2>What I Do</h2>
+            <div class="three-column">
+                <div class="column">
+                    <h3>Strategy & Analysis</h3>
+                    <ul>
+                        <li>Brand positioning and competitive analysis</li>
+                        <li>Market research and consumer insights</li>
+                        <li>Product thinking and GTM planning</li>
+                        <li>Business strategy and decision frameworks</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Technical & Automation</h3>
+                    <ul>
+                        <li>AI/LLM workflow design and automation</li>
+                        <li>Python scripting and data pipelines</li>
+                        <li>Product documentation and technical communication</li>
+                        <li>Enterprise software workflow documentation</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Languages: Python, PowerShell, VBA</li>
+                        <li>AI/ML: ChatGPT, Claude, RAG systems</li>
+                        <li>Business: PowerPoint, Excel, Google Sheets</li>
+                        <li>Creative: Canva, Obsidian, DaVinci Resolve</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications">
+            <h2>Certifications & Learning</h2>
+            <div class="certifications-grid">
+                <div class="cert-category">
+                    <h3>AI & Generative AI</h3>
+                    <ul class="cert-list">
+                        <li>Google Generative AI Specialization</li>
+                        <li>IBM Customer Care AI</li>
+                        <li>Continuous learning in prompt engineering</li>
+                    </ul>
+                </div>
+                <div class="cert-category">
+                    <h3>Business & Strategy</h3>
+                    <ul class="cert-list">
+                        <li>IE/Coursera Marketing Mix Implementation</li>
+                        <li>Active learning in product strategy</li>
+                        <li>Go-to-market frameworks</li>
+                    </ul>
+                </div>
+                <div class="cert-category">
+                    <h3>Active Platforms</h3>
+                    <ul class="cert-list">
+                        <li><a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn Achievements</a></li>
+                        <li><a href="https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet">Skillsoft Digital Badges</a></li>
+                        <li><a href="https://www.linkedin.com/in/dsmcc/">LinkedIn Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code & Technical Work -->
+        <section id="code">
+            <h2>Code & Technical Work</h2>
+            <p>Beyond strategy—I build automation tools, AI systems, and production pipelines.</p>
+            <div class="code-grid">
+                <div class="code-item">
+                    <h4>WebLedger</h4>
+                </div>
+                <div class="code-item">
+                    <h4>RAG_VAULT</h4>
+                </div>
+                <div class="code-item">
+                    <h4>LinkedinPipeline</h4>
+                </div>
+                <div class="code-item">
+                    <h4>Enterprise Rendering Pipelines</h4>
+                </div>
+            </div>
+            <a href="#" style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;">View code samples & architecture →</a>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <h2>Let's Talk</h2>
+            <p>Interested in discussing product strategy, AI automation, or collaboration?</p>
+            <button class="btn-primary">Get in Touch</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#work">Work</a>
+                <a href="#code">Code Samples</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+                <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet">Skillsoft</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
