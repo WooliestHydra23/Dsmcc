@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IILM Institutional Leadership — Media Operations & Placement Committee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+        }
+
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meta-item h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 14px;
+            margin: 0;
+            color: #999999;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .pillar {
+            margin-bottom: 2.5rem;
+        }
+
+        .pillar-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .artifact {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
+        }
+
+        .artifact-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .before-after h4 {
+            margin-top: 0;
+        }
+
+        .before-after ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .before-after li {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .before-after li:last-child {
+            border-bottom: none;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .role-note {
+            background: transparent;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            font-size: 14px;
+            color: #999999;
+            font-style: italic;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../certifications/">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>IILM Institutional Leadership</h1>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Media Operations & Placement Committee</h2>
+            <p class="subtitle">Institutional Media Team Leadership • Event Operations • Placement Coordination • Data Analysis</p>
+
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Dual Roles</h4>
+                    <p>Head of Social Media Team (Jul 2024–Aug 2025) + Junior Member of Placement Committee (Jul 2024–Dec 2024)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Team Size</h4>
+                    <p>10–15 person media team (photographers, videographers, content curators, coordinators)</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Scale</h4>
+                    <p>13+ major events, 6000+ curated media assets, 1000+ student institution</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Time Commitment</h4>
+                    <p>20 hrs/week institutional leadership while pursuing full-time PGDM studies</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">01 / Institutional Context</div>
+            <h2>Why Institutional Media Operations Matter</h2>
+            <p>Educational institutions with 1000+ students face a recurring challenge: major events happen continuously (orientation, panel discussions, competitions, placements, ceremonies, alumni events), but institutional memory and stakeholder communication suffer when events aren't professionally documented.</p>
+            <p>Most institutions either outsource media to external contractors (expensive, no control) or skip documentation entirely (missed opportunity for alumni engagement, institutional communication, marketing). The gap: no in-house capability to scale professional media coverage across events while creating reusable marketing assets.</p>
+            <p>Building institutional media operations requires two separate systems: (1) event coverage and content production, and (2) asset curation and reuse. Most institutions treat it as "hire a photographer"—not as infrastructure.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">02 / The Challenge</div>
+            <h2>Dual Leadership Challenges</h2>
+            <p>I took on two simultaneous institutional responsibilities:</p>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Media Operations at Scale:</strong> 13+ events per year, each needing professional-grade coverage. No existing media infrastructure—had to build team from scratch, establish workflows, maintain quality consistency. Events ranged from 50-person meetings to 1000+ student orientations.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Team Building:</strong> Recruited, trained, and coordinated 10–15 photographers, videographers, and content curators with varying skill levels and availability. Needed to standardize workflows while accommodating different event types.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Asset Curation & Reuse:</strong> Raw captures aren't useful. Needed system for filtering, organizing, and tagging assets so marketing team could easily reuse them. 6000+ items needed to be accessible, not archived.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Placement Committee Coordination:</strong> As SCoP member, responsible for helping coordinate placement drives, student-employer connectivity, and institutional placement outcomes. Placed media documentation within broader placement operations framework.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Parallel Responsibility:</strong> All while pursuing full-time PGDM studies. Required ruthless prioritization, delegation, and workflow optimization.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-number">03 / My Roles</div>
+            <h2>Dual Institutional Leadership Structure</h2>
+            <p>I held two interconnected leadership positions:</p>
+
+            <div class="pillar">
+                <div class="pillar-title">01 / Head of Social Media Team</div>
+                <div class="pillar-desc"><strong>Scope (Jul 2024 – Aug 2025):</strong> Build and lead media operations for institutional events. Recruited 10–15 team members (photographers, videographers, content capture specialists, curators). Established workflows, quality standards, asset management system. Executed professional-grade coverage across 13+ annual events. Created 6000+ curated media assets for institutional and marketing use. Managed content calendar, social presence, and asset library organization.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">02 / Junior Member of Placement Committee (SCoP)</div>
+                <div class="pillar-desc"><strong>Scope (Jul 2024 – Dec 2024):</strong> Selected from competitive pool to serve on Student Committee of Placement. Contributed to placement drive execution, student-employer coordination, placement outcome tracking. Worked with senior committee members on institutional placement strategy. Media team documentation directly supported placement operations (event coverage, badging ceremony documentation, placement drive communication). Role involved data analysis, process coordination, and stakeholder management alongside media leadership.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">04 / The Systems I Built</div>
+            <h2>Operational Frameworks</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">System 1: Event Coverage Framework</div>
+                <div class="pillar-desc"><strong>Pre-event:</strong> Coordinate with event organizers, understand scope/scale/key moments, assign team roles (photographers, videographers, audio capture). <strong>During event:</strong> Team deploys according to event type (conference = keynote + audience + networking; ceremony = posed group shots + details; competition = action shots + results). <strong>Post-event:</strong> Team uploads captures same day or next day, content curator reviews and tags, marketing-relevant assets flagged for reuse.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 2: Content Curation Pipeline</div>
+                <div class="pillar-desc"><strong>Capture → Filter:</strong> Raw photos/videos from event. <strong>Tag & Organize:</strong> Curate by event, date, subject. <strong>Quality Check:</strong> Remove duplicates, out-of-focus, off-brand. <strong>Archive for Reuse:</strong> Organize in shared library (accessible to marketing, communications, alumni team). <strong>Social Publishing:</strong> Best assets published to institutional social channels within 48 hours of event.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 3: Team Coordination</div>
+                <div class="pillar-desc"><strong>Weekly meetings:</strong> Upcoming events, role assignments, feedback on previous coverage. <strong>Event checklists:</strong> Standardized prep, during-event, and post-event workflows. <strong>Quality standards:</strong> Photography composition, video stabilization, caption accuracy. <strong>Mentoring:</strong> Worked with team members to improve technical skills and institutional awareness.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 4: Placement Committee Integration</div>
+                <div class="pillar-desc"><strong>Placement Drive Coverage:</strong> Media team documentation of placement drives for employer visibility, student engagement tracking. <strong>Badging Ceremony:</strong> Professional ceremony documentation for students and institutional records. <strong>Committee Meetings:</strong> Data on event outcomes, student participation, employer feedback. <strong>Coordination:</strong> Media timeline aligned with placement operations timeline.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">05 / Outputs & Artifacts</div>
+            <h2>What Was Delivered</h2>
+
+            <div class="artifact">
+                <div class="artifact-title">13+ Event Documentations</div>
+                <div class="artifact-desc">Professional coverage across diverse event types: Panel Discussion on AI for HR (Dec 2024), Book Launch Head Start (Dec 2024, 290 items), Alumni Meet (85 items), Placement Drive (528 items), UG 24-27 Orientation, Talent Hunt PGDM (751 items), Teachers Day (152 items), Independence Day (235 items), NHRDN HR Summit (809 items), CXO Event (307 items), Summer Internship Projects (615 + 811 items), Badging Ceremony (818 items). Each event professionally documented with consistency in quality, framing, and branding.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">6000+ Curated Media Assets</div>
+                <div class="artifact-desc">Professional-grade photos and videos organized by event, date, and subject. Curated for institutional use (alumni communication, social media, marketing). Tagged and archived for easy discovery by communications team. Total: 6000+ items across 13+ events, all organized and accessible.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Marketing Asset Library</div>
+                <div class="artifact-desc">Institutional media archive organized for reuse. Enables marketing team to quickly source images/videos for website updates, email campaigns, social promotions, alumni communications. Reduced need for external contractor or staged photo shoots.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Team Operations Manual</div>
+                <div class="artifact-desc">Documented workflows, event checklists, quality standards, asset management procedures. Enables consistent execution across team and ensures continuity if team members rotate.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Placement Committee Support Materials</div>
+                <div class="artifact-desc">Media documentation supporting placement operations: drive coverage, ceremony documentation, outcome visualization. Supported committee's data analysis and stakeholder communication.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">06 / Key Challenges & Decisions</div>
+            <h2>Execution Under Constraints</h2>
+
+            <div class="before-after">
+                <div>
+                    <h4>Team Building Challenge</h4>
+                    <ul>
+                        <li>No existing media team structure—started from zero</li>
+                        <li>Team members had varying skill levels (mix of experienced and learning)</li>
+                        <li>High turnover potential (students graduating, summer breaks)</li>
+                        <li>Needed consistent quality across 13+ events despite team flux</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Solution Approach</h4>
+                    <ul>
+                        <li>Built tiered team structure: core leads + rotating contributors</li>
+                        <li>Created detailed event checklists and quality standards (offset skill differences)</li>
+                        <li>Documented all workflows for continuity and new member onboarding</li>
+                        <li>Weekly feedback sessions to improve execution incrementally</li>
+                        <li>Mentored high-potential team members for sustained quality</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="before-after" style="margin-top: 3rem;">
+                <div>
+                    <h4>Asset Management Complexity</h4>
+                    <ul>
+                        <li>6000+ raw photos/videos from different events</li>
+                        <li>Without organization system, become unusable (black hole)</li>
+                        <li>Marketing team needed quick access to quality assets</li>
+                        <li>Curation work (tagging, filtering) invisible but critical</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Curation Strategy</h4>
+                    <ul>
+                        <li>Assigned dedicated curator role (not ad-hoc)</li>
+                        <li>Standardized tagging system (event + date + subject + quality level)</li>
+                        <li>Daily review cycle: upload → review → tag → archive</li>
+                        <li>Marketing team trained on how to search and access assets</li>
+                        <li>Regular audit of library to ensure continuing relevance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">07 / Impact & Outcomes</div>
+            <h2>Results & Institutional Value</h2>
+            <p><strong>Team Building & Scaling.</strong> Recruited, trained, and coordinated 10–15 team members across 14 months. Established operational standards and mentoring systems that enabled consistent execution despite team turnover and varying experience levels.</p>
+            <p><strong>Institutional Presence & Memory.</strong> Created comprehensive visual documentation of institutional culture and activities. Enabled alumni engagement (recent grads seeing their placement ceremonies, class activities), prospective student communication (showing real campus life), and internal stakeholder satisfaction (events professionally documented, not forgotten).</p>
+            <p><strong>Marketing Efficiency.</strong> Asset library reduced need for external contractor or staged photo shoots. Marketing team now has immediate access to 6000+ quality images/videos for website, social, email, recruitment materials. Freed budget for other institutional priorities.</p>
+            <p><strong>Event-to-Output System.</strong> Built repeatable framework that turns each event into documented output. Team can execute independently; process doesn't rely on any single person. System survived team member rotations without quality degradation.</p>
+            <p><strong>Placement Committee Support.</strong> Media documentation of placement drives and badging ceremonies provided visual support for placement operations. Enabled data visualization and stakeholder communication around placement outcomes. Demonstrated value of media operations to institutional business processes (not just social media).</p>
+            <p><strong>Time Management & Execution.</strong> Managed 20 hrs/week institutional responsibility while maintaining full-time PGDM studies. Demonstrated ability to juggle parallel commitments through ruthless prioritization, delegation, and systems thinking.</p>
+
+            <div class="role-note">
+                <strong>Scope & Context:</strong> This was institutional leadership while being a student. Not a professional role, but demonstrates team building, operations management, and systems thinking at organizational scale. The work was volunteer/committee-based (typical for PGDM students), but the execution and outcomes were professional-grade. Shows institutional initiative before entering professional roles.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">08 / Learnings & Reflection</div>
+            <h2>What This Taught Me</h2>
+            <p><strong>Systems Beat Individual Effort.</strong> Tried to do everything myself initially (attend every event, capture and curate). Hit a wall at event #4. Real scaling required: clear workflows, delegated roles, quality standards that don't depend on any single person. The framework matters more than individual brilliance.</p>
+            <p><strong>Curation is Hidden Work.</strong> Photographers/videographers get credit. But curation (filtering, organizing, making assets discoverable) is where value lives. Raw captures are clutter. Organized, tagged, accessible assets drive reuse. Nobody sees curation—everyone benefits from it.</p>
+            <p><strong>Institutional Thinking Spans Silos.</strong> Media team felt disconnected from placement committee initially. Realized they served the same stakeholders, with media supporting placement operations. Best ideas came from cross-pollination: placement committee understood event timing, media team understood visual storytelling. Integrated approach beat siloed thinking.</p>
+            <p><strong>Teams Need Clarity More Than Talent.</strong> Worked with team members of varying technical skills. Difference wasn't raw ability—it was clarity. Clear event checklists, quality standards, post-event process. Even junior team members executed well with clear framework. Ambiguity breeds mediocrity; clarity enables good work.</p>
+            <p><strong>Document Everything, Even Operational Details.</strong> Initially kept processes in my head. When team members asked "how did we do X last time?", I couldn't easily explain. Documenting workflows, event checklists, quality standards took extra effort upfront but enabled team independence and continuity.</p>
+            <p><strong>Institutional Leadership Teaches Different Lessons Than Professional Work.</strong> This wasn't optimizing for profit or scale to millions. It was about cultural documentation, stakeholder communication, and building institutional capacity. Different constraints, different success metrics, but same systems-thinking discipline.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">09 / Tools & Methods</div>
+            <h2>Operational Tools</h2>
+            <div class="tools-list">
+                <div class="tool-item">Event coordination — Email, WhatsApp, in-person meetings</div>
+                <div class="tool-item">Content management — Shared folders, tagging system, access documentation</div>
+                <div class="tool-item">Team meetings — Weekly coordination on upcoming events, feedback</div>
+                <div class="tool-item">Photography/videography — DSLR, smartphone cameras, basic editing</div>
+                <div class="tool-item">Data analysis — Spreadsheets for event tracking, attendance, outcome metrics</div>
+                <div class="tool-item">Documentation — Event checklists, workflow guides, quality standards</div>
+                <div class="tool-item">Social media — Institutional channels for asset publishing and engagement</div>
+                <div class="tool-item">Cross-functional collaboration — Placement committee coordination, marketing alignment</div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <h3>Explore More Work</h3>
+            <p><a href="../">Back to all projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
