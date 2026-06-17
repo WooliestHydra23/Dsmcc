@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiDAR Tyre Monitoring — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .case-study {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: #262626;
+            margin: 3rem 0;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .case-study {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/certifications/">Certifications</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>LiDAR Tyre Monitoring</h1>
+            <p>Product Innovation • Market Research • Go-to-Market Strategy</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">01 / Context</div>
+            <h2>The Problem Space</h2>
+            <p>Tyre failure is a leading cause of vehicle accidents, fleet downtime, and maintenance costs. Commercial fleets—long-haul trucking, logistics, public transit—lose millions annually to unplanned tyre failures and expensive reactive replacements.</p>
+            <p>Emerging LiDAR technology (used in autonomous vehicles and robotics) offers potential for real-time tyre condition monitoring: detecting wear patterns, pressure anomalies, structural damage—before failure occurs. The question: could this become a viable product and market?</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">02 / Problem</div>
+            <h2>What Needed Solving</h2>
+            <p><strong>Technology Validation:</strong> Is LiDAR actually viable for tyre monitoring? What are the technical constraints, sensor costs, and real-world accuracy rates?</p>
+            <p><strong>Market Definition:</strong> Who are the actual buyers? Tyre manufacturers? Fleet operators? Insurance companies? Vehicle OEMs? Different buyers = different value propositions.</p>
+            <p><strong>Business Model Uncertainty:</strong> Hardware sale? Subscription service? Integrated into existing telematics? Insurance partnership? The model shapes viability.</p>
+            <p><strong>Competitive Landscape:</strong> What existing solutions address this? Why haven't they solved it? What's the whitespace?</p>
+            <p><strong>Go-to-Market Path:</strong> Even if viable, how do you reach the market? What's the entry point? Early adopter segment?</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">03 / My Role</div>
+            <h2>What I Researched & Delivered</h2>
+            <p><strong>Technology Feasibility Research:</strong> Investigated LiDAR sensor specifications, cost trajectories, accuracy benchmarks. Identified technical constraints (weather, speed ranges, installation complexity) and opportunities (integration with existing vehicle systems).</p>
+            <p><strong>Market Sizing:</strong> Estimated addressable market by segment: commercial fleet size, average tyre replacement costs, downtime losses, willingness to pay for prevention. Conducted secondary research on fleet management pain points.</p>
+            <p><strong>Customer Persona Development:</strong> Identified primary buyers (Fleet Operations Manager, Safety Director, Procurement Lead) and secondary influencers (Maintenance Teams, Insurance Partners). Mapped decision criteria and objections for each.</p>
+            <p><strong>Competitive Landscape Analysis:</strong> Researched existing tyre monitoring solutions (pressure-based, temperature-based, visual inspection). Identified gaps (real-time damage detection, integration friction, cost barriers) where LiDAR could differentiate.</p>
+            <p><strong>Product Concept Development:</strong> Designed product concept, feature roadmap, and value proposition for primary customer segment. Created pitch presentation and use case scenarios.</p>
+            <p><strong>Go-to-Market Strategy:</strong> Recommended entry point (early adopter fleets with high downtime costs), partnership opportunities (tyre manufacturers, fleet telematics providers), and pricing model (subscription + hardware).</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">04 / Process</div>
+            <h2>How I Approached It</h2>
+            <p><strong>Research Design:</strong> Multi-modal research: technical (LiDAR sensor specs, benchmarks), market (fleet size data, cost analysis), competitive (existing solutions), and customer (interviews, pain point analysis).</p>
+            <p><strong>Technology Validation:</strong> Reviewed academic papers on LiDAR for material inspection. Consulted with hardware engineers on feasibility and cost. Identified sensor options and integration pathways.</p>
+            <p><strong>Market Analysis:</strong> Pulled industry data on fleet sizes, tyre replacement rates, downtime costs. Estimated willingness-to-pay by analyzing insurance savings from accident prevention.</p>
+            <p><strong>Customer Research:</strong> Interviewed fleet operators, maintenance directors, and insurance companies to validate pain points and decision criteria. Mapped customer journey from problem awareness to purchase.</p>
+            <p><strong>Concept Development:</strong> Synthesized research into product concept (hardware device + cloud dashboard), feature roadmap (MVP → full capability), and pitch narrative for investors/stakeholders.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">05 / Output</div>
+            <h2>What Was Delivered</h2>
+            <p><strong>Feasibility Report:</strong> 20+ page document on technology viability, sensor options, cost analysis, integration pathways, and technical roadmap.</p>
+            <p><strong>Market Sizing Analysis:</strong> Addressable market estimates by geography and segment. Competitive positioning map. Pricing benchmarks from adjacent markets.</p>
+            <p><strong>Customer Personas & Insights:</strong> Detailed personas (Fleet Operations Manager, Safety Director, Procurement Lead) with decision criteria, objections, and messaging recommendations.</p>
+            <p><strong>Product Concept Document:</strong> Problem statement, solution overview, feature roadmap (MVP → Phase 2 → Phase 3), value proposition by persona, competitive differentiation.</p>
+            <p><strong>Go-to-Market Strategy:</strong> Target customer segment (high-downtime fleets), entry strategy (partnership with leading fleet operators), pricing model, and 18-month launch roadmap.</p>
+            <p><strong>Pitch Presentation:</strong> Executive summary, market opportunity, product concept, team capabilities, financial projections, funding ask.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">06 / Impact</div>
+            <h2>What This Enabled</h2>
+            <p><strong>Strategic Clarity:</strong> Eliminated hypothesis—this is a real problem in a real market with proven customer willingness to pay. Provides confidence for go/no-go decision.</p>
+            <p><strong>De-risked Investment:</strong> Identified key technical and market risks upfront. Provides roadmap for risk mitigation (pilot with early adopter fleet, partnership pathway, etc).</p>
+            <p><strong>Accelerated Development:</strong> Product team has clear feature priorities based on customer value, not internal assumptions. Roadmap is customer-validated.</p>
+            <p><strong>Sales Readiness:</strong> Go-to-market team has customer personas, messaging, and value proposition ready for day one. Knows who to target and how to position.</p>
+            <p><strong>Investor Conversation:</strong> Market size, customer validation, competitive differentiation, and go-to-market clarity provide confidence for fundraising or board approval.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">07 / Tools Used</div>
+            <h2>Research & Analysis Tools</h2>
+            <div class="tools-list">
+                <div class="tool-item">Google Sheets (market sizing)</div>
+                <div class="tool-item">Academic databases (technology research)</div>
+                <div class="tool-item">Industry reports (market data)</div>
+                <div class="tool-item">Figma (positioning maps & diagrams)</div>
+                <div class="tool-item">PowerPoint (pitch & presentations)</div>
+                <div class="tool-item">Customer interviews (primary research)</div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">08 / Reflection</div>
+            <h2>What I Learned</h2>
+            <p><strong>Technology ≠ Market:</strong> LiDAR is impressive, but the product only matters if it solves a real customer problem that customers will pay for. Tech-first thinking leads to expensive failures. Customer-first thinking leads to viable products.</p>
+            <p><strong>Market Entry Beats Market Size:</strong> A $10 billion market is irrelevant if your entry point doesn't exist. Finding the early adopter segment, understanding their specific pain, and designing for them beats trying to address a massive market from day one.</p>
+            <p><strong>Willingness-to-Pay is Everything:</strong> Customers might acknowledge a problem, but will they actually buy a solution? Understanding the buying decision (who decides, what's the budget, when does money move) matters more than problem acknowledgment.</p>
+            <p><strong>Risk Mitigation Starts in Research:</strong> Spending time upfront identifying technical risks (sensor cost, accuracy, integration), market risks (buyer fragmentation, adoption resistance), and competitive risks (existing solutions improving) saves massive cost during execution.</p>
+        </section>
+
+        <section class="case-study cta-section">
+            <h3>Explore More Work</h3>
+            <p><a href="/work/">Back to all projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

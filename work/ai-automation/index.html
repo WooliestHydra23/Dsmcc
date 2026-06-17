@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workflow Automation — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .case-study {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .project-list li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .project-list li:last-child {
+            border-bottom: none;
+        }
+
+        .project-name {
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .case-study {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/certifications/">Certifications</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>AI Workflow Automation</h1>
+            <p>Systems Design • Python Development • AI/LLM Integration</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">01 / Context</div>
+            <h2>The Opportunity</h2>
+            <p>Modern business workflows are fragmented: data lives in spreadsheets, analysis happens in email, decisions stall in approvals, and repetitive tasks consume thousands of person-hours annually.</p>
+            <p>Generative AI and LLM systems now enable a new class of solutions: intelligent automation that can understand context, make decisions, and coordinate across systems. The challenge: building systems that are reliable, maintainable, and actually solve real problems.</p>
+            <p>I've designed and built multiple automation systems—WebLedger for web audits, RAG_VAULT for knowledge management, LinkedinPipeline for data orchestration, and enterprise rendering pipelines for 3D software integration. These projects taught me how to design systems that bridge AI, Python, and real-world business processes.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">02 / Problem</div>
+            <h2>What These Systems Solve</h2>
+            <p><strong>Knowledge Fragmentation:</strong> Important information is scattered—emails, docs, conversations, databases. Teams repeat the same research and questions. No single source of truth.</p>
+            <p><strong>Manual Data Pipelines:</strong> Moving data between systems, formatting it, validating it—all manual, all error-prone. Scientists and analysts spend 60% of time on data prep, not analysis.</p>
+            <p><strong>Approval Bottlenecks:</strong> Simple decisions stall waiting for humans to review. Escalation chains slow execution. No transparency into queue or status.</p>
+            <p><strong>Repetitive Technical Work:</strong> Configuration, asset management, dependency tracking in complex software systems requires manual intervention and expertise. Mistakes cascade.</p>
+            <p><strong>Integration Friction:</strong> Systems don't talk to each other. Copy-paste between tools, manual data entry, lost context in handoffs.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">03 / My Role</div>
+            <h2>What I Designed & Built</h2>
+            <p><strong>WebLedger:</strong> Python-based web audit tool. Captures page state, detects changes, verifies content integrity. Used for SEO monitoring, compliance audits, and change tracking. Demonstrates web scraping, API integration, and automated verification logic.</p>
+            <p><strong>RAG_VAULT:</strong> AI-powered knowledge retrieval system. Takes unstructured documents, generates embeddings, enables natural language queries using retrieval-augmented generation. Users ask questions in plain English; system retrieves relevant context and synthesizes answers. Demonstrates LLM workflow design, prompt engineering, and knowledge architecture.</p>
+            <p><strong>LinkedinPipeline:</strong> Data orchestration system. Automates workflow across multiple platforms—data extraction, transformation, enrichment, validation, and loading. Demonstrates ETL design, error handling, and systems thinking.</p>
+            <p><strong>Enterprise Rendering Pipelines:</strong> Production systems for 3D rendering software (Maya, Blender, Houdini, C4D). Automates asset repathing, dependency resolution, streaming management, and job orchestration. Demonstrates multi-software integration, production reliability, and complex systems thinking.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">04 / Process</div>
+            <h2>How I Approach System Design</h2>
+            <p><strong>Problem Definition:</strong> Start with the actual human problem, not the technology. What tasks are manual? Where do errors happen? What's the bottleneck? Technology is the solution, not the starting point.</p>
+            <p><strong>Architecture Design:</strong> Map inputs → processing logic → outputs. Identify where humans enter/exit. Design for debuggability, not cleverness. Simple beats elegant if it's more maintainable.</p>
+            <p><strong>Data Flow Mapping:</strong> Follow the data: where does it come from, what transformations does it need, where does it go, what validations matter? Document the flow before writing code.</p>
+            <p><strong>Failure Handling:</strong> Real systems fail. Plan for it: monitoring, alerts, graceful degradation, human override capabilities. The system that fails gracefully beats the system that fails silently.</p>
+            <p><strong>Iterative Refinement:</strong> Build MVP (minimum viable pipeline) first. Test with real data. Iterate based on failure modes and user feedback. Don't over-engineer upfront.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">05 / Output</div>
+            <h2>What Was Built</h2>
+            <ul class="project-list">
+                <li>
+                    <div class="project-name">WebLedger</div>
+                    <div class="project-desc">Web audit & change detection tool. Python, web scraping, automated verification. Status: Live & maintained.</div>
+                </li>
+                <li>
+                    <div class="project-name">RAG_VAULT</div>
+                    <div class="project-desc">AI knowledge retrieval system. Python, LLM integration (ChatGPT/Claude), embeddings, prompt engineering. Status: Active development.</div>
+                </li>
+                <li>
+                    <div class="project-name">LinkedinPipeline</div>
+                    <div class="project-desc">Data orchestration & ETL system. Python, multi-platform integration, error handling, logging. Status: Live.</div>
+                </li>
+                <li>
+                    <div class="project-name">Enterprise Rendering Pipelines</div>
+                    <div class="project-desc">Production 3D software integration. Multi-software support (Maya, Blender, Houdini, C4D), asset management, job orchestration. Status: Production.</div>
+                </li>
+            </ul>
+
+            <p style="margin-top: 2rem;"><strong>Architectural Patterns Across All Systems:</strong> Event-driven processing. Error tracking and alerting. Logging for debuggability. Human override capabilities. Version control for configuration. Testing at system boundaries.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">06 / Impact</div>
+            <h2>What These Systems Enable</h2>
+            <p><strong>Knowledge Accessibility:</strong> RAG_VAULT allows teams to ask questions instead of manually searching. Context that would take hours to find is available in seconds. Reduces repeated work and accelerates decision-making.</p>
+            <p><strong>Data Pipeline Reliability:</strong> LinkedinPipeline automates error-prone manual steps. Validation happens programmatically. Errors surface immediately instead of causing downstream problems. Data integrity improves, turnaround time decreases.</p>
+            <p><strong>Enterprise Software Integration:</strong> Rendering pipelines eliminate manual configuration work. Assets are tracked automatically. Dependencies are resolved without human intervention. Production stability improves, artist productivity increases.</p>
+            <p><strong>Scalability:</strong> What took a team of 3 people 2 days now happens overnight, automatically, with fewer errors. Systems scale work without scaling team size.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">07 / Tools Used</div>
+            <h2>Technology Stack</h2>
+            <div class="tools-list">
+                <div class="tool-item">Python (primary language)</div>
+                <div class="tool-item">ChatGPT / Claude APIs</div>
+                <div class="tool-item">LangChain (LLM workflows)</div>
+                <div class="tool-item">PostgreSQL (data storage)</div>
+                <div class="tool-item">REST APIs (integrations)</div>
+                <div class="tool-item">Docker (deployment)</div>
+                <div class="tool-item">Git (version control)</div>
+                <div class="tool-item">Monitoring & logging tools</div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">08 / Reflection</div>
+            <h2>What I Learned</h2>
+            <p><strong>Systems > Code:</strong> The code is 20% of the work. The other 80% is understanding the problem, designing the architecture, handling failures, monitoring production, and iterating based on real usage. Most developers underestimate this.</p>
+            <p><strong>Simplicity Scales:</strong> Clever systems are hard to debug and maintain. Simple systems with clear data flows, explicit error handling, and good logging are faster to iterate on and easier to improve.</p>
+            <p><strong>AI is a Tool, Not Magic:</strong> LLMs are powerful but require careful prompt engineering, error handling, and quality gates. RAG systems only work if the knowledge base is curated. AI solves certain classes of problems brilliantly but isn't a substitute for thinking.</p>
+            <p><strong>Reliability > Velocity:</strong> A system that runs reliably 99% of the time, fails visibly, and degrades gracefully beats a system that's 10% faster but fails silently or cascades errors. Trust is the limiting factor.</p>
+            <p><strong>Bridge the Gap Between Business & Technical:</strong> The best systems I've built are ones where I understood the business problem deeply enough to question technical assumptions. "We need to automate X" often masks "we need to understand Y" or "we're solving the wrong problem."</p>
+        </section>
+
+        <section class="case-study cta-section">
+            <h3>See Code & Architecture</h3>
+            <p><a href="/code/">View all builds & projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

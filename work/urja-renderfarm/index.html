@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Cloud Rendering — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .case-study {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: #262626;
+            margin: 3rem 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 2rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+        }
+
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meta-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .case-study {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/certifications/">Certifications</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Enterprise Cloud Rendering</h1>
+            <p>Product & GTM Support • Technical Communication • Stakeholder Coordination</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">01 / Context</div>
+            <h2>The Project</h2>
+            <p>Urja Renderfarm is an enterprise-grade cloud rendering platform designed for studios, VFX houses, and animation teams. The platform manages complex 3D rendering workloads across distributed infrastructure—a technically sophisticated product serving a specialized market.</p>
+            <p>My involvement centered on making this complexity accessible to customers, sales teams, and internal stakeholders. The focus: clear documentation, sales enablement, and GTM strategy to support product launch and market positioning.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">02 / Problem</div>
+            <h2>What Was Broken</h2>
+            <p><strong>Documentation Gap:</strong> Enterprise customers needed clear guides on platform capabilities, workflow integration, troubleshooting, and best practices. Without this, onboarding friction slowed adoption and support tickets multiplied.</p>
+            <p><strong>Sales Enablement Mismatch:</strong> The sales team lacked clear, concise materials to explain technical differentiation to non-technical decision-makers (studio heads, VFX supervisors, IT leads).</p>
+            <p><strong>Stakeholder Alignment:</strong> Product, sales, and support teams operated with different understandings of platform capabilities, messaging, and customer value propositions—creating handoff friction.</p>
+            <p><strong>Knowledge Siloing:</strong> Critical product knowledge lived in code, internal conversations, and tribal memory. No single source of truth for customers or internal teams.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">03 / My Role</div>
+            <h2>What I Did</h2>
+            <p><strong>Documentation Architecture:</strong> Designed a structured FAQ and knowledge base framework organized by customer journey stage: pre-integration (capabilities, pricing), integration (API, workflows), production (performance tuning, troubleshooting), and support (edge cases, best practices).</p>
+            <p><strong>Content Development:</strong> Wrote 30+ FAQ items, integration guides, and troubleshooting docs. Conducted product interviews to extract knowledge. Iterated with support team feedback to ensure accuracy and customer relevance.</p>
+            <p><strong>Video & Tutorial Scripting:</strong> Outlined and scripted 8+ tutorial videos covering core workflows (job submission, monitoring, result retrieval, pipeline integration). Coordinated with product/demo team on technical accuracy and visual clarity.</p>
+            <p><strong>Sales Enablement:</strong> Created one-pagers explaining technical value to different buyer personas (studio leads, VFX supervisors, IT). Developed comparison docs against competitive offerings. Built internal training deck for sales team onboarding.</p>
+            <p><strong>Stakeholder Coordination:</strong> Facilitated product/sales/support alignment meetings. Synthesized feedback from all teams into documentation priorities and updates. Ensured consistency across all customer-facing materials.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">04 / Process</div>
+            <h2>How I Approached It</h2>
+            <p><strong>Discovery:</strong> Interviews with product team (capabilities, roadmap), sales team (objections, common questions), and support (recurring issues). Reviewed competitive products to understand positioning gaps.</p>
+            <p><strong>Information Architecture:</strong> Mapped customer journey and decision points. Organized content by persona and use case rather than just feature lists. Created hierarchical structure (category → subtopic → FAQ/guide) for discoverability.</p>
+            <p><strong>Content Development:</strong> Wrote in customer voice, not product voice. Tested explanations with non-expert readers to ensure clarity. Built iteratively—published core docs first, then expanded based on feedback.</p>
+            <p><strong>Coordination:</strong> Weekly sync with product to validate accuracy. Monthly reviews with sales to measure material effectiveness. Quarterly updates with support to incorporate new issue patterns.</p>
+            <p><strong>Quality Gates:</strong> Technical accuracy reviewed by engineering. Clarity reviewed by customer-facing teams. Consistency checked across all materials.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">05 / Output</div>
+            <h2>What Was Delivered</h2>
+            <p><strong>Documentation Suite:</strong> 30+ FAQ items (organized by topic), integration guides, API documentation, troubleshooting playbooks, best practices guides, video scripts, and training materials.</p>
+            <p><strong>Sales Materials:</strong> Persona-specific one-pagers (Studio Lead, VFX Supervisor, IT Infrastructure), competitive comparison docs, internal sales training deck, objection handling guide.</p>
+            <p><strong>Internal Knowledge:</strong> Process documentation for documentation updates, feedback loops between support/product/sales, and a system for incorporating new learnings into customer-facing materials.</p>
+            <p><strong>Video Content:</strong> Scripts and outlines for 8+ tutorial videos covering core workflows, ready for demo/video production team implementation.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">06 / Impact</div>
+            <h2>What Changed</h2>
+            <p><strong>Reduced Onboarding Friction:</strong> New customers could self-serve answers to common questions, reducing support load and accelerating time-to-value.</p>
+            <p><strong>Improved Sales Effectiveness:</strong> Sales team had clear materials to explain technical value to non-technical buyers. Support for objections and competitive positioning improved deal closure rates.</p>
+            <p><strong>Aligned Stakeholders:</strong> Product, sales, and support operated from shared documentation. Handoff friction decreased. Cross-team communication improved.</p>
+            <p><strong>Foundation for Scale:</strong> Documentation framework supports rapid onboarding of new team members and customers. Creates a scalable knowledge system as product grows.</p>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">07 / Tools Used</div>
+            <h2>Technical Stack</h2>
+            <div class="tools-list">
+                <div class="tool-item">Google Docs (collaborative writing)</div>
+                <div class="tool-item">Markdown (doc formatting)</div>
+                <div class="tool-item">Figma (diagrams & visuals)</div>
+                <div class="tool-item">Loom (video recording)</div>
+                <div class="tool-item">Notion (knowledge base)</div>
+                <div class="tool-item">Slack (team coordination)</div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="section-number">08 / Reflection</div>
+            <h2>What I Learned</h2>
+            <p><strong>Documentation is GTM:</strong> Clear documentation isn't a post-launch task—it's a critical part of go-to-market strategy. Good docs reduce friction, accelerate adoption, and improve customer satisfaction.</p>
+            <p><strong>Systems Beat Content:</strong> A single great doc loses value if nobody maintains it. Building systems for feedback, updates, and knowledge capture beats writing one-off docs.</p>
+            <p><strong>Bridge Internal Silos:</strong> The most valuable work happened at intersections—coordinating between product, sales, and support. Documentation became a shared language for alignment.</p>
+            <p><strong>Know Your Personas:</strong> Writing FAQ for "enterprise customers" fails. Writing for "Studio Lead concerned about ROI" or "VFX Supervisor evaluating integration effort" succeeds. Understanding buyer motivation matters more than feature lists.</p>
+        </section>
+
+        <section class="case-study cta-section">
+            <h3>Explore More Work</h3>
+            <p><a href="/work/">Back to all projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/work/">Work</a>
+                <a href="/code/">Code</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
