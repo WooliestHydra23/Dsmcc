@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiDAR Tyre Monitoring — Dron Sharma</title>
+    <title>LiDAR Tyre Monitoring — Product Innovation & Market Validation</title>
     <style>
         * {
             margin: 0;
@@ -31,11 +31,19 @@
             margin-bottom: 1rem;
         }
 
+        .subtitle {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
         h2 {
             font-size: 32px;
             line-height: 1.2;
             letter-spacing: 0.06em;
-            margin-top: 2rem;
+            margin-top: 3rem;
             margin-bottom: 1.5rem;
         }
 
@@ -44,12 +52,14 @@
             line-height: 1.3;
             letter-spacing: 0.04em;
             margin-bottom: 1rem;
+            margin-top: 2rem;
         }
 
         h4 {
             font-size: 16px;
             letter-spacing: 0.04em;
             margin-bottom: 1rem;
+            color: #ffffff;
         }
 
         p {
@@ -62,14 +72,6 @@
 
         p:last-child {
             margin-bottom: 0;
-        }
-
-        .caption {
-            font-size: 11px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #999999;
-            margin-bottom: 0.5rem;
         }
 
         a {
@@ -145,13 +147,34 @@
             padding: 120px 0 60px 0;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #999999;
-            margin-bottom: 1rem;
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
         }
 
-        .case-study {
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meta-item h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 14px;
+            margin: 0;
+            color: #999999;
+        }
+
+        .section {
             padding: 60px 0;
         }
 
@@ -160,13 +183,84 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .research-area {
+            margin-bottom: 2.5rem;
+        }
+
+        .research-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
             margin-bottom: 0.5rem;
         }
 
-        .divider {
-            height: 1px;
-            background: #262626;
+        .research-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .artifact {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
+        }
+
+        .artifact-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
             margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .before-after h4 {
+            margin-top: 0;
+        }
+
+        .before-after ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .before-after li {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .before-after li:last-child {
+            border-bottom: none;
         }
 
         .tools-list {
@@ -179,6 +273,17 @@
         .tool-item {
             font-size: 14px;
             color: #cccccc;
+        }
+
+        .role-note {
+            background: transparent;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            font-size: 14px;
+            color: #999999;
+            font-style: italic;
         }
 
         .cta-section {
@@ -253,7 +358,7 @@
                 padding-bottom: 40px;
             }
 
-            .case-study {
+            .section {
                 padding: 40px 0;
             }
 
@@ -280,91 +385,172 @@
     <main>
         <section class="hero">
             <h1>LiDAR Tyre Monitoring</h1>
-            <p>Product Innovation • Market Research • Go-to-Market Strategy</p>
-        </section>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Product Innovation & Market Validation</h2>
+            <p class="subtitle">A comprehensive exploration of IoT-enabled vehicle safety: researching LiDAR technology feasibility, defining the market opportunity, and building a go-to-market strategy for an emerging product category.</p>
 
-        <section class="case-study">
-            <div class="section-number">01 / Context</div>
-            <h2>The Problem Space</h2>
-            <p>Tyre failure is a leading cause of vehicle accidents, fleet downtime, and maintenance costs. Commercial fleets—long-haul trucking, logistics, public transit—lose millions annually to unplanned tyre failures and expensive reactive replacements.</p>
-            <p>Emerging LiDAR technology (used in autonomous vehicles and robotics) offers potential for real-time tyre condition monitoring: detecting wear patterns, pressure anomalies, structural damage—before failure occurs. The question: could this become a viable product and market?</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">02 / Problem</div>
-            <h2>What Needed Solving</h2>
-            <p><strong>Technology Validation:</strong> Is LiDAR actually viable for tyre monitoring? What are the technical constraints, sensor costs, and real-world accuracy rates?</p>
-            <p><strong>Market Definition:</strong> Who are the actual buyers? Tyre manufacturers? Fleet operators? Insurance companies? Vehicle OEMs? Different buyers = different value propositions.</p>
-            <p><strong>Business Model Uncertainty:</strong> Hardware sale? Subscription service? Integrated into existing telematics? Insurance partnership? The model shapes viability.</p>
-            <p><strong>Competitive Landscape:</strong> What existing solutions address this? Why haven't they solved it? What's the whitespace?</p>
-            <p><strong>Go-to-Market Path:</strong> Even if viable, how do you reach the market? What's the entry point? Early adopter segment?</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">03 / My Role</div>
-            <h2>What I Researched & Delivered</h2>
-            <p><strong>Technology Feasibility Research:</strong> Investigated LiDAR sensor specifications, cost trajectories, accuracy benchmarks. Identified technical constraints (weather, speed ranges, installation complexity) and opportunities (integration with existing vehicle systems).</p>
-            <p><strong>Market Sizing:</strong> Estimated addressable market by segment: commercial fleet size, average tyre replacement costs, downtime losses, willingness to pay for prevention. Conducted secondary research on fleet management pain points.</p>
-            <p><strong>Customer Persona Development:</strong> Identified primary buyers (Fleet Operations Manager, Safety Director, Procurement Lead) and secondary influencers (Maintenance Teams, Insurance Partners). Mapped decision criteria and objections for each.</p>
-            <p><strong>Competitive Landscape Analysis:</strong> Researched existing tyre monitoring solutions (pressure-based, temperature-based, visual inspection). Identified gaps (real-time damage detection, integration friction, cost barriers) where LiDAR could differentiate.</p>
-            <p><strong>Product Concept Development:</strong> Designed product concept, feature roadmap, and value proposition for primary customer segment. Created pitch presentation and use case scenarios.</p>
-            <p><strong>Go-to-Market Strategy:</strong> Recommended entry point (early adopter fleets with high downtime costs), partnership opportunities (tyre manufacturers, fleet telematics providers), and pricing model (subscription + hardware).</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">04 / Process</div>
-            <h2>How I Approached It</h2>
-            <p><strong>Research Design:</strong> Multi-modal research: technical (LiDAR sensor specs, benchmarks), market (fleet size data, cost analysis), competitive (existing solutions), and customer (interviews, pain point analysis).</p>
-            <p><strong>Technology Validation:</strong> Reviewed academic papers on LiDAR for material inspection. Consulted with hardware engineers on feasibility and cost. Identified sensor options and integration pathways.</p>
-            <p><strong>Market Analysis:</strong> Pulled industry data on fleet sizes, tyre replacement rates, downtime costs. Estimated willingness-to-pay by analyzing insurance savings from accident prevention.</p>
-            <p><strong>Customer Research:</strong> Interviewed fleet operators, maintenance directors, and insurance companies to validate pain points and decision criteria. Mapped customer journey from problem awareness to purchase.</p>
-            <p><strong>Concept Development:</strong> Synthesized research into product concept (hardware device + cloud dashboard), feature roadmap (MVP → full capability), and pitch narrative for investors/stakeholders.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">05 / Output</div>
-            <h2>What Was Delivered</h2>
-            <p><strong>Feasibility Report:</strong> 20+ page document on technology viability, sensor options, cost analysis, integration pathways, and technical roadmap.</p>
-            <p><strong>Market Sizing Analysis:</strong> Addressable market estimates by geography and segment. Competitive positioning map. Pricing benchmarks from adjacent markets.</p>
-            <p><strong>Customer Personas & Insights:</strong> Detailed personas (Fleet Operations Manager, Safety Director, Procurement Lead) with decision criteria, objections, and messaging recommendations.</p>
-            <p><strong>Product Concept Document:</strong> Problem statement, solution overview, feature roadmap (MVP → Phase 2 → Phase 3), value proposition by persona, competitive differentiation.</p>
-            <p><strong>Go-to-Market Strategy:</strong> Target customer segment (high-downtime fleets), entry strategy (partnership with leading fleet operators), pricing model, and 18-month launch roadmap.</p>
-            <p><strong>Pitch Presentation:</strong> Executive summary, market opportunity, product concept, team capabilities, financial projections, funding ask.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">06 / Impact</div>
-            <h2>What This Enabled</h2>
-            <p><strong>Strategic Clarity:</strong> Eliminated hypothesis—this is a real problem in a real market with proven customer willingness to pay. Provides confidence for go/no-go decision.</p>
-            <p><strong>De-risked Investment:</strong> Identified key technical and market risks upfront. Provides roadmap for risk mitigation (pilot with early adopter fleet, partnership pathway, etc).</p>
-            <p><strong>Accelerated Development:</strong> Product team has clear feature priorities based on customer value, not internal assumptions. Roadmap is customer-validated.</p>
-            <p><strong>Sales Readiness:</strong> Go-to-market team has customer personas, messaging, and value proposition ready for day one. Knows who to target and how to position.</p>
-            <p><strong>Investor Conversation:</strong> Market size, customer validation, competitive differentiation, and go-to-market clarity provide confidence for fundraising or board approval.</p>
-        </section>
-
-        <section class="case-study">
-            <div class="section-number">07 / Tools Used</div>
-            <h2>Research & Analysis Tools</h2>
-            <div class="tools-list">
-                <div class="tool-item">Google Sheets (market sizing)</div>
-                <div class="tool-item">Academic databases (technology research)</div>
-                <div class="tool-item">Industry reports (market data)</div>
-                <div class="tool-item">Figma (positioning maps & diagrams)</div>
-                <div class="tool-item">PowerPoint (pitch & presentations)</div>
-                <div class="tool-item">Customer interviews (primary research)</div>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>My Role</h4>
+                    <p>Market Research, Product Strategy, Technical Feasibility Analysis, Customer Research</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Focus Areas</h4>
+                    <p>Technology validation, market sizing, customer personas, competitive analysis, GTM strategy</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Industry</h4>
+                    <p>Fleet Management, Vehicle Safety, IoT, Automotive, Logistics</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Product Category</h4>
+                    <p>IoT Sensor System, Real-time Monitoring, Predictive Maintenance</p>
+                </div>
             </div>
         </section>
 
-        <section class="case-study">
-            <div class="section-number">08 / Reflection</div>
-            <h2>What I Learned</h2>
-            <p><strong>Technology ≠ Market:</strong> LiDAR is impressive, but the product only matters if it solves a real customer problem that customers will pay for. Tech-first thinking leads to expensive failures. Customer-first thinking leads to viable products.</p>
-            <p><strong>Market Entry Beats Market Size:</strong> A $10 billion market is irrelevant if your entry point doesn't exist. Finding the early adopter segment, understanding their specific pain, and designing for them beats trying to address a massive market from day one.</p>
-            <p><strong>Willingness-to-Pay is Everything:</strong> Customers might acknowledge a problem, but will they actually buy a solution? Understanding the buying decision (who decides, what's the budget, when does money move) matters more than problem acknowledgment.</p>
-            <p><strong>Risk Mitigation Starts in Research:</strong> Spending time upfront identifying technical risks (sensor cost, accuracy, integration), market risks (buyer fragmentation, adoption resistance), and competitive risks (existing solutions improving) saves massive cost during execution.</p>
+        <section class="section">
+            <div class="section-number">01 / Why This Mattered</div>
+            <h2>The Stakes</h2>
+            <p>Tyre failure is a leading cause of vehicle accidents, fleet downtime, and maintenance costs. Commercial fleets—long-haul trucking, logistics, public transit—lose millions annually to unplanned tyre failures and reactive replacements.</p>
+            <p>Emerging technologies like LiDAR offer potential for real-time condition monitoring: detecting wear patterns, pressure anomalies, structural damage—before failure occurs. But potential is not market. The question was: could this become a viable, validated product category?</p>
+            <p>This project aimed to de-risk that uncertainty through research, validation, and strategic analysis.</p>
         </section>
 
-        <section class="case-study cta-section">
+        <section class="section">
+            <div class="section-number">02 / The Challenge</div>
+            <h2>What Needed Answering</h2>
+            <p>The core question: Is this a real business opportunity? But that breaks down into harder questions:</p>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Technology:</strong> Is LiDAR actually viable for tyre monitoring? What are the technical constraints, sensor costs, accuracy benchmarks, and real-world limitations?</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Market:</strong> Who are the actual buyers? Fleet operators? Tyre manufacturers? Insurance companies? OEMs? Different buyers = different markets.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Competition:</strong> Why haven't existing solutions solved this? What's the whitespace where this product could differentiate?</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Business Model:</strong> Hardware sale? Subscription? Integrated service? Partnership? The model directly impacts viability.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-number">03 / My Research System</div>
+            <h2>How I De-Risked the Uncertainty</h2>
+
+            <div class="research-area">
+                <div class="research-title">01 / Technology Feasibility</div>
+                <div class="research-desc">Researched LiDAR sensor specifications, cost trajectories, accuracy benchmarks, and real-world constraints. Identified what works and what doesn't. Found the gap between theoretical capability and field reality.</div>
+            </div>
+
+            <div class="research-area">
+                <div class="research-title">02 / Market Sizing & Definition</div>
+                <div class="research-desc">Estimated addressable market by segment: commercial fleet size, average tyre costs, downtime losses, willingness-to-pay for prevention. Built bottom-up market sizing, not top-down guesses.</div>
+            </div>
+
+            <div class="research-area">
+                <div class="research-title">03 / Customer Understanding</div>
+                <div class="research-desc">Developed detailed personas for different buyer types (Fleet Operations Manager, Safety Director, Procurement Lead, Insurance Partner). Mapped decision criteria, objections, and pain points for each.</div>
+            </div>
+
+            <div class="research-area">
+                <div class="research-title">04 / Competitive Landscape</div>
+                <div class="research-desc">Analyzed existing tyre monitoring solutions (pressure-based, temperature sensors, visual inspection). Identified their limitations and the gap where LiDAR could differentiate.</div>
+            </div>
+
+            <div class="research-area">
+                <div class="research-title">05 / Product & GTM Strategy</div>
+                <div class="research-desc">Synthesized research into product concept, feature roadmap, value proposition by persona, and go-to-market strategy. Built a credible narrative that connects technology → market → business model.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">04 / Selected Outputs</div>
+            <h2>What Was Delivered</h2>
+
+            <div class="artifact">
+                <div class="artifact-title">Feasibility Report</div>
+                <div class="artifact-desc">20+ page technical analysis covering LiDAR sensor options, cost analysis, accuracy benchmarks, integration pathways, and technical roadmap. Validated that the technology is viable, identified constraints and opportunities.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Market Sizing & Analysis</div>
+                <div class="artifact-desc">Addressable market estimates by geography and segment, competitive positioning maps, pricing benchmarks from adjacent markets. Showed the market size and opportunity.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Customer Personas & Insights</div>
+                <div class="artifact-desc">Detailed personas for Fleet Operations Manager, Safety Director, Procurement Lead, and Insurance Partner. Included decision criteria, objections, messaging recommendations for each.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Product Concept & Roadmap</div>
+                <div class="artifact-desc">Problem statement, solution overview, feature roadmap (MVP → Phase 2 → Phase 3), value proposition by persona, competitive differentiation points.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Go-to-Market Strategy</div>
+                <div class="artifact-desc">Target customer segment (high-downtime fleets), entry strategy, partnership opportunities, pricing model, and 18-month launch roadmap.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">05 / Before & After</div>
+            <h2>What Changed Through This Research</h2>
+
+            <div class="before-after">
+                <div>
+                    <h4>Before</h4>
+                    <ul>
+                        <li>Hypothesis: LiDAR could monitor tyres. But was it viable? Nobody knew for certain.</li>
+                        <li>Market assumption: "Large fleets would want this." But who? Trucking? Transit? Taxis? Different customer = different value prop.</li>
+                        <li>Competition: Assumed existing solutions were weak. But in what specific ways? Where could differentiation actually exist?</li>
+                        <li>Business case: Scattered ideas about hardware, subscriptions, partnerships. No clear model.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>After</h4>
+                    <ul>
+                        <li>Technology validated: LiDAR is viable. Identified the specific sensors, cost points, integration pathways, and constraints that matter.</li>
+                        <li>Market clarified: Different fleet segments have different needs. Long-haul trucking has different pain than public transit. Identified early adopter segment.</li>
+                        <li>Competition understood: Existing solutions focus on pressure or temperature. The gap: real-time structural damage detection. That's where differentiation lives.</li>
+                        <li>Business model defined: Subscription + hardware makes sense. Early adopter partnerships as entry strategy. Pricing benchmarked.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">06 / Impact</div>
+            <h2>What This Enabled</h2>
+            <p><strong>De-Risked the Opportunity.</strong> Eliminated hypothesis through research. Provided confidence for go/no-go decision on product investment.</p>
+            <p><strong>Identified the Real Constraints.</strong> Technology risk, market risk, and competitive risk all became specific and addressable, not abstract.</p>
+            <p><strong>Clarified the Entry Point.</strong> Instead of "sell to all fleets," identified a specific early adopter segment with validated pain and willingness to pay.</p>
+            <p><strong>Aligned Leadership.</strong> Product, business, and leadership teams moved from "interesting idea" to "validated opportunity with specific go-to-market approach."</p>
+            <p><strong>Created a Roadmap.</strong> Not just for product development, but for market validation, customer discovery, partnership, and launch timing.</p>
+
+            <div class="role-note">
+                My role was not to engineer the LiDAR sensor or build the product. My role was to research the opportunity, validate the market, and build the strategic case for moving forward. That clarity is what made the research valuable.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">07 / Tools & Methods</div>
+            <h2>How I Researched</h2>
+            <div class="tools-list">
+                <div class="tool-item">Academic research databases (technology papers)</div>
+                <div class="tool-item">Industry reports (market sizing, trends)</div>
+                <div class="tool-item">Google Sheets (market analysis, competitive mapping)</div>
+                <div class="tool-item">Customer interviews (primary research validation)</div>
+                <div class="tool-item">Figma (positioning diagrams, customer journey maps)</div>
+                <div class="tool-item">PowerPoint (pitch decks, presentations)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">08 / Reflection</div>
+            <h2>What I Learned</h2>
+            <p><strong>Technology ≠ Opportunity.</strong> A brilliant technology solution means nothing if nobody will pay for it. Market validation comes before engineering validation.</p>
+            <p><strong>The Entry Point Matters Most.</strong> A $10B addressable market is irrelevant if you can't reach it. The real question: where is your first customer? What's the smallest viable market entry point?</p>
+            <p><strong>Willingness-to-Pay Beats Problem Acknowledgment.</strong> Customers might agree a problem exists. But will they actually buy a solution? Will they change vendors for it? That distinction is critical.</p>
+            <p><strong>Research Reduces Risk Asymmetrically.</strong> Spending time upfront identifying technical, market, and competitive risks saves massive cost during execution. The earlier you find the constraints, the better.</p>
+        </section>
+
+        <section class="section cta-section">
             <h3>Explore More Work</h3>
             <p><a href="/work/">Back to all projects →</a></p>
         </section>
