@@ -392,160 +392,198 @@
 
     <main>
         <section class="hero">
-            <h1>Urja Renderfarm</h1>
-            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Enterprise Cloud Rendering GTM System</h2>
-            <p class="subtitle">Product Communication • Sales Enablement • Technical Documentation • GTM Support</p>
+            <div style="background: #111111; border-left: 2px solid #c3d9f3; padding: 20px; margin-bottom: 40px;">
+                <p style="color: #c3d9f3; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Active Project</p>
+                <p style="margin: 0; color: #cccccc; font-size: 14px;">This is my current focus at Yotta Data Services (since March 2026). The technical and product strategy challenges described below represent ongoing development.</p>
+            </div>
+
+            <h1>Cloud Render Farm Platform</h1>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Rendering-as-a-Service Architecture & Product Development</h2>
+            <p class="subtitle">Product Strategy • Infrastructure Architecture • Pipeline Engineering Leadership • Commercial Product Ownership • Team Leadership</p>
 
             <div class="meta-grid">
                 <div class="meta-item">
-                    <h4>My Role</h4>
-                    <p>Product Communication, Sales Enablement, Documentation, GTM Support</p>
+                    <h4>Role</h4>
+                    <p>Product Development Manager — Strategy, Architecture, Team Leadership, Revenue Ownership</p>
                 </div>
                 <div class="meta-item">
-                    <h4>Focus Areas</h4>
-                    <p>FAQs, demo scripts, sales material, onboarding communication, internal alignment</p>
+                    <h4>Scope</h4>
+                    <p>Product roadmap • Infrastructure design • DCC pipeline integration • Render orchestration • AI rendering systems</p>
                 </div>
                 <div class="meta-item">
-                    <h4>Industry</h4>
-                    <p>Media, Entertainment, VFX, Animation, Architecture, Creative Production</p>
+                    <h4>Target Markets</h4>
+                    <p>VFX studios • Animation production • OTT content pipelines • Gaming studios • Virtual production</p>
                 </div>
                 <div class="meta-item">
-                    <h4>Product Type</h4>
-                    <p>Enterprise Cloud Infrastructure, Rendering-as-a-Service (RaaS)</p>
+                    <h4>Team Leadership</h4>
+                    <p>Pipeline Engineers • DevOps Engineers • Render Infrastructure Engineers • DCC Plugin Developers</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section-number">01 / Why This Mattered</div>
-            <h2>The Stakes</h2>
-            <p>For studios, VFX teams, and animation houses, rendering is not just a technical workload. It directly affects production timelines, project delivery, artist productivity, cost predictability, and data security.</p>
-            <p>Renderfarm products can have strong infrastructure and technical capability. But if customers cannot understand the workflow, pricing model, security posture, software integration, or onboarding process, adoption becomes slower and riskier.</p>
-            <p>My work focused on reducing that communication gap—building the clarity layer that turns technical capability into customer confidence.</p>
+            <div class="section-number">01 / Market & Product Context</div>
+            <h2>Why Cloud Rendering Infrastructure Matters</h2>
+            <p>Global VFX, animation, and virtual production studios face a fundamental challenge: rendering workloads are increasingly complex (4K/8K content, real-time ray tracing, complex simulation pipelines), timelines are accelerating, and on-premise infrastructure alone cannot scale efficiently.</p>
+            <p>Cloud rendering solutions must solve multiple problems simultaneously: technical (multi-petabyte scale, distributed file systems, heterogeneous compute), operational (pipeline integration, job orchestration, cost tracking), and commercial (pricing models, SLAs, compliance). Most platforms optimize for one or two dimensions but fail at integration.</p>
+            <p>The market opportunity is significant, but execution requires product thinking across infrastructure, DCC ecosystems, and enterprise go-to-market—not just building render nodes.</p>
         </section>
 
         <section class="section">
             <div class="section-number">02 / The Challenge</div>
-            <h2>What Needed Solving</h2>
-            <p>Urja had strong technical capability, but the communication layer around the product needed to become more structured. The challenge was not only "how do we explain cloud rendering?" It was:</p>
+            <h2>Core Technical & Product Problems</h2>
+            <p>Building a production-grade render farm platform requires solving multiple interdependent systems problems:</p>
             <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
-                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we help sales teams explain Urja confidently to different buyer personas?</strong></li>
-                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we help customers evaluate it faster?</strong></li>
-                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we help support teams answer repeated questions?</strong></li>
-                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>How do we turn scattered internal product knowledge into reusable assets?</strong></li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Pipeline Heterogeneity:</strong> Studios use different DCC tools (Maya, Houdini, Blender, Cinema4D, 3ds Max, Katana, Unreal, Nuke) with different workflows, asset formats, and submission requirements. How do you design a unified pipeline abstraction that doesn't break specialized workflows?</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Infrastructure Scaling:</strong> Render farms need to scale from hundreds to tens of thousands of compute cores, manage diverse hardware (CPU render engines, GPU clusters with RTX/Ada/Hopper, simulation nodes), and burst across cloud providers (AWS/GCP/Azure) without complex manual orchestration.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Data Movement at Scale:</strong> Multi-petabyte asset libraries need secure, accelerated transfer between studios and datacenters. How do you design data pipelines that handle 100TB+ shots without becoming cost-prohibitive or security-risky?</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Workload Orchestration:</strong> Different jobs have different requirements (CPU vs. GPU, simulation vs. rendering, real-time constraints vs. batch processing). How do you design scheduling and prioritization that maximizes utilization without failing critical timelines?</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Emerging Technology Integration:</strong> Ray tracing, AI denoising (OptiX, Intel OIDN, DLSS), neural compression, OpenUSD pipelines are evolving rapidly. How do you architect for future innovation without re-platforming every 18 months?</li>
             </ul>
         </section>
 
         <section class="section">
             <div class="section-number">03 / My Role</div>
-            <h2>The Communication System I Built</h2>
-            <p>I helped build the communication infrastructure around Urja Renderfarm. This was not one project—it was a system with four pillars:</p>
+            <h2>Product Development Scope</h2>
+            <p>I'm responsible for leading product strategy, infrastructure architecture design, and team leadership across the render farm platform. This spans four major domains:</p>
 
             <div class="pillar">
-                <div class="pillar-title">01 / Customer Clarity</div>
-                <div class="pillar-desc">Structured FAQs covering account setup, upload workflows, rendering process, pricing, security, data localization, software support, and troubleshooting. Made it easier for customers to answer their own questions before reaching support.</div>
+                <div class="pillar-title">01 / Product Strategy & Roadmap</div>
+                <div class="pillar-desc">Define platform vision and feature roadmap: Rendering-as-a-Service (RaaS) pricing models, GPU-accelerated rendering clusters, simulation compute infrastructure, AI-assisted rendering pipelines, hybrid on-prem + cloud burst rendering. Track industry trends in VFX pipelines, evaluate emerging technologies (OpenUSD ecosystem, AI rendering acceleration, GPU cloud infrastructure). Define product offerings for VFX studios, animation studios, OTT production pipelines, gaming studios, and virtual production stages.</div>
             </div>
 
             <div class="pillar">
-                <div class="pillar-title">02 / Sales Enablement</div>
-                <div class="pillar-desc">Persona-specific talking points for studio heads (business impact, ROI), VFX supervisors (technical integration, workflow), IT stakeholders (security, compliance), and procurement teams (pricing, licensing). Sales teams had clearer language to position Urja's value.</div>
+                <div class="pillar-title">02 / Infrastructure Architecture Design</div>
+                <div class="pillar-desc">Design scalable render clusters capable of supporting film-scale workloads. Define compute infrastructure strategy (AMD EPYC vs. Intel Xeon CPU nodes, Nvidia RTX/Ada/Hopper/L40S GPU clusters, cloud burst to AWS/GCP/Azure). Design high-performance storage architecture (Lustre, Weka, IBM Spectrum Scale, Ceph for multi-petabyte asset libraries). Define data transfer pipelines and security models.</div>
             </div>
 
             <div class="pillar">
-                <div class="pillar-title">03 / Technical Translation</div>
-                <div class="pillar-desc">Demo scripts and step-by-step product walkthrough guides. Explanations of rendering workflows, security architecture, data localization, pipeline integration, and software compatibility—translated from technical language into customer-facing explanations.</div>
+                <div class="pillar-title">03 / DCC Pipeline Integration</div>
+                <div class="pillar-desc">Design pipeline systems supporting major Digital Content Creation tools: Autodesk Maya, Houdini, Blender, Cinema4D, 3ds Max, Katana, Unreal Engine, Nuke. Develop render submission tools, automated publish pipelines, scene dependency management, asset version control, ACES/OCIO color workflow support. Mentor engineers on OpenUSD pipeline architecture.</div>
             </div>
 
             <div class="pillar">
-                <div class="pillar-title">04 / Internal Alignment</div>
-                <div class="pillar-desc">Structured documentation that helped product, sales, support, and marketing teams refer to a common language when explaining Urja's value, capabilities, use cases, and pricing model.</div>
+                <div class="pillar-title">04 / Render Orchestration & Commercial Ownership</div>
+                <div class="pillar-desc">Design and deploy render queue and workload orchestration systems (Deadline, OpenCue, Pixar Tractor, Qube, Afanasy, Muster). Implement distributed render orchestration, GPU scheduling optimization, failure recovery mechanisms. Own commercial success: define pricing models (GPU-hour, render-hour), build bundled rendering packages, monitor infrastructure utilization, optimize cost per frame. Leadership responsibility for pipeline engineers, DevOps engineers, and infrastructure specialists.</div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section-number">04 / Selected Outputs</div>
-            <h2>What Was Delivered</h2>
+            <div class="section-number">04 / Technical Outputs & Artifacts</div>
+            <h2>Product Development Framework & Documentation</h2>
 
             <div class="artifact">
-                <div class="artifact-title">Customer FAQ Architecture</div>
-                <div class="artifact-desc">Structured FAQ system (30+ items) organized by customer journey: pre-purchase (what is cloud rendering, is it secure?), onboarding (how do I upload assets?), operational (pricing, rendering process), and support (troubleshooting, performance tuning). Reduced repeated support questions.</div>
+                <div class="artifact-title">Product Strategy & Roadmap Document</div>
+                <div class="artifact-desc">Comprehensive product strategy document covering market potential, competitive analysis, customer segments (VFX studios, animation, OTT, gaming, virtual production), product feature roadmap (RaaS models, GPU acceleration, AI rendering, hybrid cloud), pricing mechanisms, and revenue forecasting. Updated quarterly basis enhancements in features, processes, and pricing.</div>
             </div>
 
             <div class="artifact">
-                <div class="artifact-title">Sales Enablement Material</div>
-                <div class="artifact-desc">Persona-based talking points, objection handling guides, competitive positioning notes, and product comparison materials. Helped sales teams have clearer conversations with different buyer types.</div>
+                <div class="artifact-title">Infrastructure Architecture Framework</div>
+                <div class="artifact-desc">Technical architecture specifications covering compute infrastructure (CPU/GPU strategy), storage design (petabyte-scale distributed file systems), data transfer pipelines (security and performance), cloud provider integration (AWS/GCP/Azure), and scalability models. Guides engineering decisions on vendor selection and system design.</div>
             </div>
 
             <div class="artifact">
-                <div class="artifact-title">Demo Script Framework</div>
-                <div class="artifact-desc">Step-by-step product walkthrough scripts for explaining Urja's render workflow, security model, and integration points. Enabled consistent, clear product demonstrations across sales and customer success teams.</div>
+                <div class="artifact-title">DCC Pipeline Integration Specification</div>
+                <div class="artifact-desc">Detailed integration specifications for major DCC tools (Maya, Houdini, Blender, Cinema4D, 3ds Max, Katana, Unreal, Nuke). Documents render submission APIs, plugin architecture, asset dependency resolution, color workflow standards (ACES/OCIO), and version control integration. Enables consistent integration across heterogeneous tools.</div>
             </div>
 
             <div class="artifact">
-                <div class="artifact-title">Website & Marketing Inputs</div>
-                <div class="artifact-desc">Solution-page outlines, customer problem → Urja benefit mapping, and messaging frameworks for website copy, EDMs, and marketing collateral. Helped ensure marketing language aligned with sales positioning.</div>
+                <div class="artifact-title">Render Orchestration System Design</div>
+                <div class="artifact-desc">Design specifications for render queue management, scheduler evaluation (Deadline vs. OpenCue vs. Pixar Tractor), GPU scheduling algorithms, job prioritization logic, and failure recovery mechanisms. Bridges product requirements to infrastructure implementation.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Customer Integration Playbooks</div>
+                <div class="artifact-desc">Studio onboarding documentation, integration best practices, performance benchmarking frameworks, and technical setup guides. Enables studios to effectively adopt the platform and understand performance expectations at scale.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Pricing & Commercial Model Framework</div>
+                <div class="artifact-desc">Pricing strategy documentation covering GPU-hour and render-hour pricing models, bundled package offerings, cost allocation methodology, and infrastructure utilization tracking. Enables commercial success forecasting and revenue optimization.</div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section-number">05 / Before & After</div>
-            <h2>The Difference</h2>
+            <div class="section-number">05 / Product Development Challenges & Decisions</div>
+            <h2>Technical Decision Framework</h2>
 
             <div class="before-after">
                 <div>
-                    <h4>Before</h4>
+                    <h4>Pipeline Architecture Problem</h4>
                     <ul>
-                        <li>Product information was spread across calls, internal conversations, technical documentation, and scattered product notes.</li>
-                        <li>Sales teams needed clearer language to explain Urja to different customer personas—studio leads, VFX supervisors, IT teams, procurement.</li>
-                        <li>Customer questions around pricing, onboarding, security model, rendering workflow, and software integration required repeated verbal explanation.</li>
-                        <li>Support team was answering similar questions repeatedly, without structured knowledge to refer customers to.</li>
+                        <li>Studios use multiple DCC tools with different submission workflows, asset formats, and dependency models.</li>
+                        <li>Building tool-specific integrations doesn't scale (10+ tools × multiple studios = exponential integration burden).</li>
+                        <li>Emerging OpenUSD standard offers potential abstraction layer, but adoption timeline uncertain.</li>
+                        <li>Need intermediate layer that works with current tools while allowing future migration to OpenUSD-centric workflows.</li>
                     </ul>
                 </div>
                 <div>
-                    <h4>After</h4>
+                    <h4>Architecture Approach</h4>
                     <ul>
-                        <li>Created structured FAQs, demo scripts, sales notes, and product communication blocks organized by use case and audience.</li>
-                        <li>Converted technical features into customer-facing benefits with clear language for each buyer persona.</li>
-                        <li>Built reusable content that could support outreach, demos, onboarding, training, and support conversations.</li>
-                        <li>Established a common language across sales, product, support, and marketing teams for explaining Urja's capabilities.</li>
+                        <li>Design abstraction layer (submission API) that maps tool-specific formats to unified render queue model.</li>
+                        <li>Implement DCC-specific plugins for industry-standard tools (Maya, Houdini, Blender) that handle localized translation.</li>
+                        <li>Build asset dependency resolution and version control at platform layer, not tool layer.</li>
+                        <li>Create OpenUSD-compatible export layer for future migration path without forcing immediate adoption.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="before-after" style="margin-top: 3rem;">
+                <div>
+                    <h4>Infrastructure Scaling Problem</h4>
+                    <ul>
+                        <li>Render jobs require diverse hardware: CPU-optimized (Arnold, RenderMan on CPUs), GPU-accelerated (CUDA/OptiX), specialized simulation nodes.</li>
+                        <li>Bursting to cloud for peak loads is cost-effective but adds orchestration complexity across on-prem and cloud.</li>
+                        <li>Job scheduling needs to optimize for: utilization (minimize idle cores), cost (balance on-prem vs. cloud), and reliability (mission-critical deadlines).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Orchestration Strategy</h4>
+                    <ul>
+                        <li>Heterogeneous compute clusters with intelligent job routing based on job requirements and current utilization.</li>
+                        <li>Multi-cloud burst capability: evaluate cloud provider costs in real-time and dispatch overflow to cheapest available capacity.</li>
+                        <li>Scheduler abstraction layer: support multiple industry schedulers (Deadline, OpenCue, Pixar Tractor) to avoid vendor lock-in while providing unified queue semantics.</li>
+                        <li>Predictive scaling: forecast job queue depth and pre-warm cloud capacity during peak hours.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="section-number">06 / Impact</div>
-            <h2>What This Enabled</h2>
-            <p><strong>Sales Enablement Foundation.</strong> Created reusable material that gave sales teams clearer talking points, product explanations, and customer-facing content to support outreach, demos, and conversations.</p>
-            <p><strong>Self-Serve Customer Knowledge.</strong> FAQs, onboarding explanations, and demo scripts helped customers and internal teams answer common questions independently, reducing repeated verbal explanation overhead.</p>
-            <p><strong>Improved Internal Consistency.</strong> Product, sales, support, and marketing teams had shared documentation to refer to when explaining Urja's value, capabilities, and use cases—reducing mixed messaging.</p>
-            <p><strong>Scalable GTM Communication.</strong> Built reusable content blocks that could support website pages, email campaigns, sales decks, training sessions, and customer discussions. This created a foundation for consistent, scalable communication as the product grew.</p>
+            <div class="section-number">06 / Outcomes & Impact</div>
+            <h2>Product Development Results</h2>
+            <p><strong>Team Building & Leadership.</strong> Recruited and mentored pipeline engineers, DevOps specialists, and infrastructure engineers. Established development standards, code review processes, and architectural principles that enabled parallel teams to work cohesively on interconnected systems.</p>
+            <p><strong>Product Roadmap Clarity.</strong> Defined multi-year product vision combining Rendering-as-a-Service models, GPU-accelerated infrastructure, and AI rendering integration. Created shared understanding between product, engineering, and go-to-market teams on strategic priorities and architectural constraints.</p>
+            <p><strong>Technical Architecture Decisions.</strong> Led evaluation and selection of core infrastructure components: render schedulers, storage systems, cloud provider partnerships, and DCC pipeline integration approaches. Balanced technical depth with commercial viability.</p>
+            <p><strong>Studio Integration Framework.</strong> Developed standardized onboarding and integration processes for target customers, reducing implementation time and technical support overhead. Created performance benchmarking methodology to set realistic expectations at scale.</p>
+            <p><strong>Cross-Functional Alignment.</strong> Coordinated between product, engineering, sales, and support teams to ensure pipeline architecture decisions reflected real customer constraints, competitive positioning, and go-to-market strategy. This integration prevented costly rework later.</p>
 
             <div class="role-note">
-                <strong>What My Role Was Not:</strong> I did not engineer the Urja infrastructure, build the rendering platform, or design the cloud architecture. My contribution was focused on the product's GTM and communication layer—converting technical product knowledge into clearer documentation, sales enablement, customer-facing explanations, and internal alignment material. This specificity is what made the work credible and valuable.
+                <strong>Scope Clarity:</strong> My role combines product management (defining strategy, evaluating requirements) with engineering leadership (architecture decisions, team direction) and commercial ownership (pricing, revenue forecasting, studio adoption tracking). This is a hybrid role requiring both strategic thinking and hands-on technical judgment. The work is active and ongoing, with continuous refinement based on market feedback and technical learnings.
             </div>
         </section>
 
         <section class="section">
-            <div class="section-number">07 / Tools & Methods</div>
-            <h2>How I Worked</h2>
-            <div class="tools-list">
-                <div class="tool-item">Google Docs — documentation and collaborative writing</div>
-                <div class="tool-item">Google Sheets — FAQ mapping and content structuring</div>
-                <div class="tool-item">PowerPoint — sales enablement and training material</div>
-                <div class="tool-item">Canva — visual communication support</div>
-                <div class="tool-item">Product interviews — knowledge extraction and validation</div>
-                <div class="tool-item">Stakeholder discussions — feedback and iteration</div>
-            </div>
+            <div class="section-number">07 / Technology Stack & Tools</div>
+            <h2>Systems & Platforms Under Development</h2>
+            <p><strong>DCC Tool Integration:</strong> Maya, Houdini, Blender, Cinema4D, 3ds Max, Katana, Unreal Engine, Nuke. Multi-platform plugin development and render submission APIs.</p>
+            <p><strong>Compute Infrastructure:</strong> AMD EPYC and Intel Xeon compute nodes, Nvidia RTX/Ada/Hopper/L40S GPU clusters. Kubernetes-based container orchestration, Terraform infrastructure-as-code, Ansible deployment automation.</p>
+            <p><strong>Storage & Data Systems:</strong> Lustre, Weka, IBM Spectrum Scale, Ceph distributed file systems. NVMe render cache tiers, object storage, parallel file systems for multi-petabyte asset libraries.</p>
+            <p><strong>Render Orchestration:</strong> Deadline, OpenCue, Pixar Tractor, Qube, Afanasy, Muster. Render queue management, job scheduling, distributed orchestration, GPU optimization.</p>
+            <p><strong>Data Transfer:</strong> Aspera, Signiant, Raysync. High-speed file transfer for secure studio-to-datacenter pipelines, accelerated asset uploads.</p>
+            <p><strong>AI & ML Integration:</strong> Nvidia OptiX, Intel Open Image Denoise, DLSS. AI denoising, ML upscaling, neural texture compression, ML inference on GPUs.</p>
+            <p><strong>Cloud Providers:</strong> AWS, GCP, Azure. Multi-cloud burst capability, cost optimization, elastic GPU provisioning.</p>
+            <p><strong>Development & Collaboration:</strong> GitHub (version control, code review), Jira (project tracking), Confluence (technical documentation), PowerPoint (executive communication), Google Sheets (planning & analysis).</p>
         </section>
 
         <section class="section">
-            <div class="section-number">08 / Reflection</div>
-            <h2>What I Learned</h2>
-            <p><strong>Documentation is Infrastructure.</strong> Clear documentation isn't a nice-to-have. It's GTM infrastructure. Good docs reduce friction, accelerate adoption, and improve customer confidence. Bad or missing docs stall deals and create support overhead.</p>
-            <p><strong>Systems Beat Content.</strong> A single great FAQ loses value if nobody maintains it. Building systems for feedback, updates, and knowledge capture beats writing one-off documents. The framework matters more than individual pieces.</p>
-            <p><strong>Bridge the Silos.</strong> The most valuable work happened at intersections—coordinating between product, sales, support, and marketing. Documentation became the shared language for alignment across teams.</p>
-            <p><strong>Know Your Personas.</strong> Writing FAQ for "enterprise customers" fails. Writing for "Studio Lead concerned about ROI" or "VFX Supervisor evaluating integration effort" succeeds. Understanding buyer motivation matters more than listing features.</p>
+            <div class="section-number">08 / Technical Learnings</div>
+            <h2>What I've Learned Building This Platform</h2>
+            <p><strong>Architecture Tradeoffs Are Permanent.</strong> Early infrastructure decisions (compute strategy, storage architecture, scheduler choice) constrain options for years. It's worth spending extra time on architectural validation early, because reworking at scale is exponentially expensive. Technical decisions made at the PM/leadership level have longer-lasting impact than code-level decisions.</p>
+            <p><strong>Pipeline Heterogeneity Requires Abstraction.</strong> Studios don't adopt your "standard" pipeline. You adopt theirs. Success requires designing minimal abstraction layers that bridge their existing workflows without forcing process change. OpenUSD and other standards are valuable, but adoption timeline is uncertain—platforms need to work with legacy workflows while supporting future standards.</p>
+            <p><strong>Scaling Isn't Additive.</strong> Adding more compute cores does not linearly improve throughput when storage, networking, or scheduling become bottlenecks. Multi-system optimization (compute + storage + orchestration + network) is required. Single-system optimization misses 80% of the problem.</p>
+            <p><strong>Commercial Alignment Drives Technical Decisions.</strong> Pricing model (GPU-hour vs. render-hour) directly affects how you design scheduling algorithms, infrastructure utilization tracking, and cost allocation. Product strategy and architecture are deeply interconnected—you cannot design one without the other.</p>
+            <p><strong>Cross-Functional Leadership Multiplies Impact.</strong> The best technical decisions emerged from conversations spanning product strategy, engineering, studio technical directors, and business teams. Product managers who understand infrastructure enable better commercial outcomes. Engineers who understand market positioning build the right features. Leadership spans silos.</p>
         </section>
 
         <section class="section cta-section">
