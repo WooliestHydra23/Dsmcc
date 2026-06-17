@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodh — Founding a College-Funded Quiz Show Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+        }
+
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meta-item h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 14px;
+            margin: 0;
+            color: #999999;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .pillar {
+            margin-bottom: 2.5rem;
+        }
+
+        .pillar-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .artifact {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
+        }
+
+        .artifact-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .before-after h4 {
+            margin-top: 0;
+        }
+
+        .before-after ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .before-after li {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .before-after li:last-child {
+            border-bottom: none;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .role-note {
+            background: transparent;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            font-size: 14px;
+            color: #999999;
+            font-style: italic;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../certifications/">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Bodh</h1>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Founding a College-Funded Quiz Show Platform</h2>
+            <p class="subtitle">Startup Thinking • Systems Design • IT Infrastructure • Community Building • Event Operations</p>
+
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Role & Timeline</h4>
+                    <p>Founding Member & Head of IT Department (Dec 2021–Sep 2023, 1 yr 10 mos). Evolved from Q'triosity backend contributor to founding institutional quiz show.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Scope</h4>
+                    <p>College-funded recurring event platform. Multiple Q'triosity competitions, specialized quiz events (Water, Educators). Event management + IT infrastructure.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Scale</h4>
+                    <p>Grew from backend volunteer role to founding and institutionalizing a multi-event annual platform. Sustained for 2+ years across multiple competitions.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Outcome</h4>
+                    <p>Transitioned side project into college-funded recurring institutional event. Demonstrated concept viability and market demand for structured quiz platform.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">01 / Market Context</div>
+            <h2>The Opportunity</h2>
+            <p>Most college quiz competitions are ad-hoc—organized by enthusiasts, run once annually, disappear when organizers graduate. Few become institutionalized or attract college funding. Even fewer sustain across multiple years or spawn derivative events.</p>
+            <p>Bodh emerged from recognizing a pattern: students enjoy competitive intellectual platforms, but infrastructure (registration, scoring, engagement) is usually amateur. The opportunity: build quiz show as a systems-driven platform, not one-off event. If execution worked once, could it scale? Could it attract institutional support?</p>
+            <p>This required two things: (1) Prove the concept (execution excellence first time), (2) Build IT infrastructure that made repetition easy. Most quiz organizers skip #2 and burn out. Bodh focused on infrastructure from the start.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">02 / The Journey</div>
+            <h2>From Contributor to Founder</h2>
+            <p><strong>Sep–Dec 2021:</strong> Started as backend volunteer on Q'triosity, the college's small annual quiz show. Got exposure to event operations, registration systems, scoring. Saw opportunities for improvement.</p>
+            <p><strong>Dec 2021–Sep 2023:</strong> Proposed expanding Q'triosity into a recurring platform with IT infrastructure. College approved concept and funded it as Bodh. Transitioned from volunteer contributor to founding member and Head of IT.</p>
+            <p>Key decision: Rather than just run events, build systems that made execution repeatable. IT infrastructure became the differentiator—registration automation, scoring frameworks, analytics, social integration.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">03 / My Role</div>
+            <h2>Founding & Infrastructure Leadership</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">01 / Concept Development</div>
+                <div class="pillar-desc">Identified opportunity to expand small annual quiz into recurring platform. Proposed infrastructure-first approach: build systems that enable repetition, not just one-off execution. Convinced college leadership that Q'triosity could become institutional entity with dedicated funding. Developed concept document outlining platform vision, event calendar, IT requirements, and sustainability model.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">02 / IT Infrastructure & Technology Strategy</div>
+                <div class="pillar-desc">Designed and implemented technical infrastructure for quiz platform: registration systems, scoring frameworks, leaderboard management, social media integration. Built systems that made running multiple events per year feasible. Technology strategy focused on reducing manual work, enabling data collection, and improving participant experience. Created reusable workflows for event setup, execution, and post-event analysis.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">03 / Event Operations</div>
+                <div class="pillar-desc">Managed IT execution across multiple Q'triosity competitions and specialized events (Water Quiz, Educators Quiz). Ensured technical infrastructure performed reliably under event-day pressure. Coordinated with event organizers, student teams, and college administration. Handled real-time troubleshooting, participant support, and post-event data compilation.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">04 / Institutional Building</div>
+                <div class="pillar-desc">Worked to make Bodh sustainable beyond any single person. Documented processes, trained team members, created standard operating procedures. Positioned IT infrastructure as non-negotiable foundation, not optional addition. Demonstrated value to college leadership through attendance growth, participant satisfaction, and media reach.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">04 / The Systems</div>
+            <h2>Infrastructure-First Platform Design</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">System 1: Registration & Participant Management</div>
+                <div class="pillar-desc">Automated registration system instead of manual signups. Participants could self-register, receive confirmations, access event information. Enabled scaling from 50 to 500+ participants per event without proportional admin burden. Captured participant data for follow-up, community building, and future event insights.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 2: Scoring & Leaderboard</div>
+                <div class="pillar-desc">Standardized scoring framework and real-time leaderboard. Made event execution faster (judges no longer manually tracked scores) and more transparent (participants could see live rankings). Reduced scoring disputes and improved participant engagement.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 3: Social Media & Analytics</div>
+                <div class="pillar-desc">Integrated social media promotion with event infrastructure. Tracked engagement metrics, post reach, and community growth across events. Used analytics to refine future event positioning and promotion strategy. Made Bodh visible beyond just participants—built institutional brand.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 4: Operational Documentation</div>
+                <div class="pillar-desc">Documented all IT processes: setup checklists, troubleshooting guides, standard operating procedures. Enabled continuity—future organizers could run events without starting from scratch. Reduced dependency on any single person's knowledge.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">05 / Outputs & Events</div>
+            <h2>What Was Built & Delivered</h2>
+
+            <div class="artifact">
+                <div class="artifact-title">Q'triosity Competitions (Multiple Years)</div>
+                <div class="artifact-desc">Expanded original small annual quiz into recurring major event with college funding and dedicated team. Successfully executed multiple Q'triosity competitions across the platform timeline. Grew participation, improved execution quality, and demonstrated sustainable event model.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Specialized Quiz Events</div>
+                <div class="artifact-desc">Launched derivative events leveraging Bodh infrastructure: Water Quiz (themed around water/astrobiology), Educators Quiz (collaboration with external educators), and others. Demonstrated that platform could support diverse quiz formats and themes.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">IT Infrastructure & Tools</div>
+                <div class="artifact-desc">Built and maintained registration systems, scoring platforms, leaderboards, analytics dashboards, social media integration. Created reusable components that made launching new events faster and less error-prone.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Operations Manual & Documentation</div>
+                <div class="artifact-desc">Documented all IT processes, event setup procedures, troubleshooting guides, and standard operating procedures. Enabled knowledge transfer and continuity—platform could function without founder dependency.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Community & Brand</div>
+                <div class="artifact-desc">Built Bodh brand across social media, established community of regular participants, created institutional recognition for college-funded quiz platform. Made Bodh recognizable and aspirational for student participation.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">06 / Key Challenges & Decisions</div>
+            <h2>Building a Sustainable Platform</h2>
+
+            <div class="before-after">
+                <div>
+                    <h4>The Challenge</h4>
+                    <ul>
+                        <li>Started as small backend volunteer role (Q'triosity)</li>
+                        <li>Opportunity to expand, but no existing infrastructure</li>
+                        <li>Risk: become just another one-off event that disappears</li>
+                        <li>Need to convince college leadership to invest in recurring platform</li>
+                        <li>Scaling meant dealing with complexity (more events, more participants, more moving parts)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>The Approach</h4>
+                    <ul>
+                        <li>Built IT infrastructure first, before scaling events</li>
+                        <li>Made founding proposal to college: "Here's why this works, here's how we scale"</li>
+                        <li>Focused on systems that reduced human burden (automation, documentation)</li>
+                        <li>Measured success through metrics (attendance, engagement, brand reach) not just "did event happen"</li>
+                        <li>Documented everything to ensure continuity beyond founder departure</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">07 / Impact & Outcomes</div>
+            <h2>Building Something That Sustained</h2>
+            <p><strong>Converted Side Project to Institution.</strong> Q'triosity was small annual event. Bodh became college-funded recurring platform. Demonstrated that side projects, if executed well and documented properly, can become institutional entities.</p>
+            <p><strong>Infrastructure Enabled Scaling.</strong> Built IT systems that made running multiple events per year feasible without proportional increase in volunteer burden. Registration automation, scoring frameworks, and documentation reduced complexity.</p>
+            <p><strong>Community Building.</strong> Created sustained community around quiz competitions. Regular participants, growing social media following, increasing event attendance. Bodh became recognizable institutional brand.</p>
+            <p><strong>Systems Over Hero Worship.</strong> Deliberately avoided making platform dependent on any single person. Documented processes, trained team members, created standard procedures. Positioned infrastructure—not individual—as the value. This enabled sustainability beyond founder.</p>
+            <p><strong>Proof of Concept for Startup Thinking.</strong> Demonstrated ability to: identify opportunity → propose solution → secure resources → build systems → sustain platform → transition beyond dependency. This is startup thinking applied to student context.</p>
+
+            <div class="role-note">
+                <strong>Timeline & Context:</strong> This was during BBA studies (part-time institutional leadership). Ran Bodh for 1 yr 10 months while studying full-time. Demonstrates ability to identify and build something substantial in parallel with primary commitment. Shows initiative—not waiting for permission, but proposing and executing.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">08 / Learnings</div>
+            <h2>What Founding Bodh Taught Me</h2>
+            <p><strong>Infrastructure Enables Scale.</strong> One-off events are volunteer-intensive. Repeatable events require systems. The difference between "we ran this once" and "we run this yearly" is infrastructure. Building for repetition from the start costs more upfront but enables sustainability.</p>
+            <p><strong>Side Projects Can Become Institutions.</strong> Most side projects stay side projects because organizers don't think systemically. If you design for sustainability (documentation, processes, team distribution), side projects can attract institutional support and become recurring.</p>
+            <p><strong>Proposing > Waiting for Permission.</strong> Didn't ask college "can we expand Q'triosity?" Proposed "here's what Bodh could be, here's why it works, here's how we execute." Came with solution, not problem. That's how you get resources.</p>
+            <p><strong>Systems Don't Replace People, They Amplify Them.</strong> Automating registration doesn't remove the need for organizers. It removes the busywork, freeing organizers to focus on participant experience, event creativity, and strategic growth.</p>
+            <p><strong>Measure What Matters.</strong> Success isn't "event happened." Success is: attendance growth, participant satisfaction, community engagement, brand reach, sustainability. Measure strategically to guide iteration.</p>
+            <p><strong>Founder Dependency is a Bug, Not a Feature.</strong> Deliberately built systems and documented processes so platform could function without me. That's how institutions work—people come and go, but systems persist.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">09 / Tools & Methods</div>
+            <h2>Operational Tools</h2>
+            <div class="tools-list">
+                <div class="tool-item">Event management & coordination — Planning, team communication</div>
+                <div class="tool-item">Registration systems — Online signup, participant management</div>
+                <div class="tool-item">Scoring & leaderboard — Live tracking, result compilation</div>
+                <div class="tool-item">Social media — Instagram, Facebook, promotion strategy</div>
+                <div class="tool-item">Analytics — Attendance tracking, engagement metrics, growth measurement</div>
+                <div class="tool-item">Documentation — Standard operating procedures, process guides</div>
+                <div class="tool-item">IT Infrastructure — Server management, system stability, data security</div>
+                <div class="tool-item">Community building — Participant engagement, feedback collection, iteration</div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <h3>Explore More Work</h3>
+            <p><a href="../">Back to all projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

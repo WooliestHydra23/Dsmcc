@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinedicate — Creative Club Leadership & Media Production</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .caption {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            padding: 120px 0 60px 0;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+        }
+
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meta-item h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            font-size: 14px;
+            margin: 0;
+            color: #999999;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-number {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .pillar {
+            margin-bottom: 2.5rem;
+        }
+
+        .pillar-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .artifact {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .artifact:last-child {
+            border-bottom: none;
+        }
+
+        .artifact-title {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .artifact-desc {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .before-after h4 {
+            margin-top: 0;
+        }
+
+        .before-after ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .before-after li {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #262626;
+        }
+
+        .before-after li:last-child {
+            border-bottom: none;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1rem;
+        }
+
+        .tool-item {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .role-note {
+            background: transparent;
+            border-top: 1px solid #262626;
+            border-bottom: 1px solid #262626;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            font-size: 14px;
+            color: #999999;
+            font-style: italic;
+        }
+
+        .cta-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid #262626;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            .hero {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../certifications/">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Cinedicate</h1>
+            <h2 style="font-size: 32px; margin-top: 0; margin-bottom: 2rem;">Creative Club Leadership & Media Production</h2>
+            <p class="subtitle">Cinematography Leadership • Creative Direction • Content Production • Community Building • Visual Storytelling</p>
+
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <h4>Role & Timeline</h4>
+                    <p>Head of Cinematography (Apr 2023–Sep 2023, 6 months, part-time). Leadership role in Shoolini University's filmmaking club.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Scope</h4>
+                    <p>Cinematography leadership, short film production, YouTube channel, social media content, community engagement with filmmaking enthusiasts.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Scale</h4>
+                    <p>Multiple short films produced, YouTube channel launched, social media presence built, 8+ media items archived and promoted.</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Skills Demonstrated</h4>
+                    <p>Creative direction, video editing, media production, storytelling, social media strategy, community building, cinematographic vision.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">01 / Context</div>
+            <h2>Creative Community at Campus Scale</h2>
+            <p>Most college film clubs are scattered projects—students shoot videos, post occasionally, lose momentum. Few establish coherent creative vision, sustained production, or institutional presence. The opportunity: position Cinedicate not as "place where filmmakers happen to meet" but as "creative platform with consistent output and vision."</p>
+            <p>This required focus on: (1) Production quality—short films worth watching, (2) Strategic storytelling—each film explores themes, not just captures moments, (3) Community building—attract both creators and audience, (4) Platform infrastructure—YouTube channel, social media, consistent publishing.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">02 / The Challenge</div>
+            <h2>Building Creative Coherence</h2>
+            <ul style="list-style: none; padding: 0; margin: 1.5rem 0;">
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Creative Direction:</strong> Club had members with different visions. How do you create coherent output while respecting individual creativity? Need editorial judgment without suppressing voices.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Production Scale:</strong> Short films require coordination (crew, equipment, time). Scaling from one film to multiple films needed planning and resource management.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Distribution & Audience:</strong> Films sit on hard drives if not published. YouTube channel, social media strategy, and consistent release cadence were essential to building viewership.</li>
+                <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #262626;"><strong>Sustainability:</strong> Club leadership rotates. How do you build platform that survives leadership transitions? Need documentation, process standardization, and community ownership.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-number">03 / My Role</div>
+            <h2>Cinematography Leadership & Creative Direction</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">01 / Creative Direction</div>
+                <div class="pillar-desc">Led cinematographic vision for club. Guided members on shot composition, visual storytelling, camera movement. Ensured films reflected consistent aesthetic and thematic coherence. Gave feedback on scripts, shot lists, and final edits. Maintained editorial standards without suppressing individual creativity.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">02 / Production Leadership</div>
+                <div class="pillar-desc">Coordinated film production across multiple projects. Managed crew assignment, equipment allocation, shooting schedules. Troubleshot technical issues during production. Ensured quality control from concept through post-production.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">03 / Platform Building</div>
+                <div class="pillar-desc">Established YouTube channel and social media presence for Cinedicate. Curated content release schedule. Wrote compelling descriptions, hashtags, and promotional copy. Built audience through consistent, high-quality output. Made club visible beyond just campus.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">04 / Community & Culture</div>
+                <div class="pillar-desc">Fostered collaborative creative culture. Mentored members on cinematography techniques. Organized screenings and discussions. Built community of filmmakers who felt ownership of club's work, not just contributors to projects.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">04 / Creative Output</div>
+            <h2>Films & Projects Produced</h2>
+
+            <div class="artifact">
+                <div class="artifact-title">"Blinq - The Fading Echoes"</div>
+                <div class="artifact-desc">Original short film exploring social media's destructive influence on campus life. Student-produced film showcasing thematic storytelling and technical production quality. Published on YouTube and promoted across social channels. Demonstrated club's ability to produce narrative-driven work, not just event coverage.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">"Script Comes to Life: Actors Bring Energy and Emotion to Table Read"</div>
+                <div class="artifact-desc">Behind-the-scenes content capturing screenwriting and acting collaboration. Showcased creative process alongside finished products. Used to build engagement and attract new members interested in different aspects of filmmaking.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Cinedicate YouTube Channel & Social Media</div>
+                <div class="artifact-desc">Launched and managed YouTube channel and Instagram presence. Consistent posting schedule, compelling visual content, strategic hashtags to reach filmmaking community. Built audience from zero to engaged followers. 8+ media items published and promoted.</div>
+            </div>
+
+            <div class="artifact">
+                <div class="artifact-title">Institutional Branding & Positioning</div>
+                <div class="artifact-desc">Established Cinedicate as recognized campus creative entity. Positioning: "Ultimate platform for film enthusiasts"—from direction to acting, screenplay to production, design to everything in between. Made club aspirational for creative students.</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">05 / Systems & Workflow</div>
+            <h2>Production & Distribution Framework</h2>
+
+            <div class="pillar">
+                <div class="pillar-title">System 1: Concept-to-Publication Pipeline</div>
+                <div class="pillar-desc"><strong>Ideation:</strong> Script pitches and creative brainstorms. <strong>Development:</strong> Script reviews, crew assignment, shot planning. <strong>Production:</strong> Shooting with defined timeline and quality standards. <strong>Post-production:</strong> Editing, color correction, sound design. <strong>Publishing:</strong> YouTube upload, social media promotion with optimized titles, descriptions, hashtags.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 2: Creative Standards</div>
+                <div class="pillar-desc">Established cinematography guidelines: shot composition principles, color grading aesthetic, audio quality standards. Ensured consistency across films while allowing individual creative voices. Standards maintained through mentoring and feedback, not rigid rules.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">System 3: Community Engagement</div>
+                <div class="pillar-desc">Regular screenings and discussions, feedback sessions, member spotlights on social media, behind-the-scenes content. Made community feel heard and recognized. Encouraged participation from different roles (actors, directors, cinematographers, editors, sound designers).</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">06 / Impact & Outcomes</div>
+            <h2>Building a Recognized Creative Platform</h2>
+            <p><strong>Professional Output Quality.</strong> Films produced by Cinedicate during this period demonstrated technical and creative quality beyond typical student club work. "Blinq - The Fading Echoes" showed capacity for thematic storytelling and production values.</p>
+            <p><strong>Institutional Presence.</strong> Established Cinedicate as recognized campus creative entity. Social media following grew, YouTube channel attracted viewers. Club became visible to prospective members and institutional stakeholders.</p>
+            <p><strong>Community & Culture.</strong> Built collaborative creative community where members felt ownership. Fostered mentoring relationships and skill-sharing. Members developed as filmmakers, not just fulfilled roles in projects.</p>
+            <p><strong>Content Production Pipeline.</strong> Developed repeatable systems for taking ideas through production to publication. Reduced friction between ideation and execution. Made launching new projects easier for successor leadership.</p>
+            <p><strong>Creative Direction.</strong> Established visual and thematic language for Cinedicate. Films reflected consistent aesthetic and quality standard. Position: "serious creative platform" not "casual student activity."</p>
+
+            <div class="role-note">
+                <strong>Timeline & Context:</strong> This was 6-month part-time role during BBA. Concurrent with Bodh IT leadership (both running Apr–Sep 2023). Demonstrates ability to lead across different domains—systems thinking for Bodh, creative direction for Cinedicate. Shows range and flexibility in institutional leadership.
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-number">07 / Learnings</div>
+            <h2>What Building Cinedicate Taught Me</h2>
+            <p><strong>Creative Direction Requires Clarity Without Rigidity.</strong> Good creative leadership sets standards and vision, but doesn't suppress individual voices. Had to give feedback that improved work without dictating every choice. Balance between coherence and freedom.</p>
+            <p><strong>Audience Matters.</strong> Films in hard drives are invisible. Publishing consistently, with strategy around timing and promotion, transformed internal projects into platform with external audience. Audience feedback then informed creative direction.</p>
+            <p><strong>Production is Systems Work.</strong> Filmmaking looks like art but is actually logistics—crew coordination, equipment management, timeline discipline. Good production comes from systems, not inspiration. Infrastructure enables creativity.</p>
+            <p><strong>Mentoring Multiplies Impact.</strong> Rather than just making films, I mentored members on cinematography and creative thinking. This multiplied output—other members improved faster and produced better work. Teaching is leveraged impact.</p>
+            <p><strong>Community Ownership Sustains Work.</strong> Projects I purely owned would stop when I left. Projects where community had ownership and understanding continued. Success isn't about being indispensable—it's about building something that works without you.</p>
+            <p><strong>Different Leadership Looks Different.</strong> Bodh leadership was systems/operations-focused. Cinedicate was creative/vision-focused. Both required leadership, but style and tools differ. Adaptability across domains matters.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-number">08 / Tools & Methods</div>
+            <h2>Creative & Production Tools</h2>
+            <div class="tools-list">
+                <div class="tool-item">Cinematography — Shot composition, camera movement, visual storytelling</div>
+                <div class="tool-item">Video editing — Post-production, color grading, sound design</div>
+                <div class="tool-item">Production management — Crew coordination, equipment, shooting schedules</div>
+                <div class="tool-item">Social media strategy — Instagram, YouTube, content calendar, promotion</div>
+                <div class="tool-item">Creative direction — Script feedback, shot planning, quality standards</div>
+                <div class="tool-item">Community engagement — Screenings, discussions, feedback sessions</div>
+                <div class="tool-item">Storytelling — Thematic development, narrative structure, visual language</div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <h3>Explore More Work</h3>
+            <p><a href="../">Back to all projects →</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/achievements">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 17, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
