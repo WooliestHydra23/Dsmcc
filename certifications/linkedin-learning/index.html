@@ -226,6 +226,81 @@
             color: #c3d9f3;
         }
 
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-item {
+            border: 1px solid #262626;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s;
+        }
+
+        .cert-item:hover {
+            border-color: #c3d9f3;
+        }
+
+        .cert-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .cert-meta {
+            font-size: 12px;
+            color: #999999;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #c3d9f3;
+            color: #c3d9f3;
+            padding: 4px 8px;
+            font-size: 10px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border-radius: 3px;
+        }
+
+        .cert-download {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #c3d9f3;
+            text-decoration: none;
+            padding: 8px 0;
+            border-top: 1px solid #262626;
+            padding-top: 8px;
+            display: inline-block;
+        }
+
+        .cert-download:hover {
+            color: #ffffff;
+        }
+
         footer {
             border-top: 1px solid #262626;
             padding: 80px 40px;
@@ -395,6 +470,111 @@
                         <li>Learning Bitcoin and Other Cryptocurrencies</li>
                         <li>Learning Bitcoin and Other Cryptocurrencies (Additional x2)</li>
                     </ul>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem; margin-bottom: 2rem;">Certificate Gallery</h2>
+            <p style="color: #cccccc; font-size: 14px; margin-bottom: 3rem; max-width: 900px;">
+                All LinkedIn Learning certificates with completion verification. Hover over certificates to view details. Click to download PDF.
+                <span style="color: #c3d9f3;">★</span> indicates CPE (Continuing Professional Education) certified courses.
+            </p>
+
+            <div class="cert-gallery">
+                <!-- Photography Certificates -->
+                <div class="cert-item">
+                    <div class="cert-title">Photography First Steps</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Photography First Steps.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Photography Foundations Exposure 2010</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Photography Foundations Exposure 2010.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Photography Foundations Lenses</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Photography Foundations Lenses.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">The DIY Photographer</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_The DIY Photographer.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Street Photography Two Hours in a Neighborhood</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Street Photography Two Hours in a Neighborhood.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Insights on Product Photography</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Insights on Product Photography.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Editing Images Using Snapseed</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Editing Images Using Snapseed.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <!-- Marketing Certificates -->
+                <div class="cert-item">
+                    <div class="cert-title">Advertising on Instagram 2019</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Advertising on Instagram 2019.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Marketing on Instagram 2018</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Marketing on Instagram 2018.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Marketing Your Event</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Marketing Your Event.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-title">Mobile Marketing Foundations</div>
+                    <div class="cert-meta">Completed</div>
+                    <a href="certificates/CertificateOfCompletion_Mobile Marketing Foundations.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <!-- Professional Development Certificates -->
+                <div class="cert-item">
+                    <div class="cert-badge">★ CPE Certified</div>
+                    <div class="cert-title">Public Speaking Foundations</div>
+                    <div class="cert-meta">Completed (Multiple)</div>
+                    <a href="certificates/CertificateOfCompletion_Public Speaking Foundations.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-badge">★ CPE Certified</div>
+                    <div class="cert-title">Improving Your Listening Skills</div>
+                    <div class="cert-meta">Completed (Multiple)</div>
+                    <a href="certificates/CertificateOfCompletion_Improving Your Listening Skills.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-badge">★ CPE Certified</div>
+                    <div class="cert-title">Developing a Learning Mindset</div>
+                    <div class="cert-meta">Completed (Multiple)</div>
+                    <a href="certificates/CertificateOfCompletion_Developing a Learning Mindset.pdf" class="cert-download" download>Download PDF →</a>
+                </div>
+
+                <!-- Technology Certificates -->
+                <div class="cert-item">
+                    <div class="cert-title">Learning Bitcoin and Other Cryptocurrencies</div>
+                    <div class="cert-meta">Completed (Multiple)</div>
+                    <a href="certificates/CertificateOfCompletion_Learning Bitcoin and Other Cryptocurrencies.pdf" class="cert-download" download>Download PDF →</a>
                 </div>
             </div>
         </section>
