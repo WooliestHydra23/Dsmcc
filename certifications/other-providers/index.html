@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Learning Providers — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: #cccccc;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .cert-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-category {
+            border-bottom: 1px solid #262626;
+            padding-bottom: 2rem;
+        }
+
+        .cert-category h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-category p {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .cert-list li {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .cert-list a {
+            color: #c3d9f3;
+            text-decoration: none;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            section:first-of-type {
+                padding-top: 80px;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+
+            .cert-grid {
+                gap: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="breadcrumb"><a href="../">Certifications</a> / Other Learning Providers</div>
+            <h1>Other Learning Providers</h1>
+            <p style="color: #cccccc; font-size: 18px; margin-bottom: 4rem; max-width: 800px;">
+                Specialized training across AI, business strategy, and continuous professional development
+                from industry-leading providers beyond Microsoft and Skillsoft ecosystems.
+            </p>
+
+            <div class="cert-grid">
+                <div class="cert-category">
+                    <h3>Generative AI & Advanced Topics</h3>
+                    <p>Specialized AI and machine learning training from global technology leaders.</p>
+                    <ul class="cert-list">
+                        <li>Google Generative AI Specialization</li>
+                        <li>IBM Customer Care AI</li>
+                        <li>Advanced prompt engineering & LLM applications</li>
+                        <li>Cutting-edge AI implementation strategies</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Business Strategy & Market</h3>
+                    <p>Product strategy, go-to-market, and business frameworks from leading institutions.</p>
+                    <ul class="cert-list">
+                        <li>IE/Coursera Marketing Mix Implementation</li>
+                        <li>Product strategy & GTM frameworks</li>
+                        <li>Market research & competitive analysis</li>
+                        <li>Brand positioning & segmentation</li>
+                        <li>Strategic business planning</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Continuous Learning Platforms</h3>
+                    <p>Active professional development across multiple platforms and specializations.</p>
+                    <ul class="cert-list">
+                        <li><a href="https://www.linkedin.com/in/dsmcc/">LinkedIn Learning</a> — professional skill development</li>
+                        <li>Coursera — university-level specializations</li>
+                        <li>Udemy — specialized technical and business courses</li>
+                        <li>Ongoing skill development & certifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem; margin-bottom: 2rem;">Provider Overview</h2>
+
+            <div style="border: 1px solid #262626; padding: 40px; margin-bottom: 4rem;">
+                <h3 style="margin-bottom: 1.5rem;">Google Cloud</h3>
+                <p style="margin-bottom: 1.5rem;">Google's Generative AI Specialization provides hands-on training in building and deploying AI-powered applications. Covers modern AI architecture, prompt engineering, and practical implementation of generative models.</p>
+            </div>
+
+            <div style="border: 1px solid #262626; padding: 40px; margin-bottom: 4rem;">
+                <h3 style="margin-bottom: 1.5rem;">IBM</h3>
+                <p style="margin-bottom: 1.5rem;">IBM's Customer Care AI certification focuses on deploying AI solutions for enterprise customer service and support scenarios. Emphasizes practical applications and enterprise-grade implementations.</p>
+            </div>
+
+            <div style="border: 1px solid #262626; padding: 40px; margin-bottom: 4rem;">
+                <h3 style="margin-bottom: 1.5rem;">IE & Coursera</h3>
+                <p style="margin-bottom: 1.5rem;">IE's Marketing Mix Implementation course, delivered through Coursera, covers strategic business fundamentals, market analysis, and go-to-market frameworks from one of Europe's leading business schools.</p>
+            </div>
+
+            <div style="border: 1px solid #262626; padding: 40px;">
+                <h3 style="margin-bottom: 1.5rem;">LinkedIn Learning</h3>
+                <p>LinkedIn Learning provides a diverse catalog of professional development courses covering soft skills, technical skills, and career advancement across virtually every industry and function.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://www.coursera.org/">Coursera</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 22, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

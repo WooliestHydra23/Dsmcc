@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Learn — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: #cccccc;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .stat-box {
+            border: 1px solid #262626;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 300;
+            color: #c3d9f3;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .cert-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-category {
+            border-bottom: 1px solid #262626;
+            padding-bottom: 2rem;
+        }
+
+        .cert-category h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-category p {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .cert-list li {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 14px 32px;
+            min-height: 44px;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+
+        .btn-primary:hover {
+            border-color: #c3d9f3;
+            color: #c3d9f3;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            section:first-of-type {
+                padding-top: 80px;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+
+            .stats-grid {
+                gap: 30px;
+            }
+
+            .cert-grid {
+                gap: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="breadcrumb"><a href="../">Certifications</a> / Microsoft Learn</div>
+            <h1>Microsoft Learn</h1>
+            <p style="color: #cccccc; font-size: 18px; margin-bottom: 4rem; max-width: 800px;">
+                Comprehensive professional certification and skill development across cloud infrastructure,
+                enterprise technologies, security, AI, and business strategy.
+                <strong>125 hours 49 minutes</strong> of hands-on learning and assessments.
+            </p>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">183</div>
+                    <div class="stat-label">Modules Completed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">46</div>
+                    <div class="stat-label">Learning Paths</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">Level 12</div>
+                    <div class="stat-label">281,125 / 331,999 XP</div>
+                </div>
+            </div>
+
+            <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/" class="btn-primary">View Achievement Page →</a>
+
+            <h2 style="margin-top: 4rem;">Certification Categories</h2>
+
+            <div class="cert-grid">
+                <div class="cert-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Microsoft Azure fundamentals, cloud computing concepts, and cloud service types.</p>
+                    <ul class="cert-list">
+                        <li>Microsoft Azure Fundamentals: Describe cloud concepts (Dec 2023)</li>
+                        <li>Describe cloud service types</li>
+                        <li>Describe cloud computing</li>
+                        <li>Introduction to Azure solutions</li>
+                        <li>See Azure in action</li>
+                        <li>Microsoft Azure Artificial Intelligence (AI) strategy and solutions</li>
+                        <li>Microsoft data estate migration and modernization</li>
+                        <li>Applications and infrastructure migration and modernization</li>
+                        <li>Microsoft runs on trust</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>AI & Business Intelligence</h3>
+                    <p>Generative AI, machine learning strategy, AI-driven business decisions, and data visualization.</p>
+                    <ul class="cert-list">
+                        <li>Introduction to AI for business users</li>
+                        <li>Bring AI to business users in your organization</li>
+                        <li>Introduction to AI technology</li>
+                        <li>Define an AI strategy to create business value</li>
+                        <li>Identify guiding principles for responsible AI</li>
+                        <li>Understand the importance of building an AI-ready culture</li>
+                        <li>Enable business users with key AI use cases</li>
+                        <li>Get started with Power BI Desktop</li>
+                        <li>Describe the capabilities of Microsoft Power BI</li>
+                        <li>Get data with Power BI Desktop</li>
+                        <li>Learn the basics of Power BI Desktop, Power Automate, and PowerApps</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Microsoft 365 Administration</h3>
+                    <p>Tenant configuration, identity management, user administration, and tenant design.</p>
+                    <ul class="cert-list">
+                        <li>Configure your Microsoft 365 tenant</li>
+                        <li>Design your Microsoft 365 tenant</li>
+                        <li>Manage user accounts and licenses in Microsoft 365</li>
+                        <li>Manage groups in Microsoft 365</li>
+                        <li>Add a custom domain in Microsoft 365</li>
+                        <li>Configure client connectivity to Microsoft 365</li>
+                        <li>Get started with Microsoft 365</li>
+                        <li>Plan your migration to Microsoft 365</li>
+                        <li>Plan your tenant in Microsoft 365</li>
+                        <li>Plan your on-premises infrastructure for Microsoft 365</li>
+                        <li>Plan your identity and authentication solution for Microsoft 365</li>
+                        <li>Plan your supporting infrastructure for Microsoft 365</li>
+                        <li>Plan hybrid requirements for your Microsoft 365 deployment</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Security & Compliance</h3>
+                    <p>Cybersecurity fundamentals, data protection, threat management, and compliance solutions.</p>
+                    <ul class="cert-list">
+                        <li>Describe the basic concepts of cybersecurity</li>
+                        <li>Describe basic cybersecurity threats, attacks, and mitigations</li>
+                        <li>Describe authentication and authorization in cybersecurity</li>
+                        <li>Describe device-based threats and security controls</li>
+                        <li>Describe network-based threats and mitigations</li>
+                        <li>Describe concepts of cryptography</li>
+                        <li>Defend against threats with Microsoft 365</li>
+                        <li>Protect against threats with Microsoft Defender for Endpoint</li>
+                        <li>Remediate risks with Microsoft Defender for Office 365</li>
+                        <li>Safeguard your environment with Microsoft Defender for Identity</li>
+                        <li>Introduction to threat protection with Microsoft 365</li>
+                        <li>Describe threat protection with Microsoft 365 Defender</li>
+                        <li>Mitigate incidents using Microsoft 365 Defender</li>
+                        <li>MS-500 part 3 - Implement and manage information protection</li>
+                        <li>SC-400: Implement Information Governance in Microsoft 365</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Data & Information Governance</h3>
+                    <p>Data lifecycle management, records management, data protection, and compliance frameworks.</p>
+                    <ul class="cert-list">
+                        <li>Manage information protection and governance</li>
+                        <li>Introduction to information protection and governance in Microsoft 365</li>
+                        <li>Manage data retention in Microsoft 365 workloads</li>
+                        <li>Govern information in Microsoft 365</li>
+                        <li>Manage records in Microsoft 365</li>
+                        <li>Prevent data loss</li>
+                        <li>Prevent data loss in Microsoft 365</li>
+                        <li>Protect information in Microsoft 365</li>
+                        <li>Manage data loss prevention policies and reports in Microsoft 365</li>
+                        <li>Classify data for protection and governance</li>
+                        <li>Apply and manage sensitivity labels</li>
+                        <li>Create and manage sensitive information types</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Teams Administration & Collaboration</h3>
+                    <p>Microsoft Teams deployment, management, voice configuration, and team collaboration.</p>
+                    <ul class="cert-list">
+                        <li>Explore Microsoft Teams</li>
+                        <li>Get started with managing Microsoft Teams</li>
+                        <li>Manage team collaboration with Microsoft Teams</li>
+                        <li>Manage Microsoft Teams</li>
+                        <li>Plan and deploy Microsoft Teams</li>
+                        <li>Deploy Microsoft Teams clients</li>
+                        <li>Prepare for a Teams deployment with Microsoft 365</li>
+                        <li>Manage Teams Phone (Oct 2022)</li>
+                        <li>Configure and manage voice users</li>
+                        <li>Configure, deploy, and manage Teams devices</li>
+                        <li>Monitor and troubleshoot Teams Phone</li>
+                        <li>Monitor your Microsoft Teams environment</li>
+                        <li>Implement lifecycle management and governance for Microsoft Teams</li>
+                        <li>Manage apps, bots, and connectors in Microsoft Teams</li>
+                        <li>Manage meetings, conferences, and events with Microsoft Teams</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>SharePoint & OneDrive</h3>
+                    <p>SharePoint administration, site management, file sharing, and cloud storage solutions.</p>
+                    <ul class="cert-list">
+                        <li>Collaborate with SharePoint in Microsoft 365</li>
+                        <li>Understand your SharePoint site options</li>
+                        <li>Collaborate with files and folders in SharePoint</li>
+                        <li>Manage your SharePoint sites</li>
+                        <li>Plan for SharePoint in Microsoft 365</li>
+                        <li>Use OneDrive in Microsoft 365</li>
+                        <li>Manage OneDrive</li>
+                        <li>Plan and configure external sharing in OneDrive</li>
+                        <li>Manage OneDrive migrations and deployment</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Developer & Extensibility</h3>
+                    <p>Microsoft 365 platform extensibility, Office add-ins, SharePoint customization, and Teams apps.</p>
+                    <ul class="cert-list">
+                        <li>Extend Microsoft 365 – Fundamental (Nov 2022)</li>
+                        <li>Introduction to Office client customization with add-ins</li>
+                        <li>Introduction to customizing and extending SharePoint</li>
+                        <li>Introduction to building apps for Microsoft Teams</li>
+                        <li>Prepare to complete the Project Specialist Technical Achievement</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Accessibility & Inclusive Design</h3>
+                    <p>Digital accessibility, inclusive learning environments, and accessible content creation.</p>
+                    <ul class="cert-list">
+                        <li>Accessibility fundamentals</li>
+                        <li>Digital accessibility</li>
+                        <li>Creating accessible content with Microsoft 365</li>
+                        <li>Microsoft Accessibility Features and Tools</li>
+                        <li>Introduction to disability and accessibility</li>
+                        <li>Empower every student with an inclusive classroom</li>
+                        <li>Accessibility: Build the foundation for inclusive learning</li>
+                        <li>Accessibility, special education, and online learning: Supporting equity in a remote learning environment</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Windows & Device Management</h3>
+                    <p>Windows 10 & 11 administration, device deployment, and client updates.</p>
+                    <ul class="cert-list">
+                        <li>Stay current with Windows devices and Microsoft 365 Apps</li>
+                        <li>Plan to deploy updates for Windows clients and Microsoft 365 apps</li>
+                        <li>Prepare to deploy updates for Windows client and Microsoft 365 apps</li>
+                        <li>Deploy updates for Windows client and Microsoft 365 apps</li>
+                        <li>Deploy, upgrade, and migrate to Windows 10</li>
+                        <li>Update your security and compliance configuration – Windows 10 and Microsoft 365 Apps</li>
+                        <li>Migrate user files and settings in Microsoft 365</li>
+                        <li>Deliver Microsoft 365 Apps and business apps</li>
+                        <li>Analyze your directory and network readiness for Microsoft 365</li>
+                        <li>Analyze your device and app readiness for Windows</li>
+                        <li>Windows 10 for education</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Power Platform (Power Apps & Automate)</h3>
+                    <p>Low-code/no-code development with Power Apps and Power Automate automation.</p>
+                    <ul class="cert-list">
+                        <li>Get started with Power Apps canvas apps</li>
+                        <li>Get started with Power Automate</li>
+                        <li>Describe the business value of the Microsoft Power Platform</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Microsoft Search & Modern Workplace</h3>
+                    <p>Enterprise search implementation, workplace transformation, and business solutions.</p>
+                    <ul class="cert-list">
+                        <li>Microsoft Search fundamentals</li>
+                        <li>Introduction to Microsoft Search</li>
+                        <li>Assign admins and plan content for Microsoft Search</li>
+                        <li>Create and customize Microsoft Search answers</li>
+                        <li>Bring more of your data to Microsoft Search</li>
+                        <li>Manage access, add entry points, and review Microsoft Search feedback</li>
+                        <li>Increase Microsoft Search adoption, monitor usage, and maintain answers</li>
+                        <li>Use and customize Microsoft Search for schools</li>
+                        <li>Leadership in the modern workplace</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Education & Teaching (Advanced)</h3>
+                    <p>Comprehensive education technology integration, 21st century learning design, and hybrid learning.</p>
+                    <ul class="cert-list">
+                        <li>Microsoft educator academy</li>
+                        <li>Office 365 teacher academy</li>
+                        <li>Microsoft Educator Trainer academy</li>
+                        <li>Level up with Office 365 and Windows</li>
+                        <li>Get started with Office 365 and Windows for leadership</li>
+                        <li>OneNote teacher academy</li>
+                        <li>Hybrid learning strategies for success</li>
+                        <li>Blended approaches for a modern learning environment</li>
+                        <li>Teach forward: Best strategies for hybrid, remote, and blended learning</li>
+                        <li>Hybrid learning: A new model for the future of learning</li>
+                        <li>21st century learning design (8 modules)</li>
+                        <li>Transform higher education through Windows 11 and Microsoft 365</li>
+                        <li>Leadership in the modern workplace</li>
+                        <li>Anti-racism journey for educators with students</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Compliance & Governance Solutions</h3>
+                    <p>Microsoft Purview, compliance management, and regulatory framework implementation.</p>
+                    <ul class="cert-list">
+                        <li>Microsoft Security, Compliance, and Identity Fundamentals (3 learning paths)</li>
+                        <li>Describe the compliance management capabilities in Microsoft Purview</li>
+                        <li>Describe the information protection and data lifecycle management in Microsoft Purview</li>
+                        <li>Describe the insider risk capabilities in Microsoft Purview</li>
+                        <li>Describe the eDiscovery and Audit capabilities in Microsoft Purview</li>
+                        <li>Describe Microsoft's Service Trust portal and privacy capabilities</li>
+                        <li>Introduction to compliance tools in Microsoft 365</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Commercial Marketplace & Go-to-Market</h3>
+                    <p>Marketplace operations, SaaS offers, and go-to-market strategy.</p>
+                    <ul class="cert-list">
+                        <li>Sell through the commercial marketplace</li>
+                        <li>Introduction to the Microsoft commercial marketplace</li>
+                        <li>Go to market through the commercial marketplace</li>
+                        <li>Create a SaaS offer for the commercial marketplace</li>
+                        <li>Create a virtual machine offer for the commercial marketplace</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Microsoft Fundamentals (Core)</h3>
+                    <p>Foundational knowledge across Microsoft 365 services, security, compliance, and identity.</p>
+                    <ul class="cert-list">
+                        <li>MS-900 Microsoft 365 Fundamentals (complete track)</li>
+                        <li>What is Microsoft 365?</li>
+                        <li>Describe productivity solutions in Microsoft 365</li>
+                        <li>Describe collaboration solutions in Microsoft 365</li>
+                        <li>Describe endpoint modernization, management concepts, and deployment options in Microsoft 365</li>
+                        <li>Describe analytics capabilities of Microsoft 365</li>
+                        <li>Describe identity concepts</li>
+                        <li>Describe security and compliance concepts and methodologies</li>
+                        <li>Describe resource governance capabilities in Azure</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 22, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

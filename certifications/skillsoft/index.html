@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillsoft — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: #cccccc;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .stat-box {
+            border: 1px solid #262626;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 300;
+            color: #c3d9f3;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .cert-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-category {
+            border-bottom: 1px solid #262626;
+            padding-bottom: 2rem;
+        }
+
+        .cert-category h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-category p {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .cert-list li {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 14px 32px;
+            min-height: 44px;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+
+        .btn-primary:hover {
+            border-color: #c3d9f3;
+            color: #c3d9f3;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            section:first-of-type {
+                padding-top: 80px;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+
+            .stats-grid {
+                gap: 30px;
+            }
+
+            .cert-grid {
+                gap: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="breadcrumb"><a href="../">Certifications</a> / Skillsoft</div>
+            <h1>Skillsoft</h1>
+            <p style="color: #cccccc; font-size: 18px; margin-bottom: 4rem; max-width: 800px;">
+                Professional development certifications across business, communication, leadership, and technical skills.
+                Hands-on, practical learning for professional and organizational effectiveness.
+            </p>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">32</div>
+                    <div class="stat-label">Credentials</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+            </div>
+
+            <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet" class="btn-primary">View Skillsoft Wallet →</a>
+
+            <h2 style="margin-top: 4rem;">Credential Categories</h2>
+
+            <div class="cert-grid">
+                <div class="cert-category">
+                    <h3>Communication & Collaboration</h3>
+                    <p>Professional communication, active listening, and effective team collaboration.</p>
+                    <ul class="cert-list">
+                        <li>Do We Have A Failure to Communicate? (Jul 2022)</li>
+                        <li>Become a Great Listener (Jul 2022)</li>
+                        <li>Trust Building through Effective Communication (Jul 2022)</li>
+                        <li>Expert Insights on Collaboration (Sep 2022)</li>
+                        <li>The Art and Science of Communication (May 2022)</li>
+                        <li>Making an Impact with Non-verbal Communication (May 2022)</li>
+                        <li>Communicating with Confidence (May 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Leadership & Management</h3>
+                    <p>Leadership development, team management, and organizational effectiveness.</p>
+                    <ul class="cert-list">
+                        <li>Expert Insights on Unconscious Bias (Sep 2022)</li>
+                        <li>Expert Insights on Employee Retention (Jul 2022)</li>
+                        <li>Expert Insights on Managing Risk (Sep 2022)</li>
+                        <li>Expert Insights on Managing Fear (Sep 2022)</li>
+                        <li>Expert Insights on Managing a Crisis (Sep 2022)</li>
+                        <li>Expert Insights on Adapting to Change (Sep 2022)</li>
+                        <li>Business Continuity Programs (Sep 2022)</li>
+                        <li>Keeping Your Coachee Committed and Accountable (May 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Virtual Meetings & Remote Collaboration</h3>
+                    <p>Virtual meeting management and remote team collaboration tools.</p>
+                    <ul class="cert-list">
+                        <li>Organizing & Hosting Meetings in GoToMeeting (Sep 2022)</li>
+                        <li>Expert Insights on Managing Virtual Teams (Sep 2022)</li>
+                        <li>Organizing, Hosting & Joining Meetings in Join.me Windows (Sep 2022)</li>
+                        <li>Getting Started with Skype for Business (Sep 2022)</li>
+                        <li>Building Customer Relationships in a Virtual Environment (Jun 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Business & Finance</h3>
+                    <p>Financial literacy and business operations for non-financial professionals.</p>
+                    <ul class="cert-list">
+                        <li>Basic Budgeting for Non-financial Professionals (Sep 2022)</li>
+                        <li>Financial Statement Analysis for Non-financial Professionals (Sep 2022)</li>
+                        <li>Basic Accounting Concepts for Non-financial Professionals (Sep 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Digital & Social Media</h3>
+                    <p>Social media strategy, content creation, and digital communication.</p>
+                    <ul class="cert-list">
+                        <li>Managing Social Media Activity in Buffer (Nov 2022)</li>
+                        <li>Social Media and Social Selling (Nov 2022)</li>
+                        <li>Formatting Presentations in PowerPoint iPhone (May 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Technology & IT Fundamentals</h3>
+                    <p>Technical certifications and IT foundations.</p>
+                    <ul class="cert-list">
+                        <li>CompTIA IT Fundamentals: Basic IT Concepts (Aug 2023)</li>
+                        <li>SECFND: Digital Signatures (May 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Diversity, Inclusion & Well-being</h3>
+                    <p>Inclusive leadership and organizational well-being.</p>
+                    <ul class="cert-list">
+                        <li>Embracing the Power of Diversity and Inclusion featuring Special Olympics (Sep 2022)</li>
+                        <li>Great Leaders Must Be Inclusive featuring Special Olympics (Sep 2022)</li>
+                        <li>COVID-19: A Novel Coronavirus (Sep 2022)</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <h3>Project Management</h3>
+                    <p>Project planning and stakeholder management.</p>
+                    <ul class="cert-list">
+                        <li>Project Management Needs vs. Expectations (May 2022)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet">Skillsoft</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 22, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
