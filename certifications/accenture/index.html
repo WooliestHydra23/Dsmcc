@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accenture Future Learn Certifications — Dron Sharma</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: #cccccc;
+        }
+
+        a {
+            color: #c3d9f3;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 56px;
+            background: transparent;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #262626;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wordmark {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .wordmark:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        section:first-of-type {
+            padding-top: 120px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-box {
+            border: 1px solid #262626;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 300;
+            color: #c3d9f3;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-item {
+            border: 1px solid #262626;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .cert-item:hover {
+            border-color: #c3d9f3;
+            transform: translateY(-2px);
+        }
+
+        .cert-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #262626;
+        }
+
+        .cert-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .cert-item:hover .cert-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .cert-thumbnail-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666666;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .cert-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .cert-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .cert-desc {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .cert-meta {
+            font-size: 12px;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .cert-download {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #c3d9f3;
+            text-decoration: none;
+            padding: 8px 0;
+            border-top: 1px solid #262626;
+            padding-top: 8px;
+            display: inline-block;
+        }
+
+        .cert-download:hover {
+            color: #ffffff;
+        }
+
+        .category-header {
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            border-top: 1px solid #262626;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #999999;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #262626;
+            margin: 2rem 0;
+        }
+
+        .footer-meta {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            main, nav {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            section:first-of-type {
+                padding-top: 80px;
+            }
+
+            footer {
+                padding: 60px 24px;
+            }
+
+            .stats-grid {
+                gap: 30px;
+            }
+
+            .cert-gallery {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../" class="wordmark">Dron Sharma</a>
+            <div class="nav-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="breadcrumb"><a href="../">Certifications</a> / Accenture</div>
+            <h1>Accenture Future Learn</h1>
+            <p style="color: #cccccc; font-size: 18px; margin-bottom: 4rem; max-width: 800px;">
+                Professional development through Accenture's Future Learn partnership.
+                Comprehensive training in digital skills and emerging technologies.
+            </p>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Certifications Completed</div>
+                </div>
+            </div>
+
+            <h2 class="category-header">Digital Skills & AI</h2>
+            <p style="color: #cccccc; font-size: 14px; margin-bottom: 3rem; max-width: 900px;">
+                Professional certifications covering digital marketing, analytics, social media, mobile technologies, and artificial intelligence through Accenture's Future Learn platform.
+            </p>
+
+            <div class="cert-gallery">
+                <div class="cert-item">
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/digital-marketing.png" alt="Digital Marketing Certificate" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Digital Marketing<br>Certificate</div>'">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-title">Digital Marketing Essentials</div>
+                        <div class="cert-desc">
+                            Comprehensive training in digital marketing strategies, campaign management, and online marketing practices through Accenture Future Learn.
+                        </div>
+                        <div class="cert-meta">Accenture Future Learn • Verified Credential</div>
+                        <a href="certificates/digital-skills-digital-marketing_certificate_of_achievement_54cltic.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/web-analytics.png" alt="Web Analytics Certificate" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Web Analytics<br>Certificate</div>'">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-title">Digital Skills: Web Analytics</div>
+                        <div class="cert-desc">
+                            Data analysis and web analytics expertise covering metrics, performance tracking, and insights generation for digital platforms.
+                        </div>
+                        <div class="cert-meta">Accenture Future Learn • Verified Credential</div>
+                        <a href="certificates/digital-skills-web-analytics_certificate_of_achievement_oxyd4uc.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/social-media.png" alt="Social Media Certificate" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Social Media<br>Certificate</div>'">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-title">Digital Skills: Social Media</div>
+                        <div class="cert-desc">
+                            Social media strategy, content creation, engagement optimization, and community management across major platforms.
+                        </div>
+                        <div class="cert-meta">Accenture Future Learn • Verified Credential</div>
+                        <a href="certificates/digital-skills-social-media_certificate_of_achievement_mrb17nh.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/mobile.png" alt="Mobile Technologies Certificate" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Mobile Technologies<br>Certificate</div>'">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-title">Digital Skills: Mobile Technologies</div>
+                        <div class="cert-desc">
+                            Mobile app development, responsive design, and mobile-first strategies for modern digital ecosystems.
+                        </div>
+                        <div class="cert-meta">Accenture Future Learn • Verified Credential</div>
+                        <a href="certificates/digital-skills-mobile_certificate_of_achievement_m3a8xb1.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/work-life.png" alt="Digital Skills for Work and Life Certificate" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Digital Skills<br>Work & Life</div>'">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-title">Digital Skills for Work and Life</div>
+                        <div class="cert-desc">
+                            Practical digital competencies applicable to both professional and personal contexts, spanning productivity and communication tools.
+                        </div>
+                        <div class="cert-meta">Accenture Future Learn • Verified Credential</div>
+                        <a href="certificates/digital-skills-for-work-and-life_certificate_of_achievement_0zbhlvs.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/artificial-intelligence.png" alt="Artificial Intelligence Certificate" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Artificial<br>Intelligence</div>'">
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-title">Artificial Intelligence</div>
+                        <div class="cert-desc">
+                            Foundational and applied AI concepts, machine learning principles, and practical applications of AI in business contexts.
+                        </div>
+                        <div class="cert-meta">Accenture Future Learn • Verified Credential</div>
+                        <a href="certificates/artificial-intelligence_certificate_of_achievement_5jfsnvo.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="category-header">Learning Outcomes</h2>
+            <p style="color: #cccccc; font-size: 14px; margin-bottom: 3rem; max-width: 900px;">
+                These certifications validate competency across digital transformation, marketing technology, and emerging AI/automation trends:
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 4rem;">
+                <div style="border-left: 3px solid #c3d9f3; padding-left: 20px;">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 16px;">Digital Marketing & Analytics</h3>
+                    <p style="color: #cccccc; font-size: 14px;">Strategic digital marketing, web analytics, social media optimization, and performance measurement across digital channels.</p>
+                </div>
+                <div style="border-left: 3px solid #c3d9f3; padding-left: 20px;">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 16px;">Mobile & Emerging Tech</h3>
+                    <p style="color: #cccccc; font-size: 14px;">Mobile-first development, responsive design, and emerging technologies shaping digital transformation.</p>
+                </div>
+                <div style="border-left: 3px solid #c3d9f3; padding-left: 20px;">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 16px;">AI & Automation</h3>
+                    <p style="color: #cccccc; font-size: 14px;">Artificial intelligence fundamentals, machine learning applications, and automation strategies for business innovation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../../work/">Work</a>
+                <a href="../../code/">Code</a>
+                <a href="../">Certifications</a>
+                <a href="../../about/">About</a>
+                <a href="../../contact/">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsmcc/">LinkedIn</a>
+                <a href="https://github.com/WooliestHydra23">GitHub</a>
+                <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/">Microsoft Learn</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-meta">Last Updated: June 23, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
