@@ -210,6 +210,91 @@
             line-height: 1.6;
         }
 
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-card {
+            border: 1px solid #262626;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .cert-card:hover {
+            border-color: #c3d9f3;
+            transform: translateY(-2px);
+        }
+
+        .cert-thumbnail {
+            width: 100%;
+            height: 180px;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #262626;
+        }
+
+        .cert-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .cert-card:hover .cert-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .cert-thumbnail-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666666;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .cert-card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .cert-card-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .cert-card-meta {
+            font-size: 11px;
+            color: #999999;
+        }
+
         .btn-primary {
             display: inline-block;
             background: transparent;
@@ -356,7 +441,71 @@
 
             <a href="https://learn.microsoft.com/en-us/users/dronsharma-5226/" class="btn-primary">View Achievement Page →</a>
 
-            <h2 style="margin-top: 4rem;">Certification Categories</h2>
+            <h2 style="margin-top: 4rem; margin-bottom: 2rem;">Featured Certifications</h2>
+
+            <div class="cert-gallery">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/cloud-infrastructure.png" alt="Cloud & Infrastructure" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Cloud &<br>Infrastructure</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Cloud & Infrastructure</div>
+                        <div class="cert-card-meta">9 modules • Azure Fundamentals</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/security-compliance.png" alt="Security & Compliance" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Security &<br>Compliance</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Security & Compliance</div>
+                        <div class="cert-card-meta">15 modules • Cybersecurity</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/ai-business-intelligence.png" alt="AI & Business Intelligence" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>AI &<br>Intelligence</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">AI & Business Intelligence</div>
+                        <div class="cert-card-meta">11 modules • GenAI & Power BI</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/teams-collaboration.png" alt="Teams Administration" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Teams &<br>Collaboration</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Teams Administration</div>
+                        <div class="cert-card-meta">15 modules • Team Collaboration</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/data-governance.png" alt="Data & Governance" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Data &<br>Governance</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Data & Governance</div>
+                        <div class="cert-card-meta">12 modules • Information Protection</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/microsoft-365.png" alt="Microsoft 365" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Microsoft<br>365</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Microsoft 365 Admin</div>
+                        <div class="cert-card-meta">13 modules • Tenant Management</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem;">All Certification Categories</h2>
 
             <div class="cert-grid">
                 <div class="cert-category">

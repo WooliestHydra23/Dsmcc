@@ -210,6 +210,91 @@
             line-height: 1.6;
         }
 
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cert-gallery {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-card {
+            border: 1px solid #262626;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .cert-card:hover {
+            border-color: #c3d9f3;
+            transform: translateY(-2px);
+        }
+
+        .cert-thumbnail {
+            width: 100%;
+            height: 160px;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #262626;
+        }
+
+        .cert-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .cert-card:hover .cert-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .cert-thumbnail-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #666666;
+            text-align: center;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .cert-card-content {
+            padding: 16px;
+            flex-grow: 1;
+        }
+
+        .cert-card-title {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #ffffff;
+        }
+
+        .cert-card-meta {
+            font-size: 10px;
+            color: #999999;
+        }
+
         .btn-primary {
             display: inline-block;
             background: transparent;
@@ -351,7 +436,91 @@
 
             <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/dronsharma704405/wallet" class="btn-primary">View Skillsoft Wallet →</a>
 
-            <h2 style="margin-top: 4rem;">Credential Categories</h2>
+            <h2 style="margin-top: 4rem; margin-bottom: 2rem;">Featured Credentials</h2>
+
+            <div class="cert-gallery">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/communication.png" alt="Communication" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Communication</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Communication</div>
+                        <div class="cert-card-meta">7 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/leadership.png" alt="Leadership" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Leadership</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Leadership</div>
+                        <div class="cert-card-meta">8 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/virtual-collaboration.png" alt="Virtual Collaboration" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Collaboration</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Virtual Collab.</div>
+                        <div class="cert-card-meta">5 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/business.png" alt="Business & Finance" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Business</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Business</div>
+                        <div class="cert-card-meta">3 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/digital.png" alt="Digital & Social" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Digital</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Digital</div>
+                        <div class="cert-card-meta">3 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/technology.png" alt="Technology" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Technology</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Technology</div>
+                        <div class="cert-card-meta">2 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/diversity.png" alt="Diversity & Inclusion" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Diversity</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Diversity</div>
+                        <div class="cert-card-meta">3 credentials</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/project-management.png" alt="Project Management" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Project Mgmt</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Project Mgmt</div>
+                        <div class="cert-card-meta">1 credential</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem;">All Credential Categories</h2>
 
             <div class="cert-grid">
                 <div class="cert-category">

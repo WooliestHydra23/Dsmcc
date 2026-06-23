@@ -204,6 +204,91 @@
             line-height: 1.6;
         }
 
+        .cert-gallery-featured {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .cert-gallery-featured {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .cert-gallery-featured {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        .cert-card {
+            border: 1px solid #262626;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .cert-card:hover {
+            border-color: #c3d9f3;
+            transform: translateY(-2px);
+        }
+
+        .cert-thumbnail {
+            width: 100%;
+            height: 160px;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #262626;
+        }
+
+        .cert-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .cert-card:hover .cert-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .cert-thumbnail-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #666666;
+            text-align: center;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .cert-card-content {
+            padding: 16px;
+            flex-grow: 1;
+        }
+
+        .cert-card-title {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #ffffff;
+        }
+
+        .cert-card-meta {
+            font-size: 10px;
+            color: #999999;
+        }
+
         .btn-primary {
             display: inline-block;
             background: transparent;
@@ -419,6 +504,50 @@
             </div>
 
             <a href="https://www.linkedin.com/in/dsmcc/" class="btn-primary">View LinkedIn Profile →</a>
+
+            <h2 style="margin-top: 4rem; margin-bottom: 2rem;">Featured Certificates</h2>
+
+            <div class="cert-gallery-featured">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/photography.png" alt="Photography" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Photography</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Photography</div>
+                        <div class="cert-card-meta">7 certificates</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/marketing.png" alt="Social Media Marketing" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Marketing</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Marketing</div>
+                        <div class="cert-card-meta">6 certificates</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/professional-dev.png" alt="Professional Development" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Prof. Dev</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Professional Dev</div>
+                        <div class="cert-card-meta">9 certificates</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
+                        <img src="thumbnails/technology.png" alt="Technology" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Technology</div>'">
+                    </div>
+                    <div class="cert-card-content">
+                        <div class="cert-card-title">Technology</div>
+                        <div class="cert-card-meta">3 certificates</div>
+                    </div>
+                </div>
+            </div>
 
             <h2 style="margin-top: 4rem;">Course Categories</h2>
 
