@@ -183,14 +183,58 @@
 
         .cert-item {
             border: 1px solid #262626;
-            padding: 30px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, transform 0.2s;
         }
 
         .cert-item:hover {
             border-color: #c3d9f3;
+            transform: translateY(-2px);
+        }
+
+        .cert-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #262626;
+        }
+
+        .cert-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .cert-item:hover .cert-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .cert-thumbnail-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666666;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .cert-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .cert-title {
@@ -352,33 +396,48 @@
 
             <div class="cert-gallery">
                 <div class="cert-item">
-                    <div class="cert-title">Amazon Ads Retail Certification</div>
-                    <div class="cert-desc">
-                        Comprehensive certification demonstrating expertise in Amazon advertising platforms for retail sellers.
-                        Covers campaign strategies, optimization techniques, and performance metrics.
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/amazon-ads-retail.png" alt="Amazon Ads Retail Certification" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Amazon Ads Retail<br>Certificate</div>'">
                     </div>
-                    <div class="cert-meta">Amazon Learning Console • Verified Credential</div>
-                    <a href="certificates/Amazon Ads Retail Certification _ Learning console.pdf" class="cert-download" download>Download Certificate →</a>
+                    <div class="cert-content">
+                        <div class="cert-title">Amazon Ads Retail Certification</div>
+                        <div class="cert-desc">
+                            Comprehensive certification demonstrating expertise in Amazon advertising platforms for retail sellers.
+                            Covers campaign strategies, optimization techniques, and performance metrics.
+                        </div>
+                        <div class="cert-meta">Amazon Learning Console • Verified Credential</div>
+                        <a href="certificates/Amazon Ads Retail Certification _ Learning console.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
                 </div>
 
                 <div class="cert-item">
-                    <div class="cert-title">Amazon DSP Certification</div>
-                    <div class="cert-desc">
-                        Demand-Side Platform (DSP) certification validating skills in programmatic advertising on Amazon.
-                        Covers audience targeting, creative optimization, and campaign analytics.
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/amazon-dsp.png" alt="Amazon DSP Certification" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Amazon DSP<br>Certificate</div>'">
                     </div>
-                    <div class="cert-meta">Amazon Learning Console • Verified Credential</div>
-                    <a href="certificates/Amazon DSP Certification _ Learning console.pdf" class="cert-download" download>Download Certificate →</a>
+                    <div class="cert-content">
+                        <div class="cert-title">Amazon DSP Certification</div>
+                        <div class="cert-desc">
+                            Demand-Side Platform (DSP) certification validating skills in programmatic advertising on Amazon.
+                            Covers audience targeting, creative optimization, and campaign analytics.
+                        </div>
+                        <div class="cert-meta">Amazon Learning Console • Verified Credential</div>
+                        <a href="certificates/Amazon DSP Certification _ Learning console.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
                 </div>
 
                 <div class="cert-item">
-                    <div class="cert-title">Sponsored Ads Certification</div>
-                    <div class="cert-desc">
-                        Specialized certification for sponsored advertising on Amazon marketplace.
-                        Demonstrates mastery of keyword targeting, bid strategies, and ROI optimization.
+                    <div class="cert-thumbnail">
+                        <img src="certificates/thumbnails/amazon-sponsored-ads.png" alt="Sponsored Ads Certification" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=&quot;cert-thumbnail-placeholder&quot;>Sponsored Ads<br>Certificate</div>'">
                     </div>
-                    <div class="cert-meta">Amazon Learning Console • Verified Credential</div>
-                    <a href="certificates/Sponsored ads Certification _ Learning console.pdf" class="cert-download" download>Download Certificate →</a>
+                    <div class="cert-content">
+                        <div class="cert-title">Sponsored Ads Certification</div>
+                        <div class="cert-desc">
+                            Specialized certification for sponsored advertising on Amazon marketplace.
+                            Demonstrates mastery of keyword targeting, bid strategies, and ROI optimization.
+                        </div>
+                        <div class="cert-meta">Amazon Learning Console • Verified Credential</div>
+                        <a href="certificates/Sponsored ads Certification _ Learning console.pdf" class="cert-download" download>Download Certificate →</a>
+                    </div>
                 </div>
             </div>
 
